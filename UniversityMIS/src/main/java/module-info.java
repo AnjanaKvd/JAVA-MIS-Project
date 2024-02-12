@@ -1,11 +1,10 @@
-module com.university.mis.universitymis {
+module mis.university {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires mysql.connector.java;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires org.kordamp.ikonli.javafx;
 
-    opens com.university.mis.universitymis to javafx.fxml;
-    exports com.university.mis.universitymis;
+    opens mis.university to javafx.fxml;
+    exports mis.university;
 }

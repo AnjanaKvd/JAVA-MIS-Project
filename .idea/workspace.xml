@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/com/university/mis/universitymis/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/com/university/mis/universitymis/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/com/university/mis/universitymis/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/resources/com/university/mis/universitymis/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/com/university/mis/universitymis/signin.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2bus7yZhiI33UmYVSA2oyfcNPTl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anjana&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="" />
+      <created>1707076137357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707076137357</updated>
+      <workItem from="1707076143302" duration="106000" />
+      <workItem from="1707154594767" duration="83000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
