@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/AdminDashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/studentDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/header.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/mis/universitymis/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/mis/universitymis/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/university/mis/universitymis/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +104,7 @@
       <workItem from="1707154678808" duration="1663000" />
       <workItem from="1707188141675" duration="386000" />
       <workItem from="1707203620123" duration="7938000" />
-      <workItem from="1707755926598" duration="8338000" />
+      <workItem from="1707755926598" duration="9574000" />
     </task>
     <servers />
   </component>
