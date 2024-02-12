@@ -1,8 +1,10 @@
-module university.mis.universitymis {
+module mis.university {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires mysql.connector.java;
 
 
-    opens university.mis.universitymis to javafx.fxml;
-    exports university.mis.universitymis;
+    opens mis.university to javafx.fxml;
+    exports mis.university;
 }

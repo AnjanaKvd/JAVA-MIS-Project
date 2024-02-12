@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mis.university.AdminDashboardController"
+      alignment="CENTER"
+      spacing="10">
+
+    <Button text="Manage User Profiles" onAction="#manageUserProfiles"/>
+    <Button text="Manage Courses" onAction="#manageCourses"/>
+    <Button text="Manage Notices" onAction="#manageNotices"/>
+    <Button text="Manage Timetables" onAction="#manageTimetables"/>
+</VBox>
