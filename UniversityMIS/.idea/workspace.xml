@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="">
+    <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/infoPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/passwordsPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/profilePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/settingsPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Puzzle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +32,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AnjanaKvd&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5b1c2a4b-2afa-4f72-871d-54b4283d6bd2" />
+        <option name="url" value="https://github.com/AnjanaKvd/JAVA-MIS-Project-.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -55,7 +78,8 @@
     "git-widget-placeholder": "anjana",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/mysql-connector/mysql-connector-java-8.0.28.jar",
+    "last_directory_selection": "F:/GitHub/Repos/JAVA-MIS-Project-/UniversityMIS/src/main/java/mis/university",
+    "last_opened_file_path": "F:/GitHub/Repos/JAVA-MIS-Project-/UniversityMIS/src/main/resources/mis/university",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,22 +93,14 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources\mis\university" />
+      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\java\mis\university" />
       <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="D:/Java/jdk-19" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="university.mis.universitymis.Main" />
-      <module name="UniversityMIS" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;D:\Java\openjfx-21.0.2\javafx-sdk-21.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -105,7 +121,18 @@
       <workItem from="1707188141675" duration="386000" />
       <workItem from="1707203620123" duration="7938000" />
       <workItem from="1707755926598" duration="9574000" />
+      <workItem from="1708077405515" duration="3228000" />
+      <workItem from="1708099538789" duration="6584000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated">
+      <option name="closed" value="true" />
+      <created>1708083871420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708083871420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,5 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
 </project>
