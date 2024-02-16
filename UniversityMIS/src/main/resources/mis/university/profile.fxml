@@ -2,7 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -10,10 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox fillWidth="false" prefHeight="720.0" prefWidth="353.0" styleClass="primary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="720.0" prefWidth="353.0" styleClass="secondary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="355.0" spacing="15.0">
                <VBox.margin>
@@ -37,11 +38,11 @@
                   </Button>
                </children>
             </VBox>
-            <VBox prefHeight="329.0" prefWidth="354.0" spacing="30.0">
+            <VBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="366.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="365.0" spacing="20.0">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/User.png" />
                            </image>
@@ -56,17 +57,20 @@
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets right="50.0" />
+                        <Insets bottom="10.0" left="50.0" top="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../images/Puzzle.png" />
+                              <Image url="@../../images/Settings.png" />
                            </image>
                         </ImageView>
-                        <Label text="Profile" textFill="WHITE">
+                        <Label text="Settings" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -76,17 +80,20 @@
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets right="50.0" />
+                        <Insets bottom="10.0" left="50.0" right="100.0" top="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/Key.png" />
                            </image>
                         </ImageView>
-                        <Label text="Profile" textFill="WHITE">
+                        <Label text="Passwords" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -96,17 +103,20 @@
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets right="50.0" />
+                        <Insets bottom="10.0" left="50.0" right="100.0" top="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/Info.png" />
                            </image>
                         </ImageView>
-                        <Label text="Profile" textFill="WHITE">
+                        <Label text="Info" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -116,15 +126,95 @@
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets right="50.0" />
+                        <Insets bottom="10.0" left="50.0" right="100.0" top="10.0" />
                      </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </VBox>
+            <VBox alignment="CENTER" prefHeight="179.0" prefWidth="354.0">
+               <children>
+                  <Button id="warning-color" mnemonicParsing="false" prefHeight="48.0" prefWidth="111.0" styleClass="warning-color" stylesheets="@../../styles/style.css" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </VBox>
          </children>
       </VBox>
    </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="primary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="18.0" prefWidth="935.0" text="Profile Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" right="50.0" top="30.0" />
+               </padding>
+            </Label>
+            <VBox prefHeight="244.0" prefWidth="926.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="935.0" text="Profile Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="876.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="159.0" text="Name " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="First Name" styleClass="high-primary-color">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="Last Name" styleClass="high-primary-color">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="159.0" text="Date of birth" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <DatePicker prefHeight="26.0" prefWidth="190.0" styleClass="high-primary-color" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </VBox>
+   </center>
 </BorderPane>
