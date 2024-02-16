@@ -1,0 +1,10 @@
+.primary-color{
+    -fx-background-color: #0c5a50;
+}
+.secondary-color{
+    -fx-background-color: #14806F;
+}
+.button{
+    -fx-background-color: #189381;
+    -fx-background-radius: 30;
+}

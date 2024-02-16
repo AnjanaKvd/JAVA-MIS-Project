@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/profileicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/profile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,7 @@
     "git-widget-placeholder": "anjana",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/mysql-connector/mysql-connector-java-8.0.28.jar",
+    "last_opened_file_path": "F:/GitHub/Repos/JAVA-MIS-Project-/UniversityMIS/src/main/resources/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +72,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\java\mis\university" />
       <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources" />
@@ -105,6 +111,7 @@
       <workItem from="1707188141675" duration="386000" />
       <workItem from="1707203620123" duration="7938000" />
       <workItem from="1707755926598" duration="9574000" />
+      <workItem from="1708077405515" duration="2514000" />
     </task>
     <servers />
   </component>
