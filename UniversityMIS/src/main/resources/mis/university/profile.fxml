@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.Profile">
    <left>
       <VBox alignment="CENTER" fillWidth="false" prefHeight="720.0" prefWidth="353.0" styleClass="secondary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +31,7 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Edit Profile" textFill="WHITE">
+                  <Button fx:id="editProfileButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Edit Profile" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -40,7 +40,7 @@
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="366.0">
                <children>
-                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="365.0" spacing="20.0">
+                  <HBox id="hbox" fx:id="profileBox" alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="365.0" spacing="20.0">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -63,7 +63,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" fx:id="settingsBox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -86,7 +86,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" fx:id="passwordsBox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -109,7 +109,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
+                  <HBox id="hbox" fx:id="infoBox" alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="351.0" spacing="20.0">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -139,7 +139,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="179.0" prefWidth="354.0">
                <children>
-                  <Button id="warning-color" mnemonicParsing="false" prefHeight="48.0" prefWidth="111.0" styleClass="warning-color" stylesheets="@../../styles/style.css" text="Logout" textFill="WHITE">
+                  <Button id="warning-color" fx:id="logoutButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="111.0" styleClass="warning-color" stylesheets="@../../styles/style.css" text="Logout" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -153,7 +153,7 @@
       </VBox>
    </left>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="primary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="displayPages" prefHeight="200.0" prefWidth="100.0" styleClass="primary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="18.0" prefWidth="935.0" text="Profile Settings" textFill="WHITE">
                <font>
@@ -182,12 +182,12 @@
                                     <Insets left="10.0" />
                                  </padding>
                               </Label>
-                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="First Name" styleClass="high-primary-color">
+                              <TextField fx:id="firstNameTextField" prefHeight="26.0" prefWidth="190.0" promptText="First Name" styleClass="high-primary-color">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </TextField>
-                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="Last Name" styleClass="high-primary-color">
+                              <TextField fx:id="lastNameTextField" prefHeight="26.0" prefWidth="190.0" promptText="Last Name" styleClass="high-primary-color">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -204,7 +204,7 @@
                                     <Insets left="10.0" />
                                  </padding>
                               </Label>
-                              <DatePicker prefHeight="26.0" prefWidth="190.0" styleClass="high-primary-color" />
+                              <DatePicker fx:id="dobDatePicker" prefHeight="26.0" prefWidth="190.0" styleClass="high-primary-color" />
                            </children>
                         </HBox>
                      </children>

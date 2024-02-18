@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox layoutX="-2.0" layoutY="-13.0" prefHeight="733.0" prefWidth="927.0" styleClass="primary-color" stylesheets="@../../styles/style.css">
@@ -48,23 +47,6 @@
                                  </font>
                               </TextField>
                               <TextField prefHeight="26.0" prefWidth="190.0" promptText="Last Name" styleClass="high-primary-color">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="876.0" spacing="20.0">
-                           <children>
-                              <Label prefHeight="32.0" prefWidth="159.0" text="Username" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
-                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="Username" styleClass="high-primary-color">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
