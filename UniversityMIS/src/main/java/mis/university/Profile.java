@@ -65,6 +65,7 @@ public class Profile {
 
     @FXML
     private void initialize() {
+        openProfilePage();
         profileBox.setOnMouseClicked(event -> openProfilePage());
         settingsBox.setOnMouseClicked(event -> openSettingsPage());
         passwordsBox.setOnMouseClicked(event -> openPasswordsPage());
