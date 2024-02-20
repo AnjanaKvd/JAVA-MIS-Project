@@ -40,6 +40,12 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
 
+    private int userId;
+
+    public int getUserId() {
+        return userId;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -72,7 +78,8 @@ public class LoginController implements Initializable {
             try (ResultSet queryResult = statement.executeQuery()) {
                 if (queryResult.next() && queryResult.getInt(1) == 1) {
                     String userType = queryResult.getString("user_type");
-                    openMainWindow(userType);
+                    userId = queryResult.getInt("id");
+                    openMainWindow(userType, userId);
                 } else {
                     loginMessageLabel.setText("Invalid username or password");
                 }
@@ -82,7 +89,7 @@ public class LoginController implements Initializable {
             loginMessageLabel.setText("Error: Unable to login. Please try again later.");
         }
     }
-    private void openMainWindow(String userType) {
+    private void openMainWindow(String userType, int userId) {
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
@@ -97,6 +104,7 @@ public class LoginController implements Initializable {
             Parent root = loader.load();
 
             Object controller = loader.getController();
+            UserData.setUserId(userId);
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

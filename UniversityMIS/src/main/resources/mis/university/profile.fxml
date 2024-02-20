@@ -21,7 +21,7 @@
                   <Insets top="50.0" />
                </VBox.margin>
                <children>
-                  <ImageView fitHeight="135.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="profileImageView" fitHeight="135.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/profileicon.png" />
                      </image>
@@ -154,8 +154,11 @@
    </left>
    <center>
       <VBox fx:id="displayPages" prefHeight="200.0" prefWidth="100.0" styleClass="primary-color" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
          <children>
-            <Label prefHeight="18.0" prefWidth="935.0" text="Profile Settings" textFill="WHITE">
+            <Label prefHeight="110.0" prefWidth="877.0" text="Profile Settings" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -211,10 +214,69 @@
                   </VBox>
                </children>
             </VBox>
+            <VBox prefHeight="244.0" prefWidth="926.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="935.0" text="Contact Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="876.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="159.0" text="Phone" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="Phone Number" styleClass="high-primary-color">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="876.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="159.0" text="Email" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField prefHeight="26.0" prefWidth="190.0" promptText="Email" styleClass="high-primary-color">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="saveChangesButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="185.0" styleClass="warning-color" stylesheets="@../../styles/style.css" text="Save Changes" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets left="50.0" />
-         </padding>
       </VBox>
    </center>
 </BorderPane>
