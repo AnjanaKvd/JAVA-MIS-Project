@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.LoginController">
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="720.0" fitWidth="640.0" pickOnBounds="true">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../../images/header.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="720.0" prefWidth="640.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="239.0" layoutY="80.0" prefHeight="65.0" prefWidth="162.0" text="Sign In" textFill="#14806f">
+               <font>
+                  <Font name="SansSerif Regular" size="48.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" layoutY="196.0" prefHeight="34.0" prefWidth="122.0" text="Username">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="96.0" layoutY="255.0" prefHeight="51.0" prefWidth="476.0" promptText="Username" style="-fx-border-color: #14806F;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="258.0" layoutY="340.0" prefHeight="34.0" prefWidth="122.0" text="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="enterPasswordField" layoutX="94.0" layoutY="401.0" prefHeight="51.0" prefWidth="476.0" promptText="Password" style="-fx-border-color: #14806F;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="465.0" prefHeight="34.0" prefWidth="624.0" textFill="#b31717">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="246.0" layoutY="518.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="54.0" prefWidth="136.0" style="-fx-background-color: #14806F; -fx-background-radius: 18; -fx-cursor: hand;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="216.0" layoutY="594.0" text="Forgot Password?" textFill="#b31717">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
