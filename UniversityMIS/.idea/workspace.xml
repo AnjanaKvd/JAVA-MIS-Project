@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Course.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Courses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Lecturer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Notification.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Student.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Timetable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Users.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/AdminDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +127,7 @@
       <workItem from="1708236028903" duration="2774000" />
       <workItem from="1708359459420" duration="4222000" />
       <workItem from="1708426726037" duration="3978000" />
-      <workItem from="1709200475490" duration="3006000" />
+      <workItem from="1709200475490" duration="4321000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <option name="closed" value="true" />
