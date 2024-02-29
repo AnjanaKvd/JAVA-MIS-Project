@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Course.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Courses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Lecturer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Student.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Timetable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Users.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/ProfilePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/infoPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/infoPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/profilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/profilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/adminDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +91,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -121,7 +131,11 @@
       <workItem from="1708099538789" duration="6584000" />
       <workItem from="1708210092044" duration="194000" />
       <workItem from="1708210309610" duration="70000" />
-      <workItem from="1708210398625" duration="4366000" />
+      <workItem from="1708210398625" duration="4686000" />
+      <workItem from="1708236028903" duration="2774000" />
+      <workItem from="1708359459420" duration="4222000" />
+      <workItem from="1708426726037" duration="3978000" />
+      <workItem from="1709200475490" duration="3006000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <option name="closed" value="true" />
@@ -141,16 +155,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updated" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mis/university/Profile.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
