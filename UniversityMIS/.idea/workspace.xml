@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/Medical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/SearchMedical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Me1.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Me1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Medical.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/SearchMedical.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/TecOffUserProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/UpdateTecprofile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Notice.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/updateprofile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/userprofile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Notice.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/TecOffUserProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/UpdateTecprofile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
