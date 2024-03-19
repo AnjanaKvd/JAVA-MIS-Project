@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mis.university.TecDashbord"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.TecDashbord">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/T1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="124.0" layoutY="39.0" prefHeight="17.0" prefWidth="301.0" text="Dashbord Technical Officer">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="85.0" fitWidth="150.0" layoutX="214.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/attendance.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="350.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/no.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="75.0" layoutX="482.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/medical.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="75.0" layoutX="275.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/profile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="407.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/time.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="214.0" layoutY="175.0" mnemonicParsing="false" onAction="#Attendance" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #33DDFF;" text="Attendance" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="482.0" layoutY="173.0" mnemonicParsing="false" onAction="#Medical" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #33DDFF;" text="Medical" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="275.0" layoutY="302.0" mnemonicParsing="false" onAction="#profile" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #33DDFF;" text="Profile" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="406.0" layoutY="303.0" mnemonicParsing="false" onAction="#timetable" style="-fx-background-color: #33DDFF;" text="Time table" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="175.0" mnemonicParsing="false" onAction="#Notice" prefHeight="23.0" prefWidth="85.0" style="-fx-background-color: #33DDFF;" text="Notice" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
