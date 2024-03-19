@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/TecDashbord.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/UploadMedical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/T1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/attendance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/m1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/medical.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/no.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/UploadMedical.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/TechnicalOfficerDashboard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/technicalOfficerDashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/TecDashbord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/TecDashbord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -66,6 +74,7 @@
     "Application.HelloApplication.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Unnamed.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",

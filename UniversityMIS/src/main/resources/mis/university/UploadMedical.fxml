@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.UploadMedical">
+   <children>
+      <HBox layoutX="43.0" layoutY="14.0" prefHeight="65.0" prefWidth="251.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="163.0" text="Upload Medical">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="43.0" layoutY="92.0" prefHeight="284.0" prefWidth="240.0">
+         <children>
+            <ImageView fitHeight="278.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/m1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Button layoutX="331.0" layoutY="351.0" mnemonicParsing="false" onAction="#UpdateMedical" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #33DDFF;" text="Upload">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="331.0" layoutY="47.0" prefHeight="17.0" prefWidth="217.0" text="Student Id">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="331.0" layoutY="67.0" prefHeight="25.0" prefWidth="240.0" />
+      <TextField layoutX="331.0" layoutY="134.0" prefHeight="25.0" prefWidth="240.0" />
+      <TextField layoutX="331.0" layoutY="200.0" prefHeight="25.0" prefWidth="240.0" />
+      <TextField layoutX="331.0" layoutY="267.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="331.0" layoutY="117.0" prefHeight="17.0" prefWidth="240.0" text="Course Id">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="183.0" prefHeight="17.0" prefWidth="240.0" text="Type">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="250.0" text="Date">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
