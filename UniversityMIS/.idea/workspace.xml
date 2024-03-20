@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/$CONTROLLER_NAME$.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/AddAttendance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/Attendance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/FindTimeTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/Timetable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/timetable1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/timetable2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/AddAttendance.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Attendance.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/FindTimeTable.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Timetable.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mis/university/findAtten.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/FindeAttendance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/Notice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Notice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/findAttendance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/FindeAttendance.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
