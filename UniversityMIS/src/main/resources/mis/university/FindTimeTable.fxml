@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.FindTimeTable">
+   <children>
+      <HBox layoutX="37.0" layoutY="99.0" prefHeight="225.0" prefWidth="254.0">
+         <children>
+            <ImageView fitHeight="253.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/timetable2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="164.0" layoutY="26.0" prefHeight="60.0" prefWidth="272.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="242.0" text="Find Time Table">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="329.0" layoutY="142.0" prefHeight="17.0" prefWidth="149.0" text="Student Id">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="331.0" layoutY="226.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="225.0" style="-fx-background-color: #33DDFF;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField layoutX="329.0" layoutY="175.0" prefHeight="25.0" prefWidth="225.0" />
+   </children>
+</AnchorPane>
