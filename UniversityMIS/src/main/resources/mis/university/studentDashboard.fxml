@@ -3,54 +3,137 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.StudentDashboardController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1500.0" styleClass="primary-color" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <left>
-        <VBox prefHeight="720.0" prefWidth="320.0" style="-fx-background-color: #14806f;" BorderPane.alignment="CENTER">
+        <VBox prefHeight="780.0" prefWidth="328.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
             <children>
-                <AnchorPane minHeight="100.0" prefHeight="160.0" prefWidth="320.0">
+                <VBox alignment="CENTER" prefHeight="277.0" prefWidth="328.0" spacing="10.0">
                     <children>
-                        <Label layoutX="80.0" layoutY="35.0" prefHeight="31.0" prefWidth="160.0" text="University Techmis" textFill="WHITE">
+                        <Circle fill="DODGERBLUE" radius="73.0" stroke="WHITE" strokeWidth="3.0" />
+                        <Label text="GHDB ASHEN" textFill="WHITE">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="Arial" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label text="\@student" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
                             </font>
                         </Label>
                     </children>
-                </AnchorPane>
-                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Dashboard" textFill="WHITE" />
-                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Courses" textFill="WHITE" />
-                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Students" textFill="WHITE" />
-                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Grades" textFill="WHITE" />
-                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Settings" textFill="WHITE" />
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="365.0" prefWidth="328.0">
+                    <children>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Update User.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Update Profile" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Classroom.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Course Details" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Gpa Calculator.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="GPA" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Timetable.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Timetable" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Attendance.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Attendance" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Doctors Bag.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Medical" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Notification.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Notifications" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                    </children></VBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button id="warning-color" mnemonicParsing="false" prefHeight="43.0" prefWidth="92.0" text="Log Out">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
             </children>
         </VBox>
     </left>
-    <center>
-        <GridPane prefHeight="720.0" prefWidth="960.0" BorderPane.alignment="CENTER">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="400.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1280.0" minWidth="10.0" prefWidth="400.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="720.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <AnchorPane GridPane.columnIndex="1">
-                    <children>
-                        <Label layoutX="300.0" layoutY="100.0" text="Welcome to University Techmis Dashboard!" textFill="#14806f">
-                            <font>
-                                <Font name="System Bold" size="24.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </AnchorPane>
-            </children>
-        </GridPane>
-    </center>
 </BorderPane>
