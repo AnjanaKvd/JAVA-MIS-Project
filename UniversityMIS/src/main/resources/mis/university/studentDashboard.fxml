@@ -10,3 +10,23 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.DashboardController">
+    <left>
+        <VBox prefHeight="720.0" prefWidth="320.0" style="-fx-background-color: #14806f;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane minHeight="100.0" prefHeight="160.0" prefWidth="320.0">
+                    <children>
+                        <Label layoutX="80.0" layoutY="35.0" prefHeight="31.0" prefWidth="160.0" text="University Techmis" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Dashboard" textFill="WHITE" />
+                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Courses" textFill="WHITE" />
+                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Students" textFill="WHITE" />
+                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Grades" textFill="WHITE" />
+                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="51.0" prefWidth="320.0" style="-fx-background-color: #265b8e; -fx-background-radius: 0;" text="Settings" textFill="WHITE" />
+            </children>
+        </VBox>
+    </left>
