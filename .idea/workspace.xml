@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="Creating Buttons &amp; Labels">
+    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="Insert Column &amp; Row Constraints">
+      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/StudentDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +61,7 @@
       <workItem from="1709199902578" duration="411000" />
       <workItem from="1709200345728" duration="63000" />
       <workItem from="1709200466551" duration="58000" />
-      <workItem from="1710990198230" duration="1239000" />
+      <workItem from="1710990198230" duration="3843000" />
     </task>
     <task id="LOCAL-00001" summary="Updating Code">
       <option name="closed" value="true" />
@@ -93,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710992993431</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Insert Column &amp; Row Constraints">
+      <option name="closed" value="true" />
+      <created>1710993130303</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710993130303</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +126,7 @@
     <MESSAGE value="importing libraries" />
     <MESSAGE value="creating Controller" />
     <MESSAGE value="Creating Buttons &amp; Labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating Buttons &amp; Labels" />
+    <MESSAGE value="Insert Column &amp; Row Constraints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insert Column &amp; Row Constraints" />
   </component>
 </project>
