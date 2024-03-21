@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="Creating Controller">
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/images/Attendance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/images/Classroom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/images/Doctors Bag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/images/Gpa Calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/images/Update User.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="Working on interface">
+      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JAVA-MIS-Project-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JAVA-MIS-Project-.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/StudentDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/StudentDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,23 +34,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ashen&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/iTEC/Desktop/Java new/JAVA-MIS-Project-&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.JavaProject.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ashen",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/iTEC/Desktop/Java new/JAVA-MIS-Project-",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iTEC\Desktop\Java new\JAVA-MIS-Project-\UniversityMIS\src\main\resources\images" />
@@ -82,7 +85,8 @@
       <workItem from="1710996477939" duration="124000" />
       <workItem from="1710996621610" duration="63000" />
       <workItem from="1711003178361" duration="738000" />
-      <workItem from="1711003936884" duration="4842000" />
+      <workItem from="1711003936884" duration="6767000" />
+      <workItem from="1711013253057" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="Updating Code">
       <option name="closed" value="true" />
@@ -132,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710995701609</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working on interface">
+      <option name="closed" value="true" />
+      <created>1711011561844</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711011561844</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +169,7 @@
     <MESSAGE value="Creating Buttons &amp; Labels" />
     <MESSAGE value="Insert Column &amp; Row Constraints" />
     <MESSAGE value="Creating Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating Controller" />
+    <MESSAGE value="Working on interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on interface" />
   </component>
 </project>

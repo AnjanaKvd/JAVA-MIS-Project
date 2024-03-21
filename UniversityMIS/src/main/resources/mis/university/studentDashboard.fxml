@@ -35,6 +35,7 @@
                         <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+
                                     <image>
                                         <Image url="@../../images/Update User.png" />
                                     </image>

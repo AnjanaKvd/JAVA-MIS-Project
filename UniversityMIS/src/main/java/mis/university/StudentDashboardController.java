@@ -1,48 +1,86 @@
-package mis.university;
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 
 public class StudentDashboardController {
 
     @FXML
-    private void manageProfile() {
-        // Implement logic to manage user profiles
-        showAlert("Manage User Profiles clicked");
-    }
+    private Button updateProfileButton;
 
     @FXML
-    private void ViewCourses() {
-        // Implement logic to manage courses
-        showAlert("Manage Courses clicked");
-    }
-
-    private void ViewAttendance() {
-        // Implement logic to manage courses
-        showAlert("Manage Courses clicked");
-    }
-
-    private void ViewGPA() {
-        // Implement logic to manage courses
-        showAlert("Manage Courses clicked");
-    }
-    @FXML
-    private void ViewNotices() {
-        // Implement logic to manage notices
-        showAlert("Manage Notices clicked");
-    }
+    private Button courseDetailsButton;
 
     @FXML
-    private void ViewTimetables() {
-        // Implement logic to manage timetables
-        showAlert("Manage Timetables clicked");
+    private Button gpaButton;
+
+    @FXML
+    private Button timetableButton;
+
+    @FXML
+    private Button attendanceButton;
+
+    @FXML
+    private Button medicalButton;
+
+    @FXML
+    private Button notificationsButton;
+
+
+    @FXML
+    private void handleUpdateProfileButtonClick() {
+
+        System.out.println("Update Profile button clicked");
     }
 
-    private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+
+    @FXML
+    private void handleCourseDetailsButtonClick() {
+
+        System.out.println("Course Details button clicked");
+    }
+
+
+    @FXML
+    private void handleGPAButtonClick() {
+
+        System.out.println("GPA button clicked");
+    }
+
+
+    @FXML
+    private void handleTimetableButtonClick() {
+
+        System.out.println("Timetable button clicked");
+    }
+
+
+    @FXML
+    private void handleAttendanceButtonClick() {
+
+        System.out.println("Attendance button clicked");
+    }
+
+
+    @FXML
+    private void handleMedicalButtonClick() {
+
+        System.out.println("Medical button clicked");
+    }
+
+
+    @FXML
+    private void handleNotificationsButtonClick() {
+
+        System.out.println("Notifications button clicked");
+    }
+
+
+    @FXML
+    private void handleLogOutButtonClick() {
+
+        System.out.println("Log Out button clicked");
+
+        public static void main(String [] args){
+
+        }
     }
 }
