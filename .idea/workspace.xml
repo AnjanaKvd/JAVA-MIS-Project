@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UniversityMIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="First Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +60,14 @@
       <workItem from="1709200345728" duration="63000" />
       <workItem from="1709200466551" duration="58000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1711099477197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711099477197</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,5 +75,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>
