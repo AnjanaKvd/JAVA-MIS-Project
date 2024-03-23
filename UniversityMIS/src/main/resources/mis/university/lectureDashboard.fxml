@@ -3,80 +3,247 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="IMAGE_VIEW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.lecture">
-    <children>
-        <Label alignment="CENTER" layoutX="405.0" layoutY="11.0" prefHeight="57.0" prefWidth="489.0" text="Dashboard-Leacture" textAlignment="CENTER">
-            <font>
-                <Font size="48.0" />
-            </font>
-        </Label>
-        <Button layoutX="31.0" layoutY="62.0" mnemonicParsing="false" onAction="#gotopage2" prefHeight="39.0" prefWidth="161.0" text="Goto page2" />
-        <TextField fx:id="mytextfield" layoutX="57.0" layoutY="107.0" prefHeight="32.0" prefWidth="86.0" text="16" />
-        <Button layoutX="50.0" layoutY="180.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="109.0" text="Submit" />
-      <TextField fx:id="mytextfield1" layoutX="77.0" layoutY="255.0" prefHeight="32.0" prefWidth="109.0" text="16" />
-      <ImageView fitHeight="340.0" fitWidth="485.0" layoutX="434.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/19197753.jpg" />
-         </image>
-      </ImageView>
-      <ImageView cache="true" fitHeight="92.0" fitWidth="115.0" layoutX="96.0" layoutY="493.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../images/lec/couse.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="104.0" fitWidth="103.0" layoutX="432.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/lec/notice.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="112.0" layoutX="747.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true" smooth="false">
-         <image>
-            <Image url="@../../images/lec/profile.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="99.0" fitWidth="96.0" layoutX="1079.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/lec/serch.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="102.0" layoutY="599.0" prefHeight="53.0" prefWidth="108.0" text="Course" textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="450.0" layoutY="601.0" prefHeight="53.0" prefWidth="108.0" text="Notice" textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="776.0" layoutY="598.0" prefHeight="53.0" prefWidth="108.0" text="Profile" textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="1053.0" layoutY="595.0" prefHeight="54.0" prefWidth="145.0" text="Serch Stuent" textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="41.0" fitWidth="51.0" layoutX="1189.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/lec/logout.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="1181.0" layoutY="86.0" prefHeight="27.0" prefWidth="57.0" text="Logout">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-    </children>
-   <opaqueInsets>
-      <Insets />
-   </opaqueInsets>
-</AnchorPane>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1500.0" styleClass="primary-color" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <left>
+        <VBox prefHeight="780.0" prefWidth="328.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="277.0" prefWidth="328.0" spacing="10.0">
+                    <children>
+                        <Circle fill="DODGERBLUE" radius="73.0" stroke="WHITE" strokeWidth="3.0" />
+                        <Label text="dilshan" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label text="\@lecture" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="365.0" prefWidth="328.0">
+                    <children>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Dashboard.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Dashboard" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Users.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="User Manage" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Course.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Course Manage" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Timetable.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Date/Time Manage" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                        <HBox id="hbox" alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="328.0" spacing="20.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Notification.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Notifications" textFill="WHITE" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </HBox>
+                    </children></VBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button id="warning-color" mnemonicParsing="false" prefHeight="43.0" prefWidth="92.0" text="Log Out">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="134.0" prefWidth="1172.0" spacing="50.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="134.0" prefWidth="135.0" spacing="10.0" styleClass="secondary-color">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/profileicon.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Profile" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label text="500" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="134.0" prefWidth="135.0" spacing="10.0" styleClass="secondary-color">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/Courses.png" />
+                                    </image>
+                                </ImageView>
+                                <Label text="Courses" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label text="20" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                  <VBox alignment="CENTER" layoutX="343.0" layoutY="10.0" prefHeight="134.0" prefWidth="135.0" spacing="10.0" styleClass="secondary-color">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/exam.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Exams" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="500" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="61.0" prefWidth="1172.0" />
+            <HBox prefHeight="134.0" prefWidth="135.0">
+               <children>
+                  <VBox prefHeight="134.0" prefWidth="330.0" />
+                  <VBox alignment="CENTER" prefHeight="134.0" prefWidth="135.0" spacing="10.0" styleClass="secondary-color">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/notices.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Notices" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label text="10" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="134.0" prefWidth="57.0" />
+                  <VBox alignment="CENTER" prefHeight="134.0" prefWidth="135.0" spacing="10.0" styleClass="secondary-color">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Student.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Students" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label text="500" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            </children>
+            <padding>
+                <Insets top="50.0" />
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>
