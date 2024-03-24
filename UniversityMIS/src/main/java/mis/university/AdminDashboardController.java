@@ -18,14 +18,14 @@ public class AdminDashboardController {
 
     @FXML
     private void initialize(){
-        dashboardBox.setOnMouseClicked(event -> openDashboardPage());
-        usersBox.setOnMouseClicked(event -> openSettingsPage());
-        coursesBox.setOnMouseClicked(event -> openPasswordsPage());
-        timeBox.setOnMouseClicked(event -> openInfoPage());
-        notificationBox.setOnMouseClicked(event -> openInfoPage());
-
-        editProfileButton.setOnAction(event -> updateProfileImage());
-        logoutButton.setOnAction(event -> logout());
-        saveChangesButton.setOnAction(event -> saveChanges());
+//        dashboardBox.setOnMouseClicked(event -> openDashboardPage());
+//        usersBox.setOnMouseClicked(event -> openSettingsPage());
+//        coursesBox.setOnMouseClicked(event -> openPasswordsPage());
+//        timeBox.setOnMouseClicked(event -> openInfoPage());
+//        notificationBox.setOnMouseClicked(event -> openInfoPage());
+//
+//        editProfileButton.setOnAction(event -> updateProfileImage());
+//        logoutButton.setOnAction(event -> logout());
+//        saveChangesButton.setOnAction(event -> saveChanges());
     }
 }
