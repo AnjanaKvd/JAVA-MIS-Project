@@ -1,3 +1,5 @@
+package mis.university;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -79,8 +81,6 @@ public class StudentDashboardController {
 
         System.out.println("Log Out button clicked");
 
-        public static void main(String [] args){
 
-        }
     }
 }

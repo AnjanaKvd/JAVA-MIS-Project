@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36968196-4777-4b48-917b-940ab85131b3" name="Changes" comment="Working on interface">
-      <change afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JAVA-MIS-Project-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JAVA-MIS-Project-.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/StudentDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/mis/university/StudentDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/resources/mis/university/studentDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/UniversityMIS/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
     "git-widget-placeholder": "ashen",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/iTEC/Desktop/Java new/JAVA-MIS-Project-",
+    "last_opened_file_path": "C:/Users/iTEC/Desktop/Java new",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +61,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
+        <option value="jdk-22-openjdk-22-f644763e9732-8c5c9ae5" />
       </set>
     </attachedChunks>
   </component>
@@ -87,6 +84,7 @@
       <workItem from="1711003178361" duration="738000" />
       <workItem from="1711003936884" duration="6767000" />
       <workItem from="1711013253057" duration="2179000" />
+      <workItem from="1711278121817" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="Updating Code">
       <option name="closed" value="true" />
