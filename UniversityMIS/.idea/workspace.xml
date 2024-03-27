@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1172f27-7fc3-41f3-8000-17ce17c5b876" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/java/university/misv2/universitymisv2/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Attendance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/StudentDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/StudentDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,28 +29,33 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2e96q459LS0G0GC9Wu0uWIlQEGi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "anjana",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anjana&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -67,6 +72,10 @@
       <option name="presentableId" value="Default" />
       <updated>1711304635970</updated>
       <workItem from="1711304639125" duration="138000" />
+      <workItem from="1711305154936" duration="88000" />
+      <workItem from="1711376227799" duration="478000" />
+      <workItem from="1711432057737" duration="598000" />
+      <workItem from="1711562523660" duration="1303000" />
     </task>
     <servers />
   </component>
