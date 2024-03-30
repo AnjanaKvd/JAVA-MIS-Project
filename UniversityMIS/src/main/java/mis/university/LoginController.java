@@ -93,7 +93,7 @@ public class LoginController implements Initializable {
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
-                fxmlPath = "profile.fxml";
+                fxmlPath = "adminDashboard.fxml";
             } else if ("student".equals(userType)) {
                 fxmlPath = "studentDashboard.fxml";
             } else {

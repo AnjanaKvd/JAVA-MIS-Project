@@ -2,38 +2,30 @@ package mis.university;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.HBox;
 
 public class AdminDashboardController {
+    @FXML
+    private HBox dashboardBox;
+    @FXML
+    private HBox usersBox;
+    @FXML
+    private HBox coursesBox;
+    @FXML
+    private HBox timeBox;
+    @FXML
+    private HBox notificationBox;
 
     @FXML
-    private void manageUserProfiles() {
-        // Implement logic to manage user profiles
-        showAlert("Manage User Profiles clicked");
-    }
-
-    @FXML
-    private void manageCourses() {
-        // Implement logic to manage courses
-        showAlert("Manage Courses clicked");
-    }
-
-    @FXML
-    private void manageNotices() {
-        // Implement logic to manage notices
-        showAlert("Manage Notices clicked");
-    }
-
-    @FXML
-    private void manageTimetables() {
-        // Implement logic to manage timetables
-        showAlert("Manage Timetables clicked");
-    }
-
-    private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    private void initialize(){
+//        dashboardBox.setOnMouseClicked(event -> openDashboardPage());
+//        usersBox.setOnMouseClicked(event -> openSettingsPage());
+//        coursesBox.setOnMouseClicked(event -> openPasswordsPage());
+//        timeBox.setOnMouseClicked(event -> openInfoPage());
+//        notificationBox.setOnMouseClicked(event -> openInfoPage());
+//
+//        editProfileButton.setOnAction(event -> updateProfileImage());
+//        logoutButton.setOnAction(event -> logout());
+//        saveChangesButton.setOnAction(event -> saveChanges());
     }
 }

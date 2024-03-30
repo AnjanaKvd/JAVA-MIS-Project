@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mis.university.Attendance">
+   <children>
+      <HBox layoutX="119.0" layoutY="36.0" prefHeight="52.0" prefWidth="224.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="146.0" text="Attendance">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="59.0" layoutY="88.0" prefHeight="247.0" prefWidth="190.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Attendance2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Button layoutX="343.0" layoutY="118.0" mnemonicParsing="false" onAction="#addatendance" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #33DDFF;" text="Add Attendance" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="343.0" layoutY="166.0" mnemonicParsing="false" onAction="#findattendance" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #33DDFF;" text="Find Attendance" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
