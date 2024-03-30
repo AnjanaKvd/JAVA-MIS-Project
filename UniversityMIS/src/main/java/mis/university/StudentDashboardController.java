@@ -79,8 +79,8 @@ public class StudentDashboardController {
 
         System.out.println("Log Out button clicked");
 
-        public static void main(String [] args){
-
-        }
+//        public static void main(String [] args){
+//
+//        }
     }
 }

@@ -4,43 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mis/university/FindeAttendance.java" afterDir="false" />
+    <list default="true" id="f1172f27-7fc3-41f3-8000-17ce17c5b876" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/java/university/misv2/universitymisv2/databaseConnecter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/TecDashbord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/Notice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/Notice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mis/university/findAttendance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mis/university/FindeAttendance.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;AnjanaKvd&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="5b1c2a4b-2afa-4f72-871d-54b4283d6bd2" />
-        <option name="url" value="https://github.com/AnjanaKvd/JAVA-MIS-Project-.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -53,121 +30,55 @@
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2bxRJp53ddoAbR9c152WnBB4Y0s" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2e96q459LS0G0GC9Wu0uWIlQEGi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;maheshika&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anjana&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;E:/JAVA-MIS-Project-/UniversityMIS/src/main/java/mis/university&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/test&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources\mis\university" />
-      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\java\mis\university" />
-      <recent name="F:\GitHub\Repos\JAVA-MIS-Project-\UniversityMIS\src\main\resources" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="405b10ed-10d7-4f7a-98f0-e36fa478f6bf" name="Changes" comment="" />
-      <created>1707154677742</created>
+      <changelist id="f1172f27-7fc3-41f3-8000-17ce17c5b876" name="Changes" comment="" />
+      <created>1711304635970</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707154677742</updated>
-      <workItem from="1707154678808" duration="1663000" />
-      <workItem from="1707188141675" duration="386000" />
-      <workItem from="1707203620123" duration="7938000" />
-      <workItem from="1707755926598" duration="9574000" />
-      <workItem from="1708077405515" duration="3228000" />
-      <workItem from="1708099538789" duration="6584000" />
-      <workItem from="1708210092044" duration="194000" />
-      <workItem from="1708210309610" duration="70000" />
-      <workItem from="1708210398625" duration="4686000" />
-      <workItem from="1708236028903" duration="2774000" />
-      <workItem from="1708359459420" duration="4222000" />
-      <workItem from="1708426726037" duration="3978000" />
-      <workItem from="1709200475490" duration="4321000" />
-      <workItem from="1710147294998" duration="808000" />
-      <workItem from="1710148166186" duration="955000" />
-      <workItem from="1710937635323" duration="174000" />
+      <updated>1711304635970</updated>
+      <workItem from="1711304639125" duration="138000" />
+      <workItem from="1711305154936" duration="88000" />
+      <workItem from="1711376227799" duration="478000" />
+      <workItem from="1711432057737" duration="598000" />
+      <workItem from="1711562523660" duration="1303000" />
+      <workItem from="1711649854162" duration="199000" />
+      <workItem from="1711792834905" duration="11000" />
     </task>
-    <task id="LOCAL-00001" summary="Updated">
-      <option name="closed" value="true" />
-      <created>1708083871420</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1708083871420</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Updated">
-      <option name="closed" value="true" />
-      <created>1709636680038</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1709636680038</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Updated">
-      <option name="closed" value="true" />
-      <created>1709638768463</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1709638768463</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
 </project>

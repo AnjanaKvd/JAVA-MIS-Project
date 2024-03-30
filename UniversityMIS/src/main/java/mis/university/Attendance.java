@@ -3,7 +3,7 @@ package mis.university;
 import javafx.fxml.FXML;
 
 public class Attendance {
-    @FXML;
+    @FXMLs
     private void addatendance(){
         System.out.println("mali");
     }

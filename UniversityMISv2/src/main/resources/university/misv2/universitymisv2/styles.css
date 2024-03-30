@@ -1,0 +1,14 @@
+#signinlbl{
+    -fx-font-family: "Poppins Medium";
+    -fx-font-size: 32;
+}
+#usernamelbl{
+    -fx-font-family: "Poppins";
+    -fx-font-size: 16;
+}
+usernamein{
+
+}
+passwdlbl{
+
+}
