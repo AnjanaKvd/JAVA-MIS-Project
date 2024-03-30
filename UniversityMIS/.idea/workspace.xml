@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1172f27-7fc3-41f3-8000-17ce17c5b876" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/java/university/misv2/universitymisv2/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/java/university/misv2/universitymisv2/databaseConnecter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Attendance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mis/university/StudentDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mis/university/StudentDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Attendance.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../UniversityMISv2/src/main/resources/university/misv2/universitymisv2/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +73,8 @@
       <workItem from="1711376227799" duration="478000" />
       <workItem from="1711432057737" duration="598000" />
       <workItem from="1711562523660" duration="1303000" />
+      <workItem from="1711649854162" duration="199000" />
+      <workItem from="1711792834905" duration="11000" />
     </task>
     <servers />
   </component>
