@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.StudentDashboardController">
+    <children>
+        <VBox spacing="10.0" prefWidth="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <Label text="Dashboard" />
+            <Button text="Home" />
+            <Button text="Grades" />
+            <Button text="Schedule" />
+            <Button text="Assignments" />
+            <Button text="Messages" />
+            <Button text="Settings" />
+            <Button text="Help" />
+            <Button text="Logout" />
+            <HBox>
+                <ImageView fitHeight="50.0" fitWidth="50.0">
+                    <image>
+                        <Image url="@your_image_path_here" />
+                    </image>
+                </ImageView>
+                <Label text="Your Name" />
+            </HBox>
+        </VBox>
+
+        <VBox prefWidth="450.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <HBox spacing="10.0">
+                <Label text="Component 1" />
+                <Label text="Component 2" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Label text="Component 3" />
+                <Label text="Component 4" />
+            </HBox>
+
+            <HBox spacing="10.0">
+                <Label text="Component 5" />
+                <Label text="Component 6" />
+            </HBox>
+
+            <ListView prefHeight="200.0" />
+        </VBox>
+    </children>
+</AnchorPane>
