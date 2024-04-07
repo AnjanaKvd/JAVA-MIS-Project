@@ -1,14 +1,45 @@
-#signinlbl{
-    -fx-font-family: "Poppins Medium";
-    -fx-font-size: 32;
+#signinLabel {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 2em; /* Equivalent to 32px */
+    -fx-text-fill: #333333;
 }
-#usernamelbl{
-    -fx-font-family: "Poppins";
-    -fx-font-size: 16;
-}
-usernamein{
 
+#usernameLabel {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 1em;
+    -fx-text-fill: #555555;
 }
-passwdlbl{
 
+#loginPane {
+    -fx-background-image: url("./images/loginBackground.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+#loginBox{
+    -fx-background-color: white;
+    -fx-border-style: none;
+    -fx-border-radius: 20em;
+}
+
+#usernameField {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 1em; /* Equivalent to 16px */
+    -fx-pref-height: 3.5em; /* Set preferred height to 56px */
+    -fx-pref-width: 22.5em; /* Set preferred width to 459px */
+    -fx-background-color: #f2f2f2; /* Light gray background color */
+    -fx-border-color: #cccccc; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+    -fx-padding: 0.5em; /* Add some padding */
+}
+
+#passwordLabel {
+    /* Add styling for PasswordField if needed */
+}
+#loginBox {
+    -fx-background-color: white;
+    -fx-border-style: none;
+    -fx-border-radius: 20px; /* Apply curved edges */
+    -fx-background-radius: 20px; /* Apply curved edges to the background */
 }
