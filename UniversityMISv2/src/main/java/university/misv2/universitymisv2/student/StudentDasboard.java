@@ -1,6 +1,8 @@
+package university.misv2.universitymisv2.student;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import java.sql.*;
 
 class StudentDashboard {
 
