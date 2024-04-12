@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
@@ -9,19 +9,20 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.StudentDashboardController">
-    <children>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@StudentStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
         <VBox spacing="10.0" prefWidth="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
             <Label text="Dashboard" />
-            <Button text="Home" />
-            <Button text="Grades" />
-            <Button text="Schedule" />
-            <Button text="Assignments" />
-            <Button text="Messages" />
-            <Button text="Settings" />
-            <Button text="Help" />
-            <Button text="Logout" />
+            <Button text="Home" styleClass="dashboard-button" />
+            <Button text="Grades" styleClass="dashboard-button" />
+            <Button text="Schedule" styleClass="dashboard-button" />
+            <Button text="Assignments" styleClass="dashboard-button" />
+            <Button text="Messages" styleClass="dashboard-button" />
+            <Button text="Settings" styleClass="dashboard-button" />
+            <Button text="Help" styleClass="dashboard-button" />
+            <Button text="Logout" styleClass="dashboard-button" />
             <HBox>
                 <ImageView fitHeight="50.0" fitWidth="50.0">
                     <image>
@@ -31,8 +32,10 @@
                 <Label text="Your Name" />
             </HBox>
         </VBox>
+    </center>
 
-        <VBox prefWidth="450.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+    <right>
+        <VBox prefWidth="450.0" spacing="20">
             <HBox spacing="10.0">
                 <Label text="Component 1" />
                 <Label text="Component 2" />
@@ -50,5 +53,5 @@
 
             <ListView prefHeight="200.0" />
         </VBox>
-    </children>
-</AnchorPane>
+    </right>
+</BorderPane>

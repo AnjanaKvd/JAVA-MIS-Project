@@ -1,0 +1,14 @@
+.dashboard-button {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-border: none;
+    -fx-color: white;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.dashboard-button:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
