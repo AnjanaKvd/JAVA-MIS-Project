@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 
