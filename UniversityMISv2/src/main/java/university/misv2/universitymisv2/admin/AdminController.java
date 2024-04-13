@@ -1,7 +1,11 @@
 package university.misv2.universitymisv2.admin;
 
+import javafx.animation.RotateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class AdminController {
 
@@ -11,12 +15,23 @@ public class AdminController {
     @FXML
     private Label profileRoleLabel;
 
-    // You can add more FXML elements and event handlers here as needed
+    @FXML
+    private ImageView closeBtn;
 
     @FXML
     private void initialize() {
-        // Initialize controller
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setAutoReverse(false);
+        rotateTransition.setCycleCount(1);
+        closeBtn.setOnMouseEntered(event -> rotateTransition.play());
+        closeBtn.setOnMouseExited(event -> rotateTransition.stop());
+        closeBtn.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
     }
 
-    // You can add more methods here as needed
+    @FXML
+    private void handleCloseButtonAction() {
+        Stage stage = (Stage) closeBtn.getScene().getWindow();
+        stage.close();
+    }
 }

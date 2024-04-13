@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -104,7 +106,7 @@
                         </Label>
                     </HBox>
                 </VBox>
-                <VBox alignment="BOTTOM_CENTER" prefHeight="309.0" prefWidth="343.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                <VBox alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
 
                     <HBox id="profileSection" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
                         <padding>
@@ -145,4 +147,38 @@
             </children>
         </VBox>
     </left>
+   <top>
+      <HBox id="title-bar" prefHeight="35.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="1723.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="-0.54" contrast="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Label text="Admin Dashboard">
+                     <font>
+                        <Font name="Poppins Regular" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="35.0" fitWidth="36.0" nodeOrientation="INHERIT" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../images/Close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

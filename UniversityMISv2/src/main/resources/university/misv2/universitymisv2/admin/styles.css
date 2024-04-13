@@ -1,3 +1,6 @@
+#title-bar{
+    -fx-background-color: white;
+}
 .main-background {
     -fx-background-color: linear-gradient(to top, #F5F5F5, #e4ffee);
 }

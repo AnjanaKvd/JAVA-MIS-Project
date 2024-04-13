@@ -8,5 +8,10 @@ module university.misv2.universitymisv2 {
     requires java.sql;
 
     opens university.misv2.universitymisv2 to javafx.fxml;
+    opens university.misv2.universitymisv2.admin to javafx.fxml;
+    opens university.misv2.universitymisv2.student to javafx.fxml;
+    opens university.misv2.universitymisv2.technicalOfficer to javafx.fxml;
+    opens university.misv2.universitymisv2.lecturer to javafx.fxml;
+
     exports university.misv2.universitymisv2;
 }
