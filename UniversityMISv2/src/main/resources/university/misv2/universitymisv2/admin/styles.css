@@ -1,0 +1,37 @@
+#title-bar{
+    -fx-background-color: white;
+}
+.main-background {
+    -fx-background-color: linear-gradient(to top, #F5F5F5, #e4ffee);
+}
+
+.dashboard-label {
+    -fx-text-fill: #333333;
+}
+
+.dashboard-option-selected {
+    -fx-background-color: #5932EA;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+}
+
+.dashboard-option {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-text-fill: #9197B3;
+}
+
+.dashboard-option:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-cursor: hand;
+}
+#profileSection{
+    -fx-cursor: hand;
+}
+#profileNameLabel {
+    -fx-text-fill: #333333;
+}
+
+#profileRoleLabel {
+    -fx-text-fill: #757575;
+}

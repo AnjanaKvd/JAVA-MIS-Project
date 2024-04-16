@@ -1,4 +1,4 @@
-# JAVA-MIS-Project-
+# JAVA-MIS-Project
 Title: Java University Student Management Information System (Java-SIS) Project
 
 About:

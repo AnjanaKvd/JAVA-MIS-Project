@@ -1,19 +1,19 @@
-package university.misv2.universitymisv2;
+package university.misv2.universitymisv2.admin;
 
 import javafx.animation.RotateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.InputStream;
-import java.net.URL;
-import java.util.ResourceBundle;
+public class AdminController {
 
-public class LoginController {
+    @FXML
+    private Label profileNameLabel;
+
+    @FXML
+    private Label profileRoleLabel;
 
     @FXML
     private ImageView closeBtn;

@@ -1,85 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.LoginController">
    <center>
-      <AnchorPane maxHeight="200.0" maxWidth="500.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER_LEFT" layoutX="1.0" prefHeight="730.0" prefWidth="539.0">
-               <children>
-                  <Label id="signinlbl" stylesheets="@styles.css" text="Sign in">
+      <AnchorPane id="centerPane" maxHeight="200.0" maxWidth="500.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <VBox id="loginBox" alignment="CENTER_LEFT" layoutX="1.0" layoutY="-1.0" prefHeight="732.0" prefWidth="547.0">
+            <padding>
+               <Insets left="50.0" />
+            </padding>
+            <Label id="signinLabel" text="Sign in">
+               <font>
+                  <Font name="Poppins Medium" size="32.0" />
+               </font>
+            </Label>
+            <VBox id="inputBox" prefHeight="203.0" prefWidth="486.0">
+               <VBox id="usernameBox" prefHeight="200.0" prefWidth="100.0">
+                  <Label id="usernameLabel" text="Username">
                      <font>
-                        <Font name="Poppins Medium" size="32.0" />
+                        <Font name="Poppins Regular" size="16.0" />
                      </font>
                   </Label>
-                  <VBox prefHeight="203.0" prefWidth="486.0">
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Label id="usernamelbl" text="Username">
-                                 <font>
-                                    <Font name="Poppins Regular" size="16.0" />
-                                 </font></Label>
-                              <TextField id="usernamein" minHeight="56.0" minWidth="459.0">
-                                 <font>
-                                    <Font name="Poppins Regular" size="52.0" />
-                                 </font></TextField>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Label id="passwordlbl" text="Password">
-                                       <font>
-                                          <Font name="Poppins Regular" size="16.0" />
-                                       </font></Label>
-                                    <Hyperlink id="hidelbl" text="Hide">
-                                       <font>
-                                          <Font name="Poppins Regular" size="18.0" />
-                                       </font></Hyperlink>
-                                 </children>
-                              </HBox>
-                              <PasswordField id="passwordlbl" />
-                           </children>
-                        </VBox>
-                        <Button id="signinbtn" mnemonicParsing="false" text="Sign in" />
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <CheckBox id="remmechk" mnemonicParsing="false">
-                                 <graphic>
-                                    <Label text="Remember me" />
-                                 </graphic>
-                              </CheckBox>
-                              <Hyperlink id="needhelplbl" text="Need help?" />
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Label id="fgtpswlbl" text="Forgot password?" />
-                        <Hyperlink id="fgtpswlnk" text="Reset password" />
-                     </children>
+                  <TextField id="usernameField" maxWidth="459.0" minHeight="56.0" minWidth="200.0" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font name="Poppins Regular" size="16.0" />
+                     </font>
+                  </TextField>
+               </VBox>
+               <VBox id="passwordBox" prefHeight="200.0" prefWidth="100.0">
+                  <HBox id="passwordHBox" prefHeight="100.0" prefWidth="200.0">
+                     <Label id="passwordLabel" text="Password">
+                        <font>
+                           <Font name="Poppins Regular" size="16.0" />
+                        </font>
+                     </Label>
+                     <Hyperlink id="hideLink" text="Hide">
+                        <font>
+                           <Font name="Poppins Regular" size="18.0" />
+                        </font>
+                     </Hyperlink>
                   </HBox>
-               </children>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
+                  <PasswordField id="passwordField" maxHeight="56.0" maxWidth="459.0" minHeight="56.0" prefHeight="56.0" />
+               </VBox>
+               <Button id="signInButton" mnemonicParsing="false" text="Sign in" />
+               <HBox id="checkBoxBox" prefHeight="100.0" prefWidth="200.0">
+                  <CheckBox id="rememberMeCheckBox" mnemonicParsing="false">
+                     <graphic>
+                        <Label text="Remember me" />
+                     </graphic>
+                  </CheckBox>
+                  <Hyperlink id="needHelpLink" text="Need help?" />
+               </HBox>
             </VBox>
-         </children>
+            <HBox id="forgotPasswordBox" prefHeight="100.0" prefWidth="200.0">
+               <Label id="forgotPasswordLabel" text="Forgot password?" />
+               <Hyperlink id="resetPasswordLink" text="Reset password" />
+            </HBox>
+            <effect>
+               <DropShadow height="63.11" radius="47.43000000000001" spread="0.16" width="128.61" />
+            </effect>
+         </VBox>
+         <VBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="547.0">
+            <padding>
+               <Insets right="20.0"/>
+            </padding>
+            <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="40.0" fitWidth="36.0"
+                       onMouseClicked="#handleCloseButtonAction" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND"/>
+               </cursor>
+               <Image url="@images/Close.png"/>
+            </ImageView>
+         </VBox>
       </AnchorPane>
    </center>
 </BorderPane>
