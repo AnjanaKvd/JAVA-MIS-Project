@@ -1,25 +1,44 @@
 package university.misv2.universitymisv2.student;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.sql.*;
-
-class StudentDashboard {
+import javafx.scene.control.Label;
+public class StudentDashboard {
 
    @FXML
-   private Button CloseButton;
+   private Label dashboardLabel;
+    @FXML
+   private Label AttendanceLabel;
+    @FXML
+    private Label MedicalLabel;
+    @FXML
+    private Label CourseLabel;
+    @FXML
+    private Label GradesLabel;
+    @FXML
+    private Label TimetableLabel;
+    @FXML
+    private Label NotificationLabel;
+    @FXML
+    private Label HelpLabel;
 
+
+    @FXML
     private void updateProfile() {
         // Implement updating contact details and profile picture
         // Show appropriate UI components for updating profile
     }
 
+    @FXML
+    private void handleDashboardClick() {
+        // Implement updating contact details and profile picture
+        // Show appropriate UI components for updating profile
+    }
+
+    @FXML
     private void viewAttendance() {
 
             try {
@@ -37,6 +56,7 @@ class StudentDashboard {
         }
     }
 
+    @FXML
     private void viewMedicalDetails() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("viewMedicalDetails.fxml"));
@@ -52,7 +72,7 @@ class StudentDashboard {
 
         }
     }
-
+    @FXML
     private void viewCourseDetails() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("viewCourseDetails.fxml"));
@@ -68,7 +88,7 @@ class StudentDashboard {
 
         }
     }
-
+    @FXML
     private void viewGrades() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("viewGrades.fxml"));
@@ -84,7 +104,7 @@ class StudentDashboard {
 
         }
     }
-
+    @FXML
     private void viewTimetable() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("viewTimetable.fxml"));
@@ -100,7 +120,7 @@ class StudentDashboard {
 
         }
     }
-
+    @FXML
     private void viewNotices() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("viewNotices.fxml"));
@@ -116,13 +136,13 @@ class StudentDashboard {
 
         }
     }
-
-    private void showAlert(String title, String headerText, String contentText) {
+    @FXML
+    private void showAlert() {
         // Helper method to display an alert dialog
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(headerText);
-        alert.setContentText(contentText);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("This is an alert message!");
         alert.showAndWait();
     }
 }
