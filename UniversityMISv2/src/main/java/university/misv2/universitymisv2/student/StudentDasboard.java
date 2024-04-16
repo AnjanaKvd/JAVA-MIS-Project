@@ -1,52 +1,19 @@
 package university.misv2.universitymisv2.student;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
 import java.sql.*;
 
 class StudentDashboard {
 
-    @FXML
-    void handleUpdateProfileButton(ActionEvent event) {
-        // Handle updating contact details and profile picture
-        updateProfile();
-    }
-
-    @FXML
-    void handleAttendanceButton(ActionEvent event) {
-        // Handle viewing attendance details
-        viewAttendance();
-    }
-
-    @FXML
-    void handleMedicalButton(ActionEvent event) {
-        // Handle viewing medical details
-        viewMedicalDetails();
-    }
-
-    @FXML
-    void handleCourseDetailsButton(ActionEvent event) {
-        // Handle viewing course details
-        viewCourseDetails();
-    }
-
-    @FXML
-    void handleGradesButton(ActionEvent event) {
-        // Handle viewing grades and GPA
-        viewGrades();
-    }
-
-    @FXML
-    void handleTimetableButton(ActionEvent event) {
-        // Handle viewing timetables
-        viewTimetable();
-    }
-
-    @FXML
-    void handleNoticesButton(ActionEvent event) {
-        // Handle viewing notices
-        viewNotices();
-    }
+   @FXML
+   private Button CloseButton;
 
     private void updateProfile() {
         // Implement updating contact details and profile picture
@@ -54,33 +21,100 @@ class StudentDashboard {
     }
 
     private void viewAttendance() {
-        // Implement viewing attendance details
-        // You can display attendance data in a table or any other suitable format
+
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("viewattendance.fxml"));
+                Stage registerStage = new Stage();
+                registerStage.setScene(new Scene(root, 600, 400));
+                registerStage.show();
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+
+
+        }
     }
 
     private void viewMedicalDetails() {
-        // Implement viewing medical details
-        // You can display medical details in a separate window or dialog
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("viewMedicalDetails.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private void viewCourseDetails() {
-        // Implement viewing course details
-        // You can display course details in a table or any other suitable format
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("viewCourseDetails.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private void viewGrades() {
-        // Implement viewing grades and GPA
-        // You can display grades and GPA in a separate window or dialog
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("viewGrades.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private void viewTimetable() {
-        // Implement viewing timetables
-        // You can display timetables in a separate window or dialog
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("viewTimetable.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private void viewNotices() {
-        // Implement viewing notices
-        // You can display notices in a separate window or dialog
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("viewNotices.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+
+
+        }
     }
 
     private void showAlert(String title, String headerText, String contentText) {
