@@ -3,9 +3,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -13,172 +15,267 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
 <BorderPane id="loginPane" maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" styleClass="main-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.admin.AdminController">
     <left>
-        <VBox prefHeight="1024.0" prefWidth="343.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-            <children>
-                <HBox id="dashboardHeader" alignment="CENTER" prefHeight="98.0" prefWidth="302.0" spacing="20.0">
-                    <children>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../images/gear-wheel.png" />
-                            </image>
-                        </ImageView>
-                        <Label styleClass="dashboard-label" text="Dashboard">
-                            <font>
-                                <Font name="Poppins SemiBold" size="26.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </HBox>
-                <VBox prefHeight="264.0" prefWidth="343.0" spacing="10.0">
+        <VBox prefHeight="1024.0" prefWidth="343.0" styleClass="sidebar-background" BorderPane.alignment="CENTER">
+            <HBox id="dashboardHeader" alignment="CENTER" prefHeight="98.0" prefWidth="302.0" spacing="20.0">
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/gear-wheel.png"/>
+                </ImageView>
+                <Label id="dashboardLabel" text="Dashboard">
+                    <font>
+                        <Font name="Poppins SemiBold" size="26.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <VBox prefHeight="264.0" prefWidth="343.0" spacing="10.0">
+                <padding>
+                    <Insets left="30.0" right="30.0"/>
+                </padding>
+                <VBox.margin>
+                    <Insets top="30.0"/>
+                </VBox.margin>
+                <HBox id="dashboardOption1" fx:id="dashboardOption1" alignment="CENTER_LEFT" maxHeight="39.0"
+                      minHeight="39.0" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
                     <padding>
-                        <Insets left="30.0" right="30.0" />
+                        <Insets left="50.0"/>
                     </padding>
-                    <VBox.margin>
-                        <Insets top="30.0" />
-                    </VBox.margin>
-                    <HBox id="dashboardOption1" alignment="CENTER_LEFT" maxHeight="39.0" minHeight="39.0" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option-selected">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" />
-                        </ImageView>
-                        <Label text="Dashboard" textFill="WHITE">
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/key-square.png"/>
+                    </ImageView>
+                    <Label text="Dashboard" textFill="WHITE">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox id="dashboardOption2" fx:id="dashboardOption2" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/user-square.png"/>
+                    </ImageView>
+                    <Label text="Users" textFill="#9197b3">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox id="dashboardOption3" fx:id="dashboardOption3" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/3d-square.png"/>
+                    </ImageView>
+                    <Label text="Courses" textFill="#9197b3">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox id="dashboardOption4" fx:id="dashboardOption4" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/discount-shape.png"/>
+                    </ImageView>
+                    <Label text="Notifications" textFill="#9197b3">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox id="dashboardOption5" fx:id="dashboardOption5" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/message-question.png"/>
+                    </ImageView>
+                    <Label text="Help" textFill="#9197b3">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox id="profileSection" alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0"
+                  styleClass="profile-background" BorderPane.alignment="CENTER">
+                <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <Circle id="profileCircle" radius="20.0" stroke="BLACK" strokeType="INSIDE">
+                        <fill>
+                            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                <stops>
+                                    <Stop>
+                                        <color>
+                                            <Color/>
+                                        </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                        <color>
+                                            <Color red="1.0" green="1.0" blue="1.0"/>
+                                        </color>
+                                    </Stop>
+                                </stops>
+                            </RadialGradient>
+                        </fill>
+                    </Circle>
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <Label id="profileNameLabel" text="Anjana">
                             <font>
-                                <Font name="Poppins Regular" size="14.0" />
+                                <Font name="Poppins Regular" size="14.0"/>
                             </font>
                         </Label>
-                    </HBox>
-                    <HBox id="dashboardOption2" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/user-square.png" />
-                        </ImageView>
-                        <Label text="Users" textFill="#9197b3">
+                        <Label id="profileRoleLabel" text="Admin" textFill="#757575">
                             <font>
-                                <Font name="Poppins Regular" size="14.0" />
+                                <Font name="Poppins Regular" size="12.0"/>
                             </font>
                         </Label>
-                    </HBox>
-                    <HBox id="dashboardOption3" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/3d-square.png" />
-                        </ImageView>
-                        <Label text="Courses" textFill="#9197b3">
-                            <font>
-                                <Font name="Poppins Regular" size="14.0" />
-                            </font>
-                        </Label>
-                    </HBox>
-                    <HBox id="dashboardOption4" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/discount-shape.png" />
-                        </ImageView>
-                        <Label text="Notifications" textFill="#9197b3">
-                            <font>
-                                <Font name="Poppins Regular" size="14.0" />
-                            </font>
-                        </Label>
-                    </HBox>
-                    <HBox id="dashboardOption5" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/message-question.png" />
-                        </ImageView>
-                        <Label text="Help" textFill="#9197b3">
-                            <font>
-                                <Font name="Poppins Regular" size="14.0" />
-                            </font>
-                        </Label>
-                    </HBox>
-                </VBox>
-                <VBox alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-
-                    <HBox id="profileSection" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
-                        <padding>
-                            <Insets left="50.0" />
-                        </padding>
-                        <Circle radius="20.0" stroke="BLACK" strokeType="INSIDE">
-                            <fill>
-                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                    <stops>
-                                        <Stop>
-                                            <color>
-                                                <Color />
-                                            </color>
-                                        </Stop>
-                                        <Stop offset="1.0">
-                                            <color>
-                                                <Color red="1.0" green="1.0" blue="1.0" />
-                                            </color>
-                                        </Stop>
-                                    </stops>
-                                </RadialGradient>
-                            </fill>
-                        </Circle>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                            <Label id="profileNameLabel" text="Anjana">
-                                <font>
-                                    <Font name="Poppins Regular" size="14.0" />
-                                </font>
-                            </Label>
-                            <Label id="profileRoleLabel" text="Admin" textFill="#757575">
-                                <font>
-                                    <Font name="Poppins Regular" size="12.0" />
-                                </font>
-                            </Label>
-                        </VBox>
-                    </HBox>
-                </VBox>
-            </children>
+                    </VBox>
+                </HBox>
+            </VBox>
         </VBox>
     </left>
-   <top>
-      <HBox id="title-bar" prefHeight="35.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
-         <children>
+    <top>
+        <HBox id="title-bar" prefHeight="35.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
             <HBox alignment="CENTER_LEFT" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="1723.0">
-               <children>
-                  <ImageView fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/logo.png" />
-                     </image>
-                     <effect>
+                <ImageView fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
                         <ColorAdjust brightness="-0.54" contrast="1.0" />
-                     </effect>
-                  </ImageView>
-                  <Label text="Admin Dashboard">
-                     <font>
+                    </effect>
+                    <Image url="@../images/logo.png" />
+                </ImageView>
+                <Label id="titleLabel" text="Admin Dashboard">
+                    <font>
                         <Font name="Poppins Regular" size="14.0" />
-                     </font>
-                  </Label>
-               </children>
+                    </font>
+                </Label>
             </HBox>
             <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="35.0" fitWidth="36.0" nodeOrientation="INHERIT" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@../images/Close.png" />
-               </image>
-               <HBox.margin>
-                  <Insets right="5.0" />
-               </HBox.margin>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <HBox.margin>
+                    <Insets right="5.0" />
+                </HBox.margin>
+                <Image url="@../images/Close.png" />
             </ImageView>
-         </children>
-      </HBox>
-   </top>
+        </HBox>
+    </top>
+    <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <VBox layoutX="72.0" layoutY="36.0" prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
+                        <Label id="helloLabel" text="Hello">
+                            <font>
+                                <Font name="Poppins Medium" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label id="userNameLabel" text="Anjana">
+                            <font>
+                                <Font name="Poppins Medium" size="24.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/wave.png" />
+                        </ImageView>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="151.0" prefWidth="200.0" spacing="50.0" styleClass="stat-box-background">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" top="5.0" />
+                        </padding>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                            <ImageView fitHeight="84.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../images/UsersRound.png" />
+                            </ImageView>
+                            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                <Label text="Total Users">
+                                    <font>
+                                        <Font name="Poppins Regular" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="5423">
+                                    <font>
+                                        <Font name="Poppins SemiBold" size="32.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0f0f0" height="87.0" stroke="#f0f0f0" strokeType="INSIDE" width="2.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                            <ImageView fitHeight="84.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../images/SingleUserRound.png" />
+                            </ImageView>
+                            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                <Label text="Courses">
+                                    <font>
+                                        <Font name="Poppins Regular" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="60">
+                                    <font>
+                                        <Font name="Poppins SemiBold" size="32.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0f0f0" height="87.0" stroke="#f0f0f0" strokeType="INSIDE" width="2.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                            <ImageView fitHeight="84.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../images/ComputerRound.png" />
+                            </ImageView>
+                            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                <Label text="Admin Users">
+                                    <font>
+                                        <Font name="Poppins Regular" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="2">
+                                    <font>
+                                        <Font name="Poppins SemiBold" size="32.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                    </HBox>
+                    <VBox prefHeight="443.0" prefWidth="914.0" styleClass="content-background">
+                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding>
+                            <Label id="allUsersLabel" text="All Users">
+                                <font>
+                                    <Font name="Poppins SemiBold" size="22.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER" maxHeight="34.0" minHeight="33.0" prefHeight="34.0" prefWidth="206.0" spacing="10.0" styleClass="search-box-background">
+                                <ImageView fitHeight="30.0" fitWidth="25.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../images/Search.png" />
+                                </ImageView>
+                                <TextField id="searchField" prefHeight="30.0" prefWidth="149.0" promptText="Search">
+                                    <font>
+                                        <Font name="Poppins Regular" size="12.0" />
+                                    </font>
+                                </TextField>
+                            </HBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </AnchorPane>
+    </center>
 </BorderPane>

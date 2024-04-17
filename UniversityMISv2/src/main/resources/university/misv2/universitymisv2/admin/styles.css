@@ -1,8 +1,27 @@
-#title-bar{
+#title-bar {
     -fx-background-color: white;
 }
+
 .main-background {
     -fx-background-color: linear-gradient(to top, #F5F5F5, #e4ffee);
+}
+
+.sidebar-background {
+    -fx-background-color: white;
+}
+
+.profile-background {
+    -fx-background-color: white;
+}
+
+.stat-box-background {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+}
+
+.content-background {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
 }
 
 .dashboard-label {
@@ -12,12 +31,16 @@
 .dashboard-option-selected {
     -fx-background-color: #5932EA;
     -fx-background-radius: 10;
+}
+.dashboard-option-selected .label{
     -fx-text-fill: white;
 }
 
 .dashboard-option {
     -fx-background-color: white;
     -fx-background-radius: 10;
+}
+.dashboard-option .label{
     -fx-text-fill: #9197B3;
 }
 
@@ -25,9 +48,16 @@
     -fx-background-color: #f0f0f0;
     -fx-cursor: hand;
 }
-#profileSection{
+
+#profileSection {
     -fx-cursor: hand;
 }
+
+#profileCircle {
+    -fx-stroke: BLACK;
+    -fx-stroke-type: INSIDE;
+}
+
 #profileNameLabel {
     -fx-text-fill: #333333;
 }
@@ -35,3 +65,25 @@
 #profileRoleLabel {
     -fx-text-fill: #757575;
 }
+
+#helloLabel {
+    -fx-text-fill: black;
+}
+
+#userNameLabel {
+    -fx-text-fill: black;
+}
+
+#allUsersLabel {
+    -fx-text-fill: black;
+}
+
+.search-box-background {
+    -fx-background-color: #F9FBFF;
+    -fx-background-radius: 10;
+}
+
+#searchField {
+    -fx-prompt-text-fill: #9197B3;
+}
+
