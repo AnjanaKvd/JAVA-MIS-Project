@@ -45,7 +45,7 @@
                             <Insets left="50.0" />
                         </padding>
                         <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" />
+                           /
                         </ImageView>
                         <Label text="Dashboard" textFill="WHITE">
                             <font>
