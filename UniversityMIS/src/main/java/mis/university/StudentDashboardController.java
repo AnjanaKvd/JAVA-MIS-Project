@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+package mis.university;
+
+=======
+>>>>>>> ca8a66934f5e593981a6436e7d737b0402418a17
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -79,8 +84,12 @@ public class StudentDashboardController {
 
         System.out.println("Log Out button clicked");
 
+<<<<<<< HEAD
+
+=======
 //        public static void main(String [] args){
 //
 //        }
+>>>>>>> ca8a66934f5e593981a6436e7d737b0402418a17
     }
 }
