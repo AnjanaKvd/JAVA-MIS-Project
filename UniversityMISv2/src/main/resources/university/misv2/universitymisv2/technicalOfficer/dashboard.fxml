@@ -45,7 +45,7 @@
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../images/key-square.png" />
                     </ImageView>
-                    <Label text="Dashboard" textFill="WHITE">
+                    <Label prefHeight="20.0" prefWidth="89.0" text="Attendance" textFill="WHITE">
                         <font>
                             <Font name="Poppins Regular" size="14.0" />
                         </font>
@@ -58,20 +58,7 @@
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../images/user-square.png" />
                     </ImageView>
-                    <Label text="Users" textFill="#9197b3">
-                        <font>
-                            <Font name="Poppins Regular" size="14.0" />
-                        </font>
-                    </Label>
-                </HBox>
-                <HBox id="dashboardOption3" fx:id="dashboardOption3" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                    <padding>
-                        <Insets left="50.0" />
-                    </padding>
-                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/3d-square.png" />
-                    </ImageView>
-                    <Label text="Courses" textFill="#9197b3">
+                    <Label text="Medical" textFill="#9197b3">
                         <font>
                             <Font name="Poppins Regular" size="14.0" />
                         </font>
