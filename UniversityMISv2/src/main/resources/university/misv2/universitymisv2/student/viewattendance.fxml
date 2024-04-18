@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.Viewattendancecontroller">
+    <children>
+        <TableView fx:id="table" prefHeight="400.0" prefWidth="904.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="150.0" text="ID" />
+                <TableColumn fx:id="student_id" prefWidth="150.0" text="student_id" />
+                <TableColumn fx:id="course_code" prefWidth="150.0" text="course_code" />
+                <TableColumn fx:id="Date" prefWidth="150.0" text="Date" />
+                <TableColumn fx:id="Theory_or_Practical" prefWidth="150.0" text="Theory_or_Practical" />
+                <TableColumn fx:id="Status" prefWidth="150.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+
+</AnchorPane>
