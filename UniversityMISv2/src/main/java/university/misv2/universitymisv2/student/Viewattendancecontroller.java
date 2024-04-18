@@ -1,0 +1,68 @@
+package university.misv2.universitymisv2.student;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class Viewattendancecontroller implements Initializable {
+
+    @FXML
+    private TableView<User> table;
+
+    @FXML
+    private TableColumn<User, Integer> id;
+
+    @FXML
+    private TableColumn<User, String> student_id;
+
+    @FXML
+    private TableColumn<User, String> course_code;
+
+    @FXML
+    private TableColumn<User, Date> Date;
+    @FXML
+    private TableColumn<User, String> Theory_or_Practical;
+
+    @FXML
+    private TableColumn<User, String> Status;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Configure the columns with the property names matching the User class
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        student_id.setCellValueFactory(new PropertyValueFactory<>("student_id"));
+        course_code.setCellValueFactory(new PropertyValueFactory<>("course_code"));
+        Date.setCellValueFactory(new PropertyValueFactory<>("Date"));
+        Theory_or_Practical.setCellValueFactory(new PropertyValueFactory<>("Theory_or_Practical"));
+        Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
+
+        // Load the list of users from the database
+        List<User> userList = null;
+        try {
+            userList = User.fetchAllUsers();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Convert the list to an ObservableList
+        ObservableList<User> observableUserList = FXCollections.observableArrayList(userList);
+
+        // Set the data in the table
+        table.setItems(observableUserList);
+    }
+
+}
