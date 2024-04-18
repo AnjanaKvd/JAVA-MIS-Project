@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+
+import java.util.Objects;
+
 public class StudentDashboard {
 
    @FXML
@@ -42,7 +45,7 @@ public class StudentDashboard {
     private void viewAttendance() {
 
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("student/viewattendance.fxml"));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("student/viewattendace.fxml")));
                 System.out.println(" button workes");
                 Stage registerStage = new Stage();
                 registerStage.setScene(new Scene(root, 600, 400));

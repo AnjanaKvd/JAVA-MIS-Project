@@ -119,6 +119,12 @@
                 </Label>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="324.0" layoutY="214.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" />
+        <AnchorPane fx:id="dashboardTab" layoutX="324.0" layoutY="214.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="medicalTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="courseTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="gradesTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="timetableTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="notificationTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="helpTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
     </children>
 </AnchorPane>
