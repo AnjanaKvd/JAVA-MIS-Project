@@ -42,7 +42,7 @@ public class StudentDashboard {
     private void viewAttendance() {
 
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("viewattendance.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("student/viewattendance.fxml"));
                 System.out.println(" button workes");
                 Stage registerStage = new Stage();
                 registerStage.setScene(new Scene(root, 600, 400));
