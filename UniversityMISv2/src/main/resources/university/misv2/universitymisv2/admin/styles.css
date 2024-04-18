@@ -87,3 +87,83 @@
     -fx-prompt-text-fill: #9197B3;
 }
 
+/*User management tab */
+/* User Tab Title Style */
+#allUsersLabel {
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#usernameField,
+#passwordField,
+#modifyUsernameField,
+#newUsernameField,
+#newPasswordField,
+#deleteUsernameField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#userTypeDropdown,
+#modifyUserTypeDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addUserButton,
+#modifyUserButton,
+#deleteUserButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addUserButton:hover,
+#modifyUserButton:hover,
+#deleteUserButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#usernameField:focused,
+#passwordField:focused,
+#modifyUsernameField:focused,
+#newUsernameField:focused,
+#newPasswordField:focused,
+#deleteUsernameField:focused,
+#userTypeDropdown:focused,
+#modifyUserTypeDropdown:focused,
+#addUserButton:focused,
+#modifyUserButton:focused,
+#deleteUserButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addUserButton:default:hover,
+#modifyUserButton:default:hover,
+#deleteUserButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}

@@ -1,20 +1,29 @@
 package university.misv2.universitymisv2.admin;
 
 import javafx.animation.RotateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.control.Button;
+
+import java.sql.SQLException;
 
 public class AdminController {
-
     @FXML
     private Label profileNameLabel;
+
+    @FXML
+    private Label dashboardLabel;
 
     @FXML
     private Label profileRoleLabel;
@@ -38,6 +47,54 @@ public class AdminController {
     private HBox dashboardOption5;
 
     @FXML
+    private AnchorPane dashboardTab;
+
+    @FXML
+    private AnchorPane usersTab;
+
+    @FXML
+    private AnchorPane coursesTab;
+
+    @FXML
+    private AnchorPane notificationTab;
+
+    @FXML
+    private AnchorPane helpTab;
+
+    @FXML
+    private TextField usernameField;
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private ComboBox<String> userTypeDropdown;
+
+    @FXML
+    private TextField modifyUsernameField;
+
+    @FXML
+    private TextField newUsernameField;
+
+    @FXML
+    private PasswordField newPasswordField;
+
+    @FXML
+    private ComboBox<String> userTypeDropdown2;
+
+    @FXML
+    private TextField deleteUsernameField;
+
+    @FXML
+    private Button addUserButton;
+
+    @FXML
+    private Button modifyUserButton;
+
+    @FXML
+    private Button deleteUserButton;
+
+    @FXML
     private void initialize() {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
         rotateTransition.setByAngle(360);
@@ -48,14 +105,24 @@ public class AdminController {
         closeBtn.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
 
         // Add event handlers for side options
-        dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1));
-        dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2));
-        dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3));
-        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4));
-        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5));
+        dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1, "Dashboard"));
+        dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2, "Users"));
+        dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3, "Courses"));
+        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Notifications"));
+        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Help"));
 
-//         Set the default selected option
-        handleDashboardOptionSelected(dashboardOption1);
+        // Set the default selected option
+        handleDashboardOptionSelected(dashboardOption1, "Dashboard");
+
+        ObservableList<String> options = FXCollections.observableArrayList(
+                "Admin",
+                "Lecturer",
+                "Student",
+                "Technical Officer"
+        );
+        userTypeDropdown.setItems(options);
+        userTypeDropdown2.setItems(options);
+
     }
 
     @FXML
@@ -64,10 +131,75 @@ public class AdminController {
         stage.close();
     }
 
-    private void handleDashboardOptionSelected(HBox selectedOption) {
+    private void handleDashboardOptionSelected(HBox selectedOption, String optionText) {
         VBox dashboardOptionsContainer = (VBox) selectedOption.getParent();
         dashboardOptionsContainer.getChildren().forEach(option -> option.getStyleClass().setAll("dashboard-option"));
         selectedOption.getStyleClass().setAll("dashboard-option-selected");
 
+        // Update the dashboard label
+        dashboardLabel.setText(optionText);
+
+        dashboardTab.setVisible(false);
+        usersTab.setVisible(false);
+        coursesTab.setVisible(false);
+        notificationTab.setVisible(false);
+        helpTab.setVisible(false);
+
+        if (selectedOption == dashboardOption1) {
+            dashboardTab.setVisible(true);
+        } else if (selectedOption == dashboardOption2) {
+            usersTab.setVisible(true);
+        } else if (selectedOption == dashboardOption3) {
+            coursesTab.setVisible(true);
+        } else if (selectedOption == dashboardOption4) {
+            notificationTab.setVisible(true);
+        } else if (selectedOption == dashboardOption5) {
+            helpTab.setVisible(true);
+        }
     }
+
+    @FXML
+    private void addUserClicked() {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        String userType = userTypeDropdown.getValue();
+        try {
+            UserManager.addUser(username, password, userType);
+            // Optionally, you can show a success message or clear input fields after adding user
+            System.out.println("User added successfully.");
+        } catch (SQLException e) {
+            // Handle database errors
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void modifyUserClicked() {
+        String oldUsername = modifyUsernameField.getText();
+        String newUsername = newUsernameField.getText();
+        String newPassword = newPasswordField.getText();
+        String userType = userTypeDropdown2.getValue();
+        try {
+            UserManager.modifyUser(oldUsername, newUsername, newPassword, userType);
+            // Optionally, you can show a success message or clear input fields after modifying user
+            System.out.println("User modified successfully.");
+        } catch (SQLException e) {
+            // Handle database errors
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void deleteUserClicked() {
+        String usernameToDelete = deleteUsernameField.getText();
+        try {
+            UserManager.deleteUser(usernameToDelete);
+            // Optionally, you can show a success message or clear input fields after deleting user
+            System.out.println("User deleted successfully.");
+        } catch (SQLException e) {
+            // Handle database errors
+            e.printStackTrace();
+        }
+    }
+
 }
