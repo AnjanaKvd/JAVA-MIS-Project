@@ -1,14 +1,9 @@
 package university.misv2.universitymisv2.student;
 
-import university.misv2.universitymisv2.DatabaseConnection;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.sql.SQLException;
 
 public class User {
 
@@ -83,4 +78,6 @@ public class User {
     public String get_Status() {
         return Status;
     }
+
+
 }

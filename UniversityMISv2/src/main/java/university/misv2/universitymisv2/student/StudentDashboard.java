@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
@@ -42,23 +43,23 @@ public class StudentDashboard {
     }
 
     @FXML
-    private void viewAttendance() {
-
-            try {
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("student/viewattendace.fxml")));
-                System.out.println(" button workes");
-                Stage registerStage = new Stage();
-                registerStage.setScene(new Scene(root, 600, 400));
-                registerStage.show();
+    public void viewAttendance() {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("viewattendance.fxml")));
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.show();
 
 
-            } catch (Exception e) {
-                e.printStackTrace();
-                e.getCause();
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
 
 
         }
+
     }
+
 
     @FXML
     private void viewMedicalDetails() {
@@ -149,4 +150,5 @@ public class StudentDashboard {
         alert.setContentText("This is an alert message!");
         alert.showAndWait();
     }
+
 }

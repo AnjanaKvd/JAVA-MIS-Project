@@ -1,4 +1,4 @@
-package university.misv2.universitymisv2;
+package university.misv2.universitymisv2.student;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
