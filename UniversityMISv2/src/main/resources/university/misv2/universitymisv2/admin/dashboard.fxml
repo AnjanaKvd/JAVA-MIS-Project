@@ -15,7 +15,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
@@ -287,7 +290,7 @@
 <!--                User Management tab-->
                 <AnchorPane fx:id="usersTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                        <VBox alignment="CENTER" prefHeight="636.0" prefWidth="914.0" styleClass="content-background">
+                        <VBox alignment="CENTER" prefHeight="646.0" prefWidth="914.0" styleClass="content-background">
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
                                 <padding>
                                     <Insets left="40.0" />
@@ -305,18 +308,25 @@
                                 <TextField id="usernameField" fx:id="usernameField" promptText="Username" />
                                 <PasswordField id="passwordField" fx:id="passwordField" promptText="Password" />
 
-                                <ComboBox fx:id="userTypeDropdown" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
+                                <ComboBox id="userTypeDropdown" fx:id="userTypeDropdown" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
                                     <items>
                                         <FXCollections fx:factory="observableArrayList">
-                                            <String fx:value="userType1" />
-                                            <String fx:value="userType2" />
-                                            <String fx:value="userType3" />
-                                            <String fx:value="userType4" />
+                                            <String fx:value="Admin" />
+                                            <String fx:value="Lecturer" />
+                                            <String fx:value="Student" />
+                                            <String fx:value="Technical Officer" />
                                         </FXCollections>
                                     </items>
                                 </ComboBox>
-
-                                <Button id="addUserButton" fx:id="addUserButton" onAction="#addUserClicked" text="Add User" />
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                    <Button id="addUserButton" onAction="#addUserClicked" prefHeight="22.0"
+                                            prefWidth="115.2" text="Add User"/>
+                                    <Label id="userAddedLabel" fx:id="userAddedLabel">
+                                        <font>
+                                            <Font name="Poppins Italic" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </HBox>
                             </VBox>
                             <HBox prefHeight="50.0" />
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
@@ -337,18 +347,25 @@
                                 <TextField id="newUsernameField" fx:id="newUsernameField" promptText="New Username" />
                                 <PasswordField id="newPasswordField" fx:id="newPasswordField" promptText="New Password" />
 
-                                <ComboBox fx:id="userTypeDropdown2" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
+                                <ComboBox id="modifyUserTypeDropdown" fx:id="userTypeDropdown2" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
                                     <items>
                                         <FXCollections fx:factory="observableArrayList">
-                                            <String fx:value="userType1" />
-                                            <String fx:value="userType2" />
-                                            <String fx:value="userType3" />
-                                            <String fx:value="userType4" />
+                                            <String fx:value="Admin" />
+                                            <String fx:value="Lecturer" />
+                                            <String fx:value="Student" />
+                                            <String fx:value="Technical Officer" />
                                         </FXCollections>
                                     </items>
                                 </ComboBox>
-
-                                <Button id="modifyUserButton" fx:id="modifyUserButton" onAction="#modifyUserClicked" text="Modify User" />
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                    <Button id="modifyUserButton" onAction="#modifyUserClicked" prefHeight="22.0"
+                                            prefWidth="115.2" text="Modify User"/>
+                                    <Label id="userModifiedLabel" fx:id="userModifiedLabel">
+                                        <font>
+                                            <Font name="Poppins Italic" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </HBox>
                             </VBox>
                             <HBox prefHeight="50.0" />
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
@@ -366,11 +383,22 @@
                                     <Insets left="40.0" />
                                 </padding>
                                 <TextField id="deleteUsernameField" fx:id="deleteUsernameField" promptText="Username to Delete" />
-                                <Button id="deleteUserButton" fx:id="deleteUserButton" onAction="#deleteUserClicked" text="Delete User" />
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                    <Button id="deleteUserButton" onAction="#deleteUserClicked" prefHeight="22.0"
+                                            prefWidth="115.2" text="Delete User"/>
+                                    <Label id="userDeletedLabel" fx:id="userDeletedLabel">
+                                        <font>
+                                            <Font name="Poppins Italic" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </HBox>
                             </VBox>
                   <padding>
-                     <Insets bottom="10.0" />
+                     <Insets bottom="10.0" top="10.0" />
                   </padding>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
                         </VBox>
                <effect>
                   <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
@@ -381,54 +409,130 @@
                </effect>
                     </VBox>
                 </AnchorPane>
+
 <!--                Course management tab -->
                 <AnchorPane fx:id="coursesTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                        <VBox alignment="CENTER" prefHeight="620.0" prefWidth="914.0" styleClass="content-background">
-                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
+                        <VBox alignment="CENTER" prefHeight="636.0" prefWidth="914.0" styleClass="content-background">
+                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
                                 <padding>
                                     <Insets left="40.0" />
                                 </padding>
-                                <Label id="allUsersLabel" text="Add course">
+                                <Label id="addCoursesLabel" text="Add Course">
                                     <font>
                                         <Font name="Poppins SemiBold" size="22.0" />
                                     </font>
                                 </Label>
                             </HBox>
-                            <HBox prefHeight="100.0" prefWidth="200.0" />
-                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
+                            <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
                                 <padding>
                                     <Insets left="40.0" />
                                 </padding>
-                                <Label id="allUsersLabel" text="Modify course">
+                                <TextField id="courseCodeField" fx:id="courseCodeField" prefHeight="31.0" prefWidth="230.0" promptText="Course Code" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <TextField id="courseNameField" fx:id="courseNameField" promptText="Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <ComboBox fx:id="departmentDropdown" prefHeight="43.0" prefWidth="238.0" promptText="Select Department" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="ICT" />
+                                            <String fx:value="ET" />
+                                            <String fx:value="BST" />
+                                            <String fx:value="MDS" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <TextField id="creditsField" fx:id="creditsField" prefHeight="31.0" prefWidth="238.0" promptText="No of Credits" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField id="hoursField" fx:id="hoursField" promptText="Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField id="lecturerField" fx:id="lecturerField" promptText="Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                <Button id="addCourseButton" fx:id="addCourseButton" onAction="#addCourseClicked" prefHeight="23.0" prefWidth="129.0" text="Add Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                            </GridPane>
+                            <HBox prefHeight="50.0" />
+                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
+                                <padding>
+                                    <Insets left="40.0" />
+                                </padding>
+                                <Label id="modifyCourseLabel" text="Modify Course">
                                     <font>
                                         <Font name="Poppins SemiBold" size="22.0" />
                                     </font>
                                 </Label>
                             </HBox>
-                            <HBox prefHeight="100.0" prefWidth="200.0" />
-                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
+                            <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
                                 <padding>
                                     <Insets left="40.0" />
                                 </padding>
-                                <Label id="allUsersLabel" text="Delete course">
+                                <TextField id="modifyCourseCodeField" fx:id="modifyCourseCodeField" prefHeight="31.0" prefWidth="238.4" promptText="Course Code to Modify" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <TextField id="newCourseNameField" fx:id="newCourseNameField" promptText="New Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <ComboBox fx:id="newDepartmentDropdown" prefWidth="238.4" promptText="Select New Department" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="ICT" />
+                                            <String fx:value="ET" />
+                                            <String fx:value="BST" />
+                                            <String fx:value="MDS" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <TextField id="newCreditsField" fx:id="newCreditsField" prefWidth="238.4" promptText="New No of Credits" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField id="newHoursField" fx:id="newHoursField" promptText="New Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField id="newLecturerField" fx:id="newLecturerField" promptText="New Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                <Button id="modifyCourseButton" fx:id="modifyCourseButton" onAction="#modifyCourseClicked" text="Modify Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                            </GridPane>
+                            <HBox prefHeight="50.0" />
+                            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
+                                <padding>
+                                    <Insets left="40.0" />
+                                </padding>
+                                <Label id="deleteCourseLabel" text="Delete Course">
                                     <font>
                                         <Font name="Poppins SemiBold" size="22.0" />
                                     </font>
                                 </Label>
                             </HBox>
-                            <HBox prefHeight="100.0" prefWidth="200.0" />
+                            <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                <padding>
+                                    <Insets left="40.0" />
+                                </padding>
+                                <TextField id="deleteCourseCodeField" fx:id="deleteCourseCodeField" promptText="Course Code to Delete" />
+                                <Button id="deleteCourseButton" fx:id="deleteCourseButton" onAction="#deleteCourseClicked" text="Delete Course" />
+                            </VBox>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
                         </VBox>
-               <effect>
-                  <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                     <color>
-                        <Color opacity="0.10000000149011612" />
-                     </color>
-                  </DropShadow>
-               </effect>
+                        <effect>
+                            <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
+                                <color>
+                                    <Color opacity="0.09726444631814957" />
+                                </color>
+                            </DropShadow>
+                        </effect>
                     </VBox>
                 </AnchorPane>
-<!--                Notification management tab-->
+
+
+                <!--                Notification management tab-->
                 <AnchorPane fx:id="notificationTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                         <VBox alignment="TOP_RIGHT" prefHeight="620.0" prefWidth="914.0" styleClass="content-background">

@@ -3,6 +3,7 @@ package university.misv2.universitymisv2.admin;
 import javafx.animation.RotateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -19,6 +20,9 @@ import javafx.scene.control.Button;
 import java.sql.SQLException;
 
 public class AdminController {
+    public Label userAddedLabel;
+    public Label userModifiedLabel;
+    public Label userDeletedLabel;
     @FXML
     private Label profileNameLabel;
 
@@ -86,15 +90,6 @@ public class AdminController {
     private TextField deleteUsernameField;
 
     @FXML
-    private Button addUserButton;
-
-    @FXML
-    private Button modifyUserButton;
-
-    @FXML
-    private Button deleteUserButton;
-
-    @FXML
     private void initialize() {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
         rotateTransition.setByAngle(360);
@@ -113,15 +108,6 @@ public class AdminController {
 
         // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
-
-        ObservableList<String> options = FXCollections.observableArrayList(
-                "Admin",
-                "Lecturer",
-                "Student",
-                "Technical Officer"
-        );
-        userTypeDropdown.setItems(options);
-        userTypeDropdown2.setItems(options);
 
     }
 
@@ -165,8 +151,10 @@ public class AdminController {
         String userType = userTypeDropdown.getValue();
         try {
             UserManager.addUser(username, password, userType);
-            // Optionally, you can show a success message or clear input fields after adding user
-            System.out.println("User added successfully.");
+            usernameField.clear();
+            passwordField.clear();
+            userTypeDropdown.getSelectionModel().clearSelection();
+            userAddedLabel.setText("User added successfully !");
         } catch (SQLException e) {
             // Handle database errors
             e.printStackTrace();
@@ -181,8 +169,11 @@ public class AdminController {
         String userType = userTypeDropdown2.getValue();
         try {
             UserManager.modifyUser(oldUsername, newUsername, newPassword, userType);
-            // Optionally, you can show a success message or clear input fields after modifying user
-            System.out.println("User modified successfully.");
+            modifyUsernameField.clear();
+            newUsernameField.clear();
+            newPasswordField.clear();
+            userTypeDropdown2.getSelectionModel().clearSelection();
+            userModifiedLabel.setText("User modified successfully !");
         } catch (SQLException e) {
             // Handle database errors
             e.printStackTrace();
@@ -194,12 +185,20 @@ public class AdminController {
         String usernameToDelete = deleteUsernameField.getText();
         try {
             UserManager.deleteUser(usernameToDelete);
-            // Optionally, you can show a success message or clear input fields after deleting user
-            System.out.println("User deleted successfully.");
+            deleteUsernameField.clear();
+            userDeletedLabel.setText("User deleted successfully !");
         } catch (SQLException e) {
             // Handle database errors
             e.printStackTrace();
         }
     }
 
+    public void addCourseClicked(ActionEvent event) {
+    }
+
+    public void modifyCourseClicked(ActionEvent event) {
+    }
+
+    public void deleteCourseClicked(ActionEvent event) {
+    }
 }
