@@ -266,3 +266,13 @@
     -fx-background-color: #2980b9; /* Dark Blue */
     -fx-border-color: transparent;
 }
+
+#courseAddedLabel{
+    -fx-text-fill: blue;
+}
+#courseModifiedLabel{
+    -fx-text-fill: green;
+}
+#courseDeletedLabel{
+    -fx-text-fill: red;
+}

@@ -93,7 +93,7 @@
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../images/discount-shape.png" />
                     </ImageView>
-                    <Label text="Notifications" textFill="#9197b3">
+                    <Label text="Timetables" textFill="#9197b3">
                         <font>
                             <Font name="Poppins Regular" size="14.0" />
                         </font>
@@ -106,7 +106,7 @@
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../images/message-question.png" />
                     </ImageView>
-                    <Label text="Help" textFill="#9197b3">
+                    <Label text="Notifications" textFill="#9197b3">
                         <font>
                             <Font name="Poppins Regular" size="14.0" />
                         </font>
@@ -287,8 +287,9 @@
                </effect>
                     </VBox>
                 </AnchorPane>
+
 <!--                User Management tab-->
-                <AnchorPane fx:id="usersTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="usersTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                         <VBox alignment="CENTER" prefHeight="646.0" prefWidth="914.0" styleClass="content-background">
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
@@ -319,11 +320,10 @@
                                     </items>
                                 </ComboBox>
                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                    <Button id="addUserButton" onAction="#addUserClicked" prefHeight="22.0"
-                                            prefWidth="115.2" text="Add User"/>
+                                    <Button id="addUserButton" onAction="#addUserClicked" prefHeight="22.0" prefWidth="115.2" text="Add User" />
                                     <Label id="userAddedLabel" fx:id="userAddedLabel">
                                         <font>
-                                            <Font name="Poppins Italic" size="13.0"/>
+                                            <Font name="Poppins Italic" size="13.0" />
                                         </font>
                                     </Label>
                                 </HBox>
@@ -358,11 +358,10 @@
                                     </items>
                                 </ComboBox>
                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                    <Button id="modifyUserButton" onAction="#modifyUserClicked" prefHeight="22.0"
-                                            prefWidth="115.2" text="Modify User"/>
+                                    <Button id="modifyUserButton" onAction="#modifyUserClicked" prefHeight="22.0" prefWidth="115.2" text="Modify User" />
                                     <Label id="userModifiedLabel" fx:id="userModifiedLabel">
                                         <font>
-                                            <Font name="Poppins Italic" size="13.0"/>
+                                            <Font name="Poppins Italic" size="13.0" />
                                         </font>
                                     </Label>
                                 </HBox>
@@ -384,11 +383,10 @@
                                 </padding>
                                 <TextField id="deleteUsernameField" fx:id="deleteUsernameField" promptText="Username to Delete" />
                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                    <Button id="deleteUserButton" onAction="#deleteUserClicked" prefHeight="22.0"
-                                            prefWidth="115.2" text="Delete User"/>
+                                    <Button id="deleteUserButton" onAction="#deleteUserClicked" prefHeight="22.0" prefWidth="115.2" text="Delete User" />
                                     <Label id="userDeletedLabel" fx:id="userDeletedLabel">
                                         <font>
-                                            <Font name="Poppins Italic" size="13.0"/>
+                                            <Font name="Poppins Italic" size="13.0" />
                                         </font>
                                     </Label>
                                 </HBox>
@@ -411,7 +409,7 @@
                 </AnchorPane>
 
 <!--                Course management tab -->
-                <AnchorPane fx:id="coursesTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="coursesTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                         <VBox alignment="CENTER" prefHeight="636.0" prefWidth="914.0" styleClass="content-background">
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
@@ -444,7 +442,12 @@
                                 <TextField id="hoursField" fx:id="hoursField" promptText="Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                 <TextField id="lecturerField" fx:id="lecturerField" promptText="Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                                <Button id="addCourseButton" fx:id="addCourseButton" onAction="#addCourseClicked" prefHeight="23.0" prefWidth="129.0" text="Add Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Button id="addCourseButton" fx:id="addCourseButton" onAction="#addCourseClicked" prefHeight="23.0" prefWidth="144.0" text="Add Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Label id="courseAddedLabel" fx:id="courseAddedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Poppins Italic" size="13.0" />
+                                    </font>
+                                </Label>
                      <columnConstraints>
                         <ColumnConstraints />
                         <ColumnConstraints />
@@ -487,7 +490,12 @@
                                 <TextField id="newHoursField" fx:id="newHoursField" promptText="New Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                 <TextField id="newLecturerField" fx:id="newLecturerField" promptText="New Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                                <Button id="modifyCourseButton" fx:id="modifyCourseButton" onAction="#modifyCourseClicked" text="Modify Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Button id="modifyCourseButton" fx:id="modifyCourseButton" onAction="#modifyCourseClicked" prefWidth="144.0" text="Modify Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Label id="courseModifiedLabel" fx:id="courseModifiedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Poppins Italic" size="13.0" />
+                                    </font>
+                                </Label>
                      <columnConstraints>
                         <ColumnConstraints />
                         <ColumnConstraints />
@@ -515,7 +523,14 @@
                                     <Insets left="40.0" />
                                 </padding>
                                 <TextField id="deleteCourseCodeField" fx:id="deleteCourseCodeField" promptText="Course Code to Delete" />
-                                <Button id="deleteCourseButton" fx:id="deleteCourseButton" onAction="#deleteCourseClicked" text="Delete Course" />
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                    <Button id="deleteCourseButton" fx:id="deleteCourseButton" onAction="#deleteCourseClicked" prefHeight="22.0" prefWidth="144.0" text="Delete Course" />
+                                    <Label id="courseDeletedLabel" fx:id="courseDeletedLabel">
+                                        <font>
+                                            <Font name="Poppins Italic" size="13.0" />
+                                        </font>
+                                    </Label>
+                                </HBox>
                             </VBox>
                             <padding>
                                 <Insets bottom="10.0" top="10.0" />
@@ -532,15 +547,15 @@
                 </AnchorPane>
 
 
-                <!--                Notification management tab-->
-                <AnchorPane fx:id="notificationTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <!--                Timetables management tab-->
+                <AnchorPane fx:id="timetablesTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                         <VBox alignment="TOP_RIGHT" prefHeight="620.0" prefWidth="914.0" styleClass="content-background">
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
                                 <padding>
                                     <Insets left="40.0" />
                                 </padding>
-                                <Label id="allUsersLabel" text="Notifications">
+                                <Label id="timetablesLabel" text="Timetables">
                                     <font>
                                         <Font name="Poppins SemiBold" size="22.0" />
                                     </font>
@@ -556,15 +571,15 @@
                </effect>
                     </VBox>
                 </AnchorPane>
-<!--                Help tab-->
-                <AnchorPane fx:id="helpTab" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<!--                Notifications tab-->
+                <AnchorPane fx:id="notificationTab" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                         <VBox alignment="TOP_RIGHT" prefHeight="620.0" prefWidth="914.0" styleClass="content-background">
                             <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
                                 <padding>
                                     <Insets left="40.0" />
                                 </padding>
-                                <Label id="allUsersLabel" text="Help">
+                                <Label id="allUsersLabel" text="Notifications">
                                     <font>
                                         <Font name="Poppins SemiBold" size="22.0" />
                                     </font>

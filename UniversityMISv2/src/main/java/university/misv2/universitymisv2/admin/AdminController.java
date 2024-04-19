@@ -60,10 +60,11 @@ public class AdminController {
     private AnchorPane coursesTab;
 
     @FXML
-    private AnchorPane notificationTab;
+    public AnchorPane timetablesTab;
 
     @FXML
-    private AnchorPane helpTab;
+    private AnchorPane notificationTab;
+
 
     @FXML
     private TextField usernameField;
@@ -89,6 +90,26 @@ public class AdminController {
     @FXML
     private TextField deleteUsernameField;
 
+    public TextField courseCodeField;
+    public TextField courseNameField;
+    public ComboBox<String> departmentDropdown;
+    public TextField creditsField;
+    public TextField hoursField;
+    public TextField lecturerField;
+    public Button addCourseButton;
+    public Label courseAddedLabel;
+    public TextField modifyCourseCodeField;
+    public TextField newCourseNameField;
+    public ComboBox<String> newDepartmentDropdown;
+    public TextField newCreditsField;
+    public TextField newHoursField;
+    public TextField newLecturerField;
+    public Button modifyCourseButton;
+    public Label courseModifiedLabel;
+    public TextField deleteCourseCodeField;
+    public Button deleteCourseButton;
+    public Label courseDeletedLabel;
+
     @FXML
     private void initialize() {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
@@ -103,8 +124,8 @@ public class AdminController {
         dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1, "Dashboard"));
         dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2, "Users"));
         dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3, "Courses"));
-        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Notifications"));
-        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Help"));
+        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Timetables"));
+        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
 
         // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
@@ -128,8 +149,8 @@ public class AdminController {
         dashboardTab.setVisible(false);
         usersTab.setVisible(false);
         coursesTab.setVisible(false);
+        timetablesTab.setVisible(false);
         notificationTab.setVisible(false);
-        helpTab.setVisible(false);
 
         if (selectedOption == dashboardOption1) {
             dashboardTab.setVisible(true);
@@ -138,9 +159,9 @@ public class AdminController {
         } else if (selectedOption == dashboardOption3) {
             coursesTab.setVisible(true);
         } else if (selectedOption == dashboardOption4) {
-            notificationTab.setVisible(true);
+            timetablesTab.setVisible(true);
         } else if (selectedOption == dashboardOption5) {
-            helpTab.setVisible(true);
+            notificationTab.setVisible(true);
         }
     }
 
@@ -156,7 +177,6 @@ public class AdminController {
             userTypeDropdown.getSelectionModel().clearSelection();
             userAddedLabel.setText("User added successfully !");
         } catch (SQLException e) {
-            // Handle database errors
             e.printStackTrace();
         }
     }
@@ -175,7 +195,6 @@ public class AdminController {
             userTypeDropdown2.getSelectionModel().clearSelection();
             userModifiedLabel.setText("User modified successfully !");
         } catch (SQLException e) {
-            // Handle database errors
             e.printStackTrace();
         }
     }
@@ -188,17 +207,64 @@ public class AdminController {
             deleteUsernameField.clear();
             userDeletedLabel.setText("User deleted successfully !");
         } catch (SQLException e) {
-            // Handle database errors
             e.printStackTrace();
         }
     }
 
-    public void addCourseClicked(ActionEvent event) {
+    @FXML
+    private void addCourseClicked(ActionEvent event) {
+        String courseCode = courseCodeField.getText();
+        String courseName = courseNameField.getText();
+        String department = departmentDropdown.getValue();
+        int credits = Integer.parseInt(creditsField.getText());
+        int hours = Integer.parseInt(hoursField.getText());
+        String lecturer = lecturerField.getText();
+        try {
+            CourseManager.addCourse(courseCode, courseName, department, credits, hours, lecturer);
+            courseCodeField.clear();
+            courseNameField.clear();
+            departmentDropdown.getSelectionModel().clearSelection();
+            creditsField.clear();
+            hoursField.clear();
+            lecturerField.clear();
+            courseAddedLabel.setText("Course added successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void modifyCourseClicked(ActionEvent event) {
+    @FXML
+    private void modifyCourseClicked(ActionEvent event) {
+        String courseCodeToModify = modifyCourseCodeField.getText();
+        String newCourseName = newCourseNameField.getText();
+        String newDepartment = newDepartmentDropdown.getValue();
+        int newCredits = Integer.parseInt(newCreditsField.getText());
+        int newHours = Integer.parseInt(newHoursField.getText());
+        String newLecturer = newLecturerField.getText();
+        try {
+            CourseManager.modifyCourse(courseCodeToModify, newCourseName, newDepartment, newCredits, newHours, newLecturer);
+            modifyCourseCodeField.clear();
+            newCourseNameField.clear();
+            newDepartmentDropdown.getSelectionModel().clearSelection();
+            newCreditsField.clear();
+            newHoursField.clear();
+            newLecturerField.clear();
+            courseModifiedLabel.setText("Course modified successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void deleteCourseClicked(ActionEvent event) {
+    @FXML
+    private void deleteCourseClicked(ActionEvent event) {
+        String courseCodeToDelete = deleteCourseCodeField.getText();
+        try {
+            CourseManager.deleteCourse(courseCodeToDelete);
+            deleteCourseCodeField.clear();
+            courseDeletedLabel.setText("Course deleted successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
 }
