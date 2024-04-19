@@ -18,6 +18,7 @@ import javafx.util.Duration;
 import javafx.scene.control.Button;
 
 import java.sql.SQLException;
+import java.time.LocalTime;
 
 public class AdminController {
     public Label userAddedLabel;
@@ -109,6 +110,28 @@ public class AdminController {
     public TextField deleteCourseCodeField;
     public Button deleteCourseButton;
     public Label courseDeletedLabel;
+
+    public TextField startTimeField;
+    public TextField endTimeField;
+    public Button addTimetableButton;
+    public Label timetableAddedLabel;
+    public TextField timetableCourseCodeField;
+    public TextField timetablelecturerField;
+    public TextField timetablecourseNameField;
+    public TextField timetableclassroomField;
+    public ComboBox<String> dayOfWeekDropdown;
+    public TextField timetableIdField;
+    public TextField newTimetableCourseNameField;
+    public TextField newTimetableLecturerField;
+    public TextField newTimetableClassroomField;
+    public ComboBox<String> newDayOfWeekDropdown;
+    public TextField newTimetableStartTimeField;
+    public TextField newTimetableEndTimeField;
+    public Button modifyTimetableButton;
+    public Label timetableModifiedLabel;
+    public TextField deleteTimetableIdField;
+    public Button deleteTimetableButton;
+    public Label timetableDeletedLabel;
 
     @FXML
     private void initialize() {
@@ -262,6 +285,69 @@ public class AdminController {
             CourseManager.deleteCourse(courseCodeToDelete);
             deleteCourseCodeField.clear();
             courseDeletedLabel.setText("Course deleted successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void addTimetableClicked(ActionEvent event) {
+        String courseCode = timetableCourseCodeField.getText();
+        String courseName = timetablecourseNameField.getText();
+        String lecturer = timetablelecturerField.getText();
+        String classroom = timetableclassroomField.getText();
+        String dayOfWeek = dayOfWeekDropdown.getValue();
+        LocalTime startTime = LocalTime.parse(startTimeField.getText());
+        LocalTime endTime = LocalTime.parse(endTimeField.getText());
+
+        try {
+            TimetableManager.addTimetable(courseCode, courseName, lecturer, classroom, dayOfWeek, startTime, endTime);
+            timetableCourseCodeField.clear();
+            timetablecourseNameField.clear();
+            timetablelecturerField.clear();
+            timetableclassroomField.clear();
+            dayOfWeekDropdown.getSelectionModel().clearSelection();
+            startTimeField.clear();
+            endTimeField.clear();
+            timetableAddedLabel.setText("Timetable entry added successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void modifyTimetableClicked(ActionEvent event) {
+        int timetableId = Integer.parseInt(timetableIdField.getText());
+        String newCourseName = newTimetableCourseNameField.getText();
+        String newLecturer = newTimetableLecturerField.getText();
+        String newClassroom = newTimetableClassroomField.getText();
+        String newDayOfWeek = newDayOfWeekDropdown.getValue();
+        LocalTime newStartTime = LocalTime.parse(newTimetableStartTimeField.getText());
+        LocalTime newEndTime = LocalTime.parse(newTimetableEndTimeField.getText());
+
+        try {
+            TimetableManager.modifyTimetable(timetableId, newCourseName, newLecturer, newClassroom, newDayOfWeek, newStartTime, newEndTime);
+            timetableIdField.clear();
+            newTimetableCourseNameField.clear();
+            newTimetableLecturerField.clear();
+            newTimetableClassroomField.clear();
+            newDayOfWeekDropdown.getSelectionModel().clearSelection();
+            newTimetableStartTimeField.clear();
+            newTimetableEndTimeField.clear();
+            timetableModifiedLabel.setText("Timetable entry modified successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void deleteTimetableClicked(ActionEvent event) {
+        int timetableIdToDelete = Integer.parseInt(deleteTimetableIdField.getText());
+
+        try {
+            TimetableManager.deleteTimetable(timetableIdToDelete);
+            deleteTimetableIdField.clear();
+            timetableDeletedLabel.setText("Timetable entry deleted successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
