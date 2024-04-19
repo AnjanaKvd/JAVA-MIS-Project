@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Medical">
+   <children>
+      <AnchorPane layoutX="497.0" layoutY="33.0" prefHeight="85.0" prefWidth="479.0">
+         <children>
+            <Label layoutX="32.0" layoutY="34.0" prefHeight="40.0" prefWidth="237.0" text="Medical">
+               <font>
+                  <Font name="Times New Roman" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="186.0" layoutY="153.0" prefHeight="453.0" prefWidth="440.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="38.0" layoutY="80.0" text="Student ID :">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="140.0" text="Course Name :">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="200.0" text="Date :">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="246.0" text="Hours :">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="300.0" text="Type :">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="166.0" layoutY="376.0" mnemonicParsing="false" style="-fx-background-color: #F0A3FC;" text="Reset">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="278.0" layoutY="376.0" mnemonicParsing="false" style="-fx-background-color: #F0A3FC;" text="Uplod Medical">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <TextField layoutX="155.0" layoutY="78.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField layoutX="155.0" layoutY="138.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField layoutX="155.0" layoutY="198.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField layoutX="155.0" layoutY="244.0" prefHeight="25.0" prefWidth="211.0" />
+            <ChoiceBox layoutX="155.0" layoutY="298.0" prefHeight="25.0" prefWidth="211.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="654.0" layoutY="153.0" prefHeight="453.0" prefWidth="336.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button layoutX="97.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #F0A3FC;" text="Update Medical" />
+            <Button layoutX="97.0" layoutY="194.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #F0A3FC;" text="Delete Medical" />
+            <Button layoutX="97.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #F0A3FC;" text="Viwes Medical" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="186.0" layoutY="625.0" prefHeight="56.0" prefWidth="521.0">
+         <children>
+            <Button layoutX="33.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #F0A3FC;" text="Back">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
