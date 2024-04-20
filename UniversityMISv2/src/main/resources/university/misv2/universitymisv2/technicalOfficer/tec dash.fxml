@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TechnicalOfficerController">
+   <children>
+      <Label layoutX="266.0" layoutY="40.0" text="dashbord" />
+      <Button layoutX="96.0" layoutY="103.0" mnemonicParsing="false" onAction="#buttonClick" text="Attendance" />
+      <Button layoutX="96.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Medical" />
+   </children>
+</AnchorPane>
