@@ -72,7 +72,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="69.0" layoutY="33.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Back">
+            <Button layoutX="69.0" layoutY="33.0" mnemonicParsing="false" onAction="#gotecdash" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Back">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>

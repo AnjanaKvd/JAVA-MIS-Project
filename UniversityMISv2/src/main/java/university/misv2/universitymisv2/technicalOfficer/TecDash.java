@@ -15,15 +15,25 @@ public class TecDash {
     private Stage stage ;
     private Scene scene;
     private Parent root;
-    public  void goAttendance(ActionEvent event)throws IOException{
-        Parent rot = FXMLLoader.load(getClass().getResource("Attendance.fxml"));
-        stage =(Stage)((Node)event.getSource()).getScene().getWindow();
-        scene =new Scene(root);
+
+    public  void goMedical(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Medical.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-    public  void goMedical(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Medical.fxml"));
+
+    public  void gopassword(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("changePassword.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public  void GoAttendance(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Attendance.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

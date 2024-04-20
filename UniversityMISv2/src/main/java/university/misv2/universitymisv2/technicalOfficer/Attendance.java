@@ -24,4 +24,9 @@ public class Attendance {
         stage.show();
 
     }
+
+
+    public static void main(String[] args) {
+
+    }
 }
