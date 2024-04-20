@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="415.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.AttendanceMedicalController">
+    <children>
+        <TableView fx:id="table" layoutY="53.0" prefHeight="362.0" prefWidth="801.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="100.0" text="id" />
+                <TableColumn fx:id="reason" prefWidth="100.0" text="reason" />
+                <TableColumn fx:id="start_date" prefWidth="150.0" text="start_date" />
+                <TableColumn fx:id="end_date" prefWidth="150.0" text="end_date" />
+                <TableColumn fx:id="is_day_medical" prefWidth="150.0" text="is_day_medical" />
+                <TableColumn fx:id="submitted_date" prefWidth="150.0" text="submitted_date" />
+            </columns>
+        </TableView>
+        <Label layoutX="271.0" layoutY="14.0" prefHeight="35.0" prefWidth="260.0" text="Attendance and Medical">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

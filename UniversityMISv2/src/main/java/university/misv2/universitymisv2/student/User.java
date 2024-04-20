@@ -1,6 +1,8 @@
 package university.misv2.universitymisv2.student;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,7 +25,7 @@ public class User {
         this.Status = Status;
     }
 
-    public static List<User> fetchAllUsers() throws SQLException {
+    public static  List<User> fetchAllUsers()  {
         List<User> users = new ArrayList<>();
 
         DatabaseConnection connectionNow = new DatabaseConnection();
@@ -43,8 +45,9 @@ public class User {
                 String Status = result.getString("Status");
 
                 // Create a new User instance with the data from the ResultSet
-                User user = new User(id, student_id, course_code, Date,Theory_or_Practical,Status);
+                User user = new User(id, student_id, course_code, Date, Theory_or_Practical, Status);
                 users.add(user);
+
             }
 
         } catch (Exception e) {

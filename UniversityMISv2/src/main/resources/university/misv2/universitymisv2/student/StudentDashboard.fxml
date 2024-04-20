@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboard">
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardController">
     <children>
         <AnchorPane prefHeight="743.0" prefWidth="325.0" style="-fx-background-color: GRAY;">
             <children>
@@ -73,6 +73,7 @@
                   <Font size="17.0" />
                </font></Label>
                 <Label layoutX="131.0" layoutY="708.0" prefHeight="17.0" prefWidth="52.0" text="Student" textFill="#615f5f" />
+<!--            <Button fx:id="buttonclick" layoutX="259.0" layoutY="197.0" mnemonicParsing="false"  text="Button" />-->
             </children>
         </AnchorPane>
         <AnchorPane layoutX="327.0" layoutY="-1.0" prefHeight="213.0" prefWidth="1030.0" style="-fx-background-color: yellow;">
@@ -120,15 +121,12 @@
                 </Label>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="dashboardTab" layoutX="324.0" layoutY="214.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="medicalTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="courseTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="gradesTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="timetableTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="notificationTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <AnchorPane fx:id="helpTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button layoutX="119.0" layoutY="57.0" mnemonicParsing="false" onAction="#viewAttendance" text="Button" />
-         </children></AnchorPane>
+<!--        <AnchorPane fx:id="dashboardTab" layoutX="324.0" layoutY="214.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="medicalTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="courseTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="gradesTab" layoutX="334.0" layoutY="224.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="timetableTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="notificationTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
+<!--      <AnchorPane fx:id="helpTab" layoutX="344.0" layoutY="234.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />-->
     </children>
 </AnchorPane>

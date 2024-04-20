@@ -47,12 +47,7 @@ public class Viewattendancecontroller implements Initializable {
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
         // Load the list of users from the database
-        List<User> userList = null;
-        try {
-            userList = User.fetchAllUsers();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        List<User> userList = User.fetchAllUsers();
 
         // Convert the list to an ObservableList
         ObservableList<User> observableUserList = FXCollections.observableArrayList(userList);
@@ -62,3 +57,4 @@ public class Viewattendancecontroller implements Initializable {
     }
 
 }
+

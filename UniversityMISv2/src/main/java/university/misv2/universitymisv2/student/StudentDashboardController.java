@@ -4,13 +4,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 import java.util.Objects;
 
-public class StudentDashboard {
+public class StudentDashboardController {
 
    @FXML
    private Label dashboardLabel;
@@ -29,6 +29,8 @@ public class StudentDashboard {
     @FXML
     private Label HelpLabel;
 
+    @FXML
+    private Button buttonclick;
 
     @FXML
     private void updateProfile() {
@@ -47,7 +49,7 @@ public class StudentDashboard {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("viewattendance.fxml")));
             Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.setScene(new Scene(root, 900, 400));
             registerStage.show();
 
 
@@ -64,16 +66,15 @@ public class StudentDashboard {
     @FXML
     private void viewMedicalDetails() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("viewMedicalDetails.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("AttendanceMedical.fxml"));
             Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 600, 400));
+            registerStage.setScene(new Scene(root, 800, 400));
             registerStage.show();
 
 
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
-
 
         }
     }
