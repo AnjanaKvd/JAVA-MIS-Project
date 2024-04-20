@@ -45,7 +45,7 @@
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <Image url="@../images/key-square.png" />
                     </ImageView>
-                    <Label prefHeight="20.0" prefWidth="89.0" text="Attendance" textFill="WHITE">
+                    <Label onDragDetected="#buttonClick" prefHeight="20.0" prefWidth="89.0" text="Attendance" textFill="WHITE">
                         <font>
                             <Font name="Poppins Regular" size="14.0" />
                         </font>

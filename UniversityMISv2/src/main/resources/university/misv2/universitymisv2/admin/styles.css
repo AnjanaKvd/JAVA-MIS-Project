@@ -167,3 +167,218 @@
     -fx-background-color: #2980b9; /* Dark Blue */
     -fx-border-color: transparent;
 }
+
+#userAddedLabel{
+    -fx-text-fill: blue;
+}
+#userModifiedLabel{
+    -fx-text-fill: green;
+}
+#userDeletedLabel{
+    -fx-text-fill: red;
+}
+
+/*Course management tab*/
+#allCoursesLabel {
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#courseCodeField,
+#courseNameField,
+#creditsField,
+#hoursField,
+#lecturerField,
+#modifyCourseCodeField,
+#newCourseNameField,
+#newCreditsField,
+#newHoursField,
+#newLecturerField,
+#deleteCourseCodeField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#departmentDropdown,
+#newDepartmentDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addCourseButton,
+#modifyCourseButton,
+#deleteCourseButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addCourseButton:hover,
+#modifyCourseButton:hover,
+#deleteCourseButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#courseCodeField:focused,
+#courseNameField:focused,
+#creditsField:focused,
+#hoursField:focused,
+#lecturerField:focused,
+#modifyCourseCodeField:focused,
+#newCourseNameField:focused,
+#newCreditsField:focused,
+#newHoursField:focused,
+#newLecturerField:focused,
+#departmentDropdown:focused,
+#newDepartmentDropdown:focused,
+#addCourseButton:focused,
+#modifyCourseButton:focused,
+#deleteCourseButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addCourseButton:default:hover,
+#modifyCourseButton:default:hover,
+#deleteCourseButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}
+
+#courseAddedLabel{
+    -fx-text-fill: blue;
+}
+#courseModifiedLabel{
+    -fx-text-fill: green;
+}
+#courseDeletedLabel{
+    -fx-text-fill: red;
+}
+
+/* --- Timetable management tab --- */
+#addTimetableLabel,
+#modifyTimetableLabel,
+#deleteTimetableLabel{
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#timetableIdField,
+#courseCodeField,
+#courseNameField,
+#lecturerField,
+#classroomField,
+#modifyTimetableIdField,
+#newCourseNameField,
+#newLecturerField,
+#startTimeField,
+#endTimeField,
+#newClassroomField,
+#newEndTimeField,
+#newStartTimeField,
+#deleteTimetableIdField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#dayOfWeekDropdown,
+#newDayOfWeekDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addTimetableButton,
+#modifyTimetableButton,
+#deleteTimetableButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addTimetableButton:hover,
+#modifyTimetableButton:hover,
+#deleteTimetableButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#courseCodeField:focused,
+#courseNameField:focused,
+#lecturerField:focused,
+#classroomField:focused,
+#modifyTimetableIdField:focused,
+#newCourseNameField:focused,
+#newLecturerField:focused,
+#newClassroomField:focused,
+#dayOfWeekDropdown:focused,
+#newDayOfWeekDropdown:focused,
+#addTimetableButton:focused,
+#modifyTimetableButton:focused,
+#deleteTimetableButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addTimetableButton:default:hover,
+#modifyTimetableButton:default:hover,
+#deleteTimetableButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}
+
+/* Label Styles */
+#timetableAddedLabel {
+    -fx-text-fill: blue;
+}
+
+#timetableModifiedLabel {
+    -fx-text-fill: green;
+}
+
+#timetableDeletedLabel {
+    -fx-text-fill: red;
+}
+

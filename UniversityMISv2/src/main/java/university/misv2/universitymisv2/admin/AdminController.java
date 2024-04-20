@@ -3,6 +3,7 @@ package university.misv2.universitymisv2.admin;
 import javafx.animation.RotateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -17,8 +18,12 @@ import javafx.util.Duration;
 import javafx.scene.control.Button;
 
 import java.sql.SQLException;
+import java.time.LocalTime;
 
 public class AdminController {
+    public Label userAddedLabel;
+    public Label userModifiedLabel;
+    public Label userDeletedLabel;
     @FXML
     private Label profileNameLabel;
 
@@ -56,10 +61,11 @@ public class AdminController {
     private AnchorPane coursesTab;
 
     @FXML
-    private AnchorPane notificationTab;
+    public AnchorPane timetablesTab;
 
     @FXML
-    private AnchorPane helpTab;
+    private AnchorPane notificationTab;
+
 
     @FXML
     private TextField usernameField;
@@ -85,14 +91,47 @@ public class AdminController {
     @FXML
     private TextField deleteUsernameField;
 
-    @FXML
-    private Button addUserButton;
+    public TextField courseCodeField;
+    public TextField courseNameField;
+    public ComboBox<String> departmentDropdown;
+    public TextField creditsField;
+    public TextField hoursField;
+    public TextField lecturerField;
+    public Button addCourseButton;
+    public Label courseAddedLabel;
+    public TextField modifyCourseCodeField;
+    public TextField newCourseNameField;
+    public ComboBox<String> newDepartmentDropdown;
+    public TextField newCreditsField;
+    public TextField newHoursField;
+    public TextField newLecturerField;
+    public Button modifyCourseButton;
+    public Label courseModifiedLabel;
+    public TextField deleteCourseCodeField;
+    public Button deleteCourseButton;
+    public Label courseDeletedLabel;
 
-    @FXML
-    private Button modifyUserButton;
-
-    @FXML
-    private Button deleteUserButton;
+    public TextField startTimeField;
+    public TextField endTimeField;
+    public Button addTimetableButton;
+    public Label timetableAddedLabel;
+    public TextField timetableCourseCodeField;
+    public TextField timetablelecturerField;
+    public TextField timetablecourseNameField;
+    public TextField timetableclassroomField;
+    public ComboBox<String> dayOfWeekDropdown;
+    public TextField timetableIdField;
+    public TextField newTimetableCourseNameField;
+    public TextField newTimetableLecturerField;
+    public TextField newTimetableClassroomField;
+    public ComboBox<String> newDayOfWeekDropdown;
+    public TextField newTimetableStartTimeField;
+    public TextField newTimetableEndTimeField;
+    public Button modifyTimetableButton;
+    public Label timetableModifiedLabel;
+    public TextField deleteTimetableIdField;
+    public Button deleteTimetableButton;
+    public Label timetableDeletedLabel;
 
     @FXML
     private void initialize() {
@@ -108,20 +147,11 @@ public class AdminController {
         dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1, "Dashboard"));
         dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2, "Users"));
         dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3, "Courses"));
-        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Notifications"));
-        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Help"));
+        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Timetables"));
+        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
 
         // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
-
-        ObservableList<String> options = FXCollections.observableArrayList(
-                "Admin",
-                "Lecturer",
-                "Student",
-                "Technical Officer"
-        );
-        userTypeDropdown.setItems(options);
-        userTypeDropdown2.setItems(options);
 
     }
 
@@ -142,8 +172,8 @@ public class AdminController {
         dashboardTab.setVisible(false);
         usersTab.setVisible(false);
         coursesTab.setVisible(false);
+        timetablesTab.setVisible(false);
         notificationTab.setVisible(false);
-        helpTab.setVisible(false);
 
         if (selectedOption == dashboardOption1) {
             dashboardTab.setVisible(true);
@@ -152,9 +182,9 @@ public class AdminController {
         } else if (selectedOption == dashboardOption3) {
             coursesTab.setVisible(true);
         } else if (selectedOption == dashboardOption4) {
-            notificationTab.setVisible(true);
+            timetablesTab.setVisible(true);
         } else if (selectedOption == dashboardOption5) {
-            helpTab.setVisible(true);
+            notificationTab.setVisible(true);
         }
     }
 
@@ -165,10 +195,11 @@ public class AdminController {
         String userType = userTypeDropdown.getValue();
         try {
             UserManager.addUser(username, password, userType);
-            // Optionally, you can show a success message or clear input fields after adding user
-            System.out.println("User added successfully.");
+            usernameField.clear();
+            passwordField.clear();
+            userTypeDropdown.getSelectionModel().clearSelection();
+            userAddedLabel.setText("User added successfully !");
         } catch (SQLException e) {
-            // Handle database errors
             e.printStackTrace();
         }
     }
@@ -181,10 +212,12 @@ public class AdminController {
         String userType = userTypeDropdown2.getValue();
         try {
             UserManager.modifyUser(oldUsername, newUsername, newPassword, userType);
-            // Optionally, you can show a success message or clear input fields after modifying user
-            System.out.println("User modified successfully.");
+            modifyUsernameField.clear();
+            newUsernameField.clear();
+            newPasswordField.clear();
+            userTypeDropdown2.getSelectionModel().clearSelection();
+            userModifiedLabel.setText("User modified successfully !");
         } catch (SQLException e) {
-            // Handle database errors
             e.printStackTrace();
         }
     }
@@ -194,10 +227,128 @@ public class AdminController {
         String usernameToDelete = deleteUsernameField.getText();
         try {
             UserManager.deleteUser(usernameToDelete);
-            // Optionally, you can show a success message or clear input fields after deleting user
-            System.out.println("User deleted successfully.");
+            deleteUsernameField.clear();
+            userDeletedLabel.setText("User deleted successfully !");
         } catch (SQLException e) {
-            // Handle database errors
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void addCourseClicked(ActionEvent event) {
+        String courseCode = courseCodeField.getText();
+        String courseName = courseNameField.getText();
+        String department = departmentDropdown.getValue();
+        int credits = Integer.parseInt(creditsField.getText());
+        int hours = Integer.parseInt(hoursField.getText());
+        String lecturer = lecturerField.getText();
+        try {
+            CourseManager.addCourse(courseCode, courseName, department, credits, hours, lecturer);
+            courseCodeField.clear();
+            courseNameField.clear();
+            departmentDropdown.getSelectionModel().clearSelection();
+            creditsField.clear();
+            hoursField.clear();
+            lecturerField.clear();
+            courseAddedLabel.setText("Course added successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void modifyCourseClicked(ActionEvent event) {
+        String courseCodeToModify = modifyCourseCodeField.getText();
+        String newCourseName = newCourseNameField.getText();
+        String newDepartment = newDepartmentDropdown.getValue();
+        int newCredits = Integer.parseInt(newCreditsField.getText());
+        int newHours = Integer.parseInt(newHoursField.getText());
+        String newLecturer = newLecturerField.getText();
+        try {
+            CourseManager.modifyCourse(courseCodeToModify, newCourseName, newDepartment, newCredits, newHours, newLecturer);
+            modifyCourseCodeField.clear();
+            newCourseNameField.clear();
+            newDepartmentDropdown.getSelectionModel().clearSelection();
+            newCreditsField.clear();
+            newHoursField.clear();
+            newLecturerField.clear();
+            courseModifiedLabel.setText("Course modified successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void deleteCourseClicked(ActionEvent event) {
+        String courseCodeToDelete = deleteCourseCodeField.getText();
+        try {
+            CourseManager.deleteCourse(courseCodeToDelete);
+            deleteCourseCodeField.clear();
+            courseDeletedLabel.setText("Course deleted successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void addTimetableClicked(ActionEvent event) {
+        String courseCode = timetableCourseCodeField.getText();
+        String courseName = timetablecourseNameField.getText();
+        String lecturer = timetablelecturerField.getText();
+        String classroom = timetableclassroomField.getText();
+        String dayOfWeek = dayOfWeekDropdown.getValue();
+        LocalTime startTime = LocalTime.parse(startTimeField.getText());
+        LocalTime endTime = LocalTime.parse(endTimeField.getText());
+
+        try {
+            TimetableManager.addTimetable(courseCode, courseName, lecturer, classroom, dayOfWeek, startTime, endTime);
+            timetableCourseCodeField.clear();
+            timetablecourseNameField.clear();
+            timetablelecturerField.clear();
+            timetableclassroomField.clear();
+            dayOfWeekDropdown.getSelectionModel().clearSelection();
+            startTimeField.clear();
+            endTimeField.clear();
+            timetableAddedLabel.setText("Timetable entry added successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void modifyTimetableClicked(ActionEvent event) {
+        int timetableId = Integer.parseInt(timetableIdField.getText());
+        String newCourseName = newTimetableCourseNameField.getText();
+        String newLecturer = newTimetableLecturerField.getText();
+        String newClassroom = newTimetableClassroomField.getText();
+        String newDayOfWeek = newDayOfWeekDropdown.getValue();
+        LocalTime newStartTime = LocalTime.parse(newTimetableStartTimeField.getText());
+        LocalTime newEndTime = LocalTime.parse(newTimetableEndTimeField.getText());
+
+        try {
+            TimetableManager.modifyTimetable(timetableId, newCourseName, newLecturer, newClassroom, newDayOfWeek, newStartTime, newEndTime);
+            timetableIdField.clear();
+            newTimetableCourseNameField.clear();
+            newTimetableLecturerField.clear();
+            newTimetableClassroomField.clear();
+            newDayOfWeekDropdown.getSelectionModel().clearSelection();
+            newTimetableStartTimeField.clear();
+            newTimetableEndTimeField.clear();
+            timetableModifiedLabel.setText("Timetable entry modified successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void deleteTimetableClicked(ActionEvent event) {
+        int timetableIdToDelete = Integer.parseInt(deleteTimetableIdField.getText());
+
+        try {
+            TimetableManager.deleteTimetable(timetableIdToDelete);
+            deleteTimetableIdField.clear();
+            timetableDeletedLabel.setText("Timetable entry deleted successfully !");
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

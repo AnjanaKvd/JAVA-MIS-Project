@@ -68,4 +68,7 @@ public class TechnicalOfficerController {
         dashboardOptionsContainer.getChildren().forEach(option -> option.getStyleClass().setAll("dashboard-option"));
         selectedOption.getStyleClass().setAll("dashboard-option-selected");
     }
+    public void buttonClick(){
+        System.out.println("the button is..............");
+    }
 }
