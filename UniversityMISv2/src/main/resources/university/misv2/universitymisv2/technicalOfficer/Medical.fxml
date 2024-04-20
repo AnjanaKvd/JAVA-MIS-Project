@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Medical">
    <children>
       <AnchorPane layoutX="497.0" layoutY="33.0" prefHeight="85.0" prefWidth="479.0">
@@ -72,7 +71,7 @@
       </AnchorPane>
       <AnchorPane layoutX="186.0" layoutY="625.0" prefHeight="56.0" prefWidth="521.0">
          <children>
-            <Button layoutX="33.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #F0A3FC;" text="Back">
+            <Button layoutX="33.0" layoutY="16.0" mnemonicParsing="false" onAction="#gotecdash" style="-fx-background-color: #F0A3FC;" text="Back">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
