@@ -35,9 +35,9 @@
             <Font size="13.0" />
         </font>
     </Label>
-   <AnchorPane layoutY="90.0" prefHeight="526.0" prefWidth="267.0" style="-fx-background-color: #e5feef;">
+   <AnchorPane layoutY="90.0" prefHeight="526.0" prefWidth="294.0" style="-fx-background-color: #e5feef;">
       <children>
-          <Button fx:id="MGGButton" layoutX="24.0" layoutY="147.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Marks,Grades ,GPA" textFill="WHITE">
+          <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="147.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Marks&amp;Grades &amp;GPA" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -49,7 +49,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="eligibilityButton" layoutX="24.0" layoutY="192.0" mnemonicParsing="false" onAction="#eligibilityClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Eligibility " textFill="WHITE">
+          <Button fx:id="eligibilityButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="192.0" mnemonicParsing="false" onAction="#eligibilityClick" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Eligibility " textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -61,7 +61,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="notificationButton" layoutX="24.0" layoutY="237.0" mnemonicParsing="false" onAction="#noticeClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Notification" textFill="WHITE">
+          <Button fx:id="notificationButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="237.0" mnemonicParsing="false" onAction="#noticeClick" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Notification" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -73,7 +73,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="uplode_Marks" layoutX="24.0" layoutY="282.0" mnemonicParsing="false" onAction="#UplodeMarks" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #2980b9;" text="Uplode Marks" textFill="WHITE">
+          <Button fx:id="uplode_Marks" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="282.0" mnemonicParsing="false" onAction="#UplodeMarks" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Uplode Marks" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -85,7 +85,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="attendanceandmedicalField" layoutX="24.0" layoutY="327.0" mnemonicParsing="false" onAction="#attendanceMedical" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Attendance and medical" textFill="WHITE">
+          <Button fx:id="attendanceandmedicalField" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="327.0" mnemonicParsing="false" onAction="#attendanceMedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text=" Attendance &amp; medical" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -97,7 +97,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="RegisterButton" layoutX="24.0" layoutY="372.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Update Course" textFill="WHITE">
+          <Button fx:id="RegisterButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="372.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Update Course" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
@@ -109,7 +109,7 @@
                </ImageView>
             </graphic>
           </Button>
-          <Button fx:id="checkButton" layoutX="24.0" layoutY="417.0" mnemonicParsing="false" onAction="#viewtabledata" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Student Details" textFill="WHITE">
+          <Button fx:id="checkButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="417.0" mnemonicParsing="false" onAction="#viewtabledata" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Student Details" textAlignment="CENTER" textFill="WHITE">
               <font>
                   <Font size="13.0" />
               </font>
