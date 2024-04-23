@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.UpdateCourse">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.UpdateCourse">
     <children>
         <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
             <children>
@@ -35,12 +35,12 @@
                 <Font size="13.0" />
             </font>
         </Label>
-        <Button fx:id="updatecourse" layoutX="89.0" layoutY="394.0" mnemonicParsing="false" onAction="#updatecourseOnAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="UpdateCourse" textFill="WHITE">
+        <Button fx:id="updatecourse" layoutX="89.0" layoutY="525.0" mnemonicParsing="false" onAction="#updatecourseOnAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="UpdateCourse" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-        <Button fx:id="CloseButton" layoutX="92.0" layoutY="472.0" mnemonicParsing="false" onAction="#cancleButtononAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+        <Button fx:id="CloseButton" layoutX="89.0" layoutY="601.0" mnemonicParsing="false" onAction="#cancleButtononAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
@@ -50,28 +50,40 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="is_midfield" layoutX="89.0" layoutY="249.0" prefHeight="25.0" prefWidth="336.0" promptText="(Y/N)" />
-      <TextField fx:id="is_projectfield" layoutX="89.0" layoutY="302.0" prefHeight="25.0" prefWidth="336.0" promptText="(Y/N)" />
-      <TextField fx:id="theory_or_practicalfield" layoutX="89.0" layoutY="347.0" prefHeight="25.0" prefWidth="336.0" promptText="Theory/Practical" />
-      <Label layoutX="89.0" layoutY="222.0" text="is_mid">
+      <TextField fx:id="is_midfield" layoutX="89.0" layoutY="335.0" prefHeight="25.0" prefWidth="336.0" promptText="(Y/N)" />
+      <TextField fx:id="is_projectfield" layoutX="87.0" layoutY="398.0" prefHeight="25.0" prefWidth="336.0" promptText="(Y/N)" />
+      <TextField fx:id="theory_or_practicalfield" layoutX="87.0" layoutY="450.0" prefHeight="25.0" prefWidth="336.0" promptText="Theory/Practical" />
+      <Label layoutX="88.0" layoutY="316.0" text="Is_mid">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="283.0" text="is_project">
+      <Label layoutX="87.0" layoutY="372.0" text="Is_project">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="328.0" text="theory_or_practical">
+      <Label layoutX="86.0" layoutY="431.0" text="Theory_or_practical">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Button fx:id="AddMaterialsButton" layoutX="89.0" layoutY="434.0" mnemonicParsing="false" onAction="#AddMaterialsButton" onDragDetected="#AddMaterialsButton" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="AddMaterials" textFill="WHITE">
+      <Button fx:id="AddMaterialsButton" layoutX="89.0" layoutY="564.0" mnemonicParsing="false" onAction="#AddMaterialsButton" onDragDetected="#AddMaterialsButton" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="AddMaterials" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
+      <Label layoutX="94.0" layoutY="213.0" text="Credits">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="creditsfield" layoutX="89.0" layoutY="232.0" prefHeight="25.0" prefWidth="336.0" promptText="Credits" />
+      <Label layoutX="88.0" layoutY="264.0" text="Gpa_or_ngpa">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Gpafiled" layoutX="89.0" layoutY="283.0" prefHeight="25.0" prefWidth="336.0" promptText="Gpa_or_ngpa" />
     </children>
 </AnchorPane>

@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.LecturerController">
-    <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.LecturerController">
+    <AnchorPane prefHeight="89.0" prefWidth="964.0" style="-fx-background-color: #2fa99b;">
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -17,15 +17,10 @@
     </AnchorPane>
     <ImageView fx:id="shieldimageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../images/User.png" />
+         <Image url="@../images/Lecturer.png" />
       </image>
     </ImageView>
-    <Button fx:id="RegisterButton" layoutX="92.0" layoutY="386.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Register" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="CloseButton" layoutX="92.0" layoutY="467.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+    <Button fx:id="CloseButton" layoutX="882.0" layoutY="572.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
         <font>
             <Font size="13.0" />
         </font>
@@ -40,34 +35,92 @@
             <Font size="13.0" />
         </font>
     </Label>
-    <Button fx:id="checkButton" layoutX="92.0" layoutY="430.0" mnemonicParsing="false" onAction="#viewtabledata" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Student Details" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="attendanceandmedicalField" layoutX="92.0" layoutY="346.0" mnemonicParsing="false" onAction="#attendanceMedical" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Attendance and medical" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="uplode_Marks" layoutX="92.0" layoutY="311.0" mnemonicParsing="false" onAction="#UplodeMarks" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Uplode Marks" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="notificationButton" layoutX="92.0" layoutY="272.0" mnemonicParsing="false" onAction="#noticeClick" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Notification" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="eligibilityButton" layoutX="92.0" layoutY="234.0" mnemonicParsing="false" onAction="#eligibilityClick" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Eligibility " textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
-    <Button fx:id="MGGButton" layoutX="92.0" layoutY="192.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Marks,Grades ,GPA" textFill="WHITE">
-        <font>
-            <Font size="13.0" />
-        </font>
-    </Button>
+   <AnchorPane layoutY="90.0" prefHeight="526.0" prefWidth="267.0" style="-fx-background-color: #e5feef;">
+      <children>
+          <Button fx:id="MGGButton" layoutX="24.0" layoutY="147.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Marks,Grades ,GPA" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/Gpa%20Calculator.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="eligibilityButton" layoutX="24.0" layoutY="192.0" mnemonicParsing="false" onAction="#eligibilityClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Eligibility " textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/Courses.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="notificationButton" layoutX="24.0" layoutY="237.0" mnemonicParsing="false" onAction="#noticeClick" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Notification" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/Notification.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="uplode_Marks" layoutX="24.0" layoutY="282.0" mnemonicParsing="false" onAction="#UplodeMarks" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #2980b9;" text="Uplode Marks" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/Courses.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="attendanceandmedicalField" layoutX="24.0" layoutY="327.0" mnemonicParsing="false" onAction="#attendanceMedical" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Attendance and medical" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/attendanceicon2.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="RegisterButton" layoutX="24.0" layoutY="372.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Update Course" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/updatecourse.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+          <Button fx:id="checkButton" layoutX="24.0" layoutY="417.0" mnemonicParsing="false" onAction="#viewtabledata" prefHeight="34.0" prefWidth="208.0" style="-fx-background-color: #2980b9;" text="Check Student Details" textFill="WHITE">
+              <font>
+                  <Font size="13.0" />
+              </font>
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/studentdetails.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+          </Button>
+      </children>
+   </AnchorPane>
 </AnchorPane>

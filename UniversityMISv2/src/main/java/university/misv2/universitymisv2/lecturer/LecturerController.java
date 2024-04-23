@@ -60,7 +60,7 @@ public class LecturerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File branding=new File("src/main/resources/university/misv2/universitymisv2/images/User.png");
+        File branding=new File("src/main/resources/university/misv2/universitymisv2/images/Lecturer.png");
         Image UpdateImage=new Image(branding.toURI().toString());
         shieldimageView.setImage(UpdateImage);
     }

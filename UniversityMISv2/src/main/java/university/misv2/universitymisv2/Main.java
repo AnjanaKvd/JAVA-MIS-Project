@@ -19,11 +19,15 @@ public class Main extends Application {
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 
-        primaryStage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
-//        primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setX(bounds.getMinX());
-        primaryStage.setY(bounds.getMinY());
-        primaryStage.show();
+//        primaryStage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+////        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        primaryStage.setX(bounds.getMinX());
+//        primaryStage.setY(bounds.getMinY());
+//        primaryStage.show();
+
+        Stage registerStage = new Stage();
+        registerStage.setScene(new Scene(root, 520, 523));
+        registerStage.show();
     }
 
     public static void main(String[] args) {
