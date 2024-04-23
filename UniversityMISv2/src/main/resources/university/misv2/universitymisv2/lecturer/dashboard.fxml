@@ -127,6 +127,11 @@
                     <Font size="13.0" />
                 </font>
             </Button>
+         <ImageView fitHeight="111.0" fitWidth="160.0" layoutX="93.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/profileicon.png" />
+            </image>
+         </ImageView>
         </children>
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="128.0" prefHeight="717.0" prefWidth="1263.0" />
