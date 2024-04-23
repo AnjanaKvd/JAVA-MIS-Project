@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.LecturerController">
-    <AnchorPane prefHeight="89.0" prefWidth="964.0" style="-fx-background-color: #2fa99b;">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="884.0" prefWidth="1680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.LecturerController">
+    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1910.0" style="-fx-background-color: #2fa99b;">
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -20,7 +20,7 @@
          <Image url="@../images/Lecturer.png" />
       </image>
     </ImageView>
-    <Button fx:id="CloseButton" layoutX="882.0" layoutY="572.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+    <Button fx:id="CloseButton" layoutX="1336.0" layoutY="767.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
         <font>
             <Font size="13.0" />
         </font>
@@ -35,7 +35,7 @@
             <Font size="13.0" />
         </font>
     </Label>
-   <AnchorPane layoutY="90.0" prefHeight="526.0" prefWidth="294.0" style="-fx-background-color: #e5feef;">
+   <AnchorPane layoutY="131.0" prefHeight="746.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
       <children>
           <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="24.0" layoutY="147.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Marks&amp;Grades &amp;GPA" textAlignment="CENTER" textFill="WHITE">
               <font>
