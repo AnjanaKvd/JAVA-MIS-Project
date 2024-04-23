@@ -12,10 +12,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -58,36 +61,71 @@ public class LecturerController implements Initializable {
     @FXML
     private Button checkButton;
 
+    @FXML
+    private Pane pane;
+
+    @FXML
+    private Pane uplode_marks;
+
+    @FXML
+    private Pane update_course;
+
+    @FXML
+    private Pane student_details;
+
+    @FXML
+    private Pane notification;
+
+    @FXML
+    private Pane marks_grade_gpa;
+
+    @FXML
+    private Pane eligibility;
+
+    @FXML
+    private Pane Attendance_medical;
+
+    @FXML
+    private BorderPane boarderPane;
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File branding=new File("src/main/resources/university/misv2/universitymisv2/images/Lecturer.png");
         Image UpdateImage=new Image(branding.toURI().toString());
         shieldimageView.setImage(UpdateImage);
-    }
-
-
-
-    public void RegisterButtonOnAction(ActionEvent event) throws SQLException {
-
-        if(!FirstnameTextField.getText().isEmpty() && !LastnameTextField.getText().isEmpty() && !UsernameTextFiels.getText().isEmpty() &&
-                !SetPasswordField.getText().isEmpty() && !ConfirmPasswordFiels.getText().isEmpty()){
-
-            if(SetPasswordField.getText().equals(ConfirmPasswordFiels.getText())){
-                registerUser();
-                conPasswordMessageLable1.setText("");
-            }else{
-                conPasswordMessageLable1.setText("password not match");
-            }
-
-
-        } else{
-            registationMessageLable.setText("Register fail");
-        }
-
-
-
 
     }
+
+
+
+
+//    public void RegisterButtonOnAction(ActionEvent event) throws SQLException {
+//
+//        if(!FirstnameTextField.getText().isEmpty() && !LastnameTextField.getText().isEmpty() && !UsernameTextFiels.getText().isEmpty() &&
+//                !SetPasswordField.getText().isEmpty() && !ConfirmPasswordFiels.getText().isEmpty()){
+//
+//            if(SetPasswordField.getText().equals(ConfirmPasswordFiels.getText())){
+//                registerUser();
+//                conPasswordMessageLable1.setText("");
+//            }else{
+//                conPasswordMessageLable1.setText("password not match");
+//            }
+//
+//
+//        } else{
+//            registationMessageLable.setText("Register fail");
+//        }
+//    }
+
+//    private void registerUser() {
+//
+//    }
+
+
+
+
 
     public void cancleButtononAction(ActionEvent event){
         Stage stage=(Stage) CloseButton.getScene().getWindow();
@@ -96,115 +134,72 @@ public class LecturerController implements Initializable {
 
     }
 
-    public  void  registerUser() throws SQLException {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("updateCourse.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 520, 523));
-            registerStage.show();
 
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
-
-    public void viewtabledata() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("showdata.fxml")));
-
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 900, 485));
-            registerStage.show();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
-
-    public void attendanceMedical() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("attendanceMedical.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 802, 537));
-            registerStage.show();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
-
-    public void UplodeMarks() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("uploadMarks.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 520, 677));
-            registerStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-        }
-    }
-
-
-
-    public void noticeClick() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("notice.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 600, 400));
-            registerStage.show();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
-
-
-    public void eligibilityClick() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("eligibility.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 600, 400));
-            registerStage.show();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
-
-    public void mggpaClick() {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mggpa.fxml")));
-            Stage registerStage = new Stage();
-            registerStage.setScene(new Scene(root, 600, 400));
-            registerStage.show();
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-
-        }
-    }
 
 
     public void cancelButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) CloseButton.getScene().getWindow();
         stage.close();
+    }
+
+
+
+
+    @FXML
+    void UplodeMarks(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("uploadMarks.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void attendanceMedical(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("attendanceMedical.fxml")));
+        boarderPane.setCenter(root);
+    }
+
+
+    @FXML
+    void eligibilityClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("eligibility.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void mggpaClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mggpa.fxml")));
+        boarderPane.setCenter(root);
+
+
+    }
+
+    @FXML
+    void noticeClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("notice.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void registerUser(ActionEvent event) throws SQLException, IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("updateCourse.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void viewtabledata(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("showdata.fxml")));
+        boarderPane.setCenter(root);
+
+
     }
 }

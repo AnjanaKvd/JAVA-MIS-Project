@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Eligibility">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1225.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Eligibility">
     <children>
-        <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
+        <AnchorPane layoutX="-14.0" prefHeight="82.0" prefWidth="1240.0" style="-fx-background-color: #E96151;">
             <children>
                 <Label layoutX="92.0" layoutY="27.0" text="Status" textFill="WHITE">
                     <font>
@@ -23,33 +23,33 @@
                 <Image url="@../images/User.png" />
             </image>
         </ImageView>
-        <Label layoutX="92.0" layoutY="138.0" text="student_id">
+        <Label layoutX="142.0" layoutY="234.0" text="student_id">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <TextField fx:id="student_id" layoutX="92.0" layoutY="172.0" prefHeight="25.0" prefWidth="336.0" promptText="student_id" />
-        <TextField fx:id="course_code" layoutX="92.0" layoutY="226.0" prefHeight="25.0" prefWidth="336.0" promptText="course_code" />
-        <Label layoutX="92.0" layoutY="198.0" text="course_code">
+        <TextField fx:id="student_id" layoutX="128.0" layoutY="279.0" prefHeight="25.0" prefWidth="336.0" promptText="student_id" />
+        <TextField fx:id="course_code" layoutX="131.0" layoutY="369.0" prefHeight="25.0" prefWidth="336.0" promptText="course_code" />
+        <Label layoutX="160.0" layoutY="328.0" text="course_code">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <Button fx:id="CloseButton" layoutX="92.0" layoutY="311.0" mnemonicParsing="false" onAction="#cancleButtononAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+        <Button fx:id="CloseButton" layoutX="160.0" layoutY="598.0" mnemonicParsing="false" onAction="#cancleButtononAction" prefHeight="27.0" prefWidth="298.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-        <Button fx:id="eligibilityButton" layoutX="92.0" layoutY="265.0" mnemonicParsing="false" onAction="#eligibilityButtonClick" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Eligibility" textFill="WHITE">
+        <Button fx:id="eligibilityButton" layoutX="78.0" layoutY="535.0" mnemonicParsing="false" onAction="#eligibilityButtonClick" prefHeight="27.0" prefWidth="297.0" style="-fx-background-color: #E96151;" text="Check Eligibility" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-      <Label fx:id="hidemessage" layoutX="408.0" layoutY="98.0" prefHeight="18.0" prefWidth="72.0" text=" " textFill="#1297d4" />
-      <Label fx:id="statusmessage" layoutX="213.0" layoutY="125.0" prefHeight="26.0" prefWidth="139.0" textFill="#d91818">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+        <Label fx:id="hidemessage" layoutX="408.0" layoutY="98.0" prefHeight="18.0" prefWidth="72.0" text=" " textFill="#1297d4" />
+        <Label fx:id="statusmessage" layoutX="600.0" layoutY="147.0" prefHeight="49.0" prefWidth="213.0" textFill="#d91818">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>
