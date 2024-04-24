@@ -134,5 +134,12 @@
          </ImageView>
         </children>
     </AnchorPane>
-    <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="128.0" prefHeight="717.0" prefWidth="1263.0" />
+    <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="128.0" prefHeight="717.0" prefWidth="1263.0">
+      <center>
+         <ImageView fitHeight="540.0" fitWidth="758.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+               <Image url="@../images/lecture.jpg" />
+            </image>
+         </ImageView>
+      </center></BorderPane>
 </AnchorPane>
