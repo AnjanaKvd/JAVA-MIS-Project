@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="university.misv2.universitymisv2.technicalOfficer.VeweAttendance"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.VeweAttendance">
+   <children>
+      <TableView layoutX="439.0" layoutY="238.0" prefHeight="372.0" prefWidth="542.0">
+        <columns>
+          <TableColumn prefWidth="136.0" text="student_id" />
+          <TableColumn prefWidth="90.0" text="Course_code" />
+            <TableColumn prefWidth="109.0" text="theory_or_practical" />
+            <TableColumn prefWidth="95.0" text="date" />
+            <TableColumn prefWidth="109.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="614.0" layoutY="173.0" prefHeight="17.0" prefWidth="446.0" styleClass="#F0A3FC" text="Viwe Attendances">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="433.0" layoutY="632.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="See" />
+      <Button layoutX="439.0" layoutY="673.0" mnemonicParsing="false" onAction="#goAttendance" text="Back" />
+   </children>
 </AnchorPane>

@@ -28,6 +28,13 @@ public class Attendance {
         stage.show();
 
     }
+    public  void goVeweAttendance(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("VeweAttendance.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public static boolean insertAttendance(String student_id, String course_code, String theory_or_practical, java.util.Date date, String status) {
         // SQL statement for inserting data
         String sql = "INSERT INTO course_attendance (student_id, course_code, Theory_or_Practical, Date, Status) VALUES (?, ?, ?, ?, ?)";
