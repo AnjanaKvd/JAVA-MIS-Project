@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
+<fx:root prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
    <children>
       <AnchorPane layoutX="168.0" layoutY="80.0" prefHeight="522.0" prefWidth="464.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Button layoutX="218.0" layoutY="422.0" mnemonicParsing="false" text="Submit">
+            <Button layoutX="218.0" layoutY="422.0" mnemonicParsing="false" onAction="#AddMaterialsButton" text="Submit">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="342.0" layoutY="422.0" mnemonicParsing="false" text="Clear">
+            <Button layoutX="342.0" layoutY="422.0" mnemonicParsing="false" onAction="#cancleButtononAction" text="Clear">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
@@ -45,7 +45,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="212.0" layoutY="18.0" prefHeight="25.0" prefWidth="195.0" promptText="student_id" />
+            <TextField layoutX="212.0" layoutY="18.0" prefHeight="25.0" prefWidth="195.0" promptText="Student_id" />
             <TextField layoutX="211.0" layoutY="105.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
             <TextField layoutX="211.0" layoutY="249.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
             <TextField layoutX="212.0" layoutY="179.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
@@ -54,21 +54,6 @@
       </AnchorPane>
       <AnchorPane layoutX="111.0" layoutY="631.0" prefHeight="107.0" prefWidth="1176.0">
          <children>
-            <Button layoutX="561.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Viwe Attendances">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="788.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Delete">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="926.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Update">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font>
-            </Button>
             <Button layoutX="69.0" layoutY="33.0" mnemonicParsing="false" onAction="#gotecdash" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Back">
                <font>
                   <Font name="Times New Roman" size="18.0" />
@@ -82,6 +67,6 @@
          </font>
       </Label>
       <Button layoutX="786.0" layoutY="227.0" mnemonicParsing="false" onAction="#goVeweAttendance" text="viweAtt" />
-      <Button layoutX="786.0" layoutY="303.0" mnemonicParsing="false" text="editAtt" />
+      <Button layoutX="786.0" layoutY="303.0" mnemonicParsing="false" onAction="#updateAttenOnAction" text="editAtt" />
    </children>
-</AnchorPane>
+</fx:root>
