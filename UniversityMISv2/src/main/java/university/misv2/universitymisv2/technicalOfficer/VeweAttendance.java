@@ -16,14 +16,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import university.misv2.universitymisv2.lecturer.User;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import java.io.IOException;
 
-public class VeweAttendance {
+public class VeweAttendance implements Initializable {
     @FXML
     private Stage stage ;
     private Scene scene;
@@ -37,7 +39,7 @@ public class VeweAttendance {
         stage.show();
 
     }
-    public  class ViewAttendance implements Initializable{
+
         @FXML
         private TableColumn<User, String> student_id;
 
@@ -56,9 +58,8 @@ public class VeweAttendance {
         @FXML
         private TableView<User> table;
 
-    }
     @Override
-    public void initialize (URL location,ResourceBundle resources){
+    public void initialize (URL location,ResourceBundle resources) {
         student_id.setCellValueFactory(new PropertyValueFactory<>("student_id"));
         course_code.setCellValueFactory(new PropertyValueFactory<>("course_code"));
         Theory_or_Practical.setCellValueFactory(new PropertyValueFactory<>("Theory_or_Practical"));
@@ -66,7 +67,12 @@ public class VeweAttendance {
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
         // Load the list of users from the database
-        List<User> userList = User.fetchAllUsers();
+        List<User> userList = null;
+        try {
+            userList = User.fetchAllUsers();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         // Convert the list to an ObservableList
         ObservableList<User> observableUserList = FXCollections.observableArrayList(userList);

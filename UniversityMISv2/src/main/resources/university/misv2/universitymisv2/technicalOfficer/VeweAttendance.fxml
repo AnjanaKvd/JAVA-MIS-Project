@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.VeweAttendance">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
    <children>
       <TableView layoutX="439.0" layoutY="238.0" prefHeight="372.0" prefWidth="542.0">
         <columns>
@@ -24,6 +24,6 @@
          </font>
       </Label>
       <Button layoutX="433.0" layoutY="632.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="See" />
-      <Button layoutX="439.0" layoutY="673.0" mnemonicParsing="false" onAction="#goAttendance" text="Back" />
+      <Button layoutX="439.0" layoutY="673.0" mnemonicParsing="false" onAction="#goVeweAttendance" text="Back" />
    </children>
 </AnchorPane>
