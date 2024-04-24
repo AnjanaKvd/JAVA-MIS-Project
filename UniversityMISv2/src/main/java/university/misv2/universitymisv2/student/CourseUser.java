@@ -1,11 +1,9 @@
 package university.misv2.universitymisv2.student;
 
-import javafx.scene.control.TableColumn;
 import university.misv2.universitymisv2.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
