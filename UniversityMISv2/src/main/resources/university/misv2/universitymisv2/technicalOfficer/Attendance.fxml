@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
    <children>
       <AnchorPane layoutX="168.0" layoutY="80.0" prefHeight="522.0" prefWidth="464.0" style="-fx-background-color: #FFFFFF;">
          <children>
@@ -84,4 +84,4 @@
       <Button layoutX="786.0" layoutY="227.0" mnemonicParsing="false" onAction="#goVeweAttendance" text="viweAtt" />
       <Button layoutX="786.0" layoutY="303.0" mnemonicParsing="false" text="editAtt" />
    </children>
-</fx:root>
+</AnchorPane>

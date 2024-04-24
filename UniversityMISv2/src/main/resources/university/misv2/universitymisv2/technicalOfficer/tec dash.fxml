@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TecDash">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TecDash">
    <children>
       <Label layoutX="266.0" layoutY="40.0" text="dashbord" />
-      <Button layoutX="96.0" layoutY="103.0" mnemonicParsing="false" onAction="#GoAttendance" text="Attendance" />
       <Button layoutX="96.0" layoutY="175.0" mnemonicParsing="false" onAction="#goMedical" prefHeight="25.0" prefWidth="77.0" text="Medical" />
       <Button layoutX="102.0" layoutY="236.0" mnemonicParsing="false" onAction="#gopassword" prefHeight="25.0" prefWidth="77.0" text="profile" />
+      <Button layoutX="115.0" layoutY="286.0" mnemonicParsing="false" onAction="#go" text="ok" />
    </children>
-</fx:root>
+</AnchorPane>
