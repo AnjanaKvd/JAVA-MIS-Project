@@ -42,9 +42,9 @@ public class Eligibility {
     }
 
     @FXML
-    public void cancleButtononAction(ActionEvent event) {
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
+    public void  clearButton(){
+        course_code.clear();
+        student_id.clear();
     }
 
     @FXML

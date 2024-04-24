@@ -8,83 +8,78 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.UploadMarks">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="701.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.UploadMarks">
     <children>
-        <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
+        <AnchorPane layoutX="1.0" prefHeight="82.0" prefWidth="701.0" style="-fx-background-color: #116093;">
             <children>
-                <Label layoutX="92.0" layoutY="27.0" text="Uplode Marks" textFill="WHITE">
+                <Label layoutX="156.0" layoutY="27.0" text="Upload Marks" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="25.0" />
                     </font>
                 </Label>
+              <ImageView fx:id="shieldimageView" fitHeight="42.0" fitWidth="69.0" layoutX="104.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../images/User.png" />
+                  </image>
+              </ImageView>
             </children></AnchorPane>
-        <ImageView fx:id="shieldimageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../images/User.png" />
-            </image>
-        </ImageView>
-        <Label layoutX="91.0" layoutY="107.0" text="Course code">
+        <Label layoutX="160.0" layoutY="167.0" text="Course code">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <TextField fx:id="Coursecode" layoutX="92.0" layoutY="132.0" prefHeight="25.0" prefWidth="336.0" promptText="Coursecode" />
-        <TextField fx:id="student_id" layoutX="92.0" layoutY="187.0" prefHeight="25.0" prefWidth="336.0" promptText="Coursename" />
-        <Label layoutX="89.0" layoutY="168.0" text="student_id">
+        <TextField fx:id="Coursecode" layoutX="155.0" layoutY="192.0" prefHeight="26.0" prefWidth="200.0" promptText="Coursecode" />
+        <TextField fx:id="student_id" layoutX="378.0" layoutY="192.0" prefHeight="26.0" prefWidth="200.0" promptText="Coursename" />
+        <Label layoutX="380.0" layoutY="167.0" text="Student ID">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <Button fx:id="CloseButton" layoutX="92.0" layoutY="617.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+        <Button fx:id="clearfield" layoutX="375.0" layoutY="405.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #116093;" text="Clear" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-        <Label fx:id="lablehide" layoutX="260.0" layoutY="91.0" prefHeight="26.0" prefWidth="99.0" text=" " textFill="#2031b9">
+        <TextField fx:id="quiz1_marks" layoutX="160.0" layoutY="264.0" prefHeight="26.0" prefWidth="94.0" promptText="quiz1_marks" />
+        <TextField fx:id="quiz2_marks" layoutX="300.0" layoutY="263.0" prefHeight="26.0" prefWidth="94.0" promptText="quiz2_marks" />
+        <TextField fx:id="quiz3_marks" layoutX="431.0" layoutY="263.0" prefHeight="26.0" prefWidth="94.0" promptText="quiz3_marks" />
+        <Label layoutX="160.0" layoutY="235.0" text="Quiz 1 Marks">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <TextField fx:id="quiz1_marks" layoutX="89.0" layoutY="249.0" prefHeight="25.0" prefWidth="336.0" promptText="quiz1_marks" />
-        <TextField fx:id="quiz2_marks" layoutX="89.0" layoutY="302.0" prefHeight="25.0" prefWidth="336.0" promptText="quiz2_marks" />
-        <TextField fx:id="quiz3_marks" layoutX="85.0" layoutY="354.0" prefHeight="25.0" prefWidth="336.0" promptText="quiz3_marks" />
-        <Label layoutX="89.0" layoutY="222.0" text="quiz1_marks">
+        <Label layoutX="300.0" layoutY="233.0" text="Quiz 2 Marks">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <Label layoutX="89.0" layoutY="283.0" text="quiz2_marks">
+        <Label layoutX="433.0" layoutY="233.0" text="Quiz 3 Marks">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <Label layoutX="89.0" layoutY="328.0" text="quiz3_marks">
-            <font>
-                <Font size="13.0" />
-            </font>
-        </Label>
-        <Button fx:id="AddMaterialsButton" layoutX="89.0" layoutY="575.0" mnemonicParsing="false" onAction="#addDataAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Uplode Button" textFill="WHITE">
+        <Button fx:id="AddMaterialsButton" layoutX="200.0" layoutY="405.0" mnemonicParsing="false" onAction="#addDataAction" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #116093;" text="Upload Button" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-      <Label layoutX="89.0" layoutY="380.0" text="mid_marks">
+      <Label layoutX="160.0" layoutY="306.0" text="Mid Marks">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="mid_marks" layoutX="89.0" layoutY="399.0" prefHeight="25.0" prefWidth="336.0" promptText="mid_marks" />
-      <Label layoutX="87.0" layoutY="435.0" text="project_marks">
+      <TextField fx:id="mid_marks" layoutX="160.0" layoutY="336.0" prefHeight="26.0" prefWidth="94.0" promptText="mid_marks" />
+      <Label layoutX="310.0" layoutY="306.0" text="Project Marks">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="project_marks" layoutX="89.0" layoutY="455.0" prefHeight="25.0" prefWidth="336.0" promptText="project_marks" />
-      <Label layoutX="85.0" layoutY="489.0" text="end_marks">
+      <TextField fx:id="project_marks" layoutX="310.0" layoutY="336.0" prefHeight="26.0" prefWidth="94.0" promptText="project_marks" />
+      <Label layoutX="435.0" layoutY="306.0" text="End Marks">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="end_marks" layoutX="85.0" layoutY="508.0" prefHeight="25.0" prefWidth="336.0" promptText="end_marks" />
+      <TextField fx:id="end_marks" layoutX="435.0" layoutY="336.0" prefHeight="26.0" prefWidth="94.0" promptText="end_marks" />
     </children>
 </AnchorPane>

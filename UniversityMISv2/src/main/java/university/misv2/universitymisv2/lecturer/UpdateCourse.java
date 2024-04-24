@@ -59,6 +59,7 @@ public class UpdateCourse {
 
 
 
+
     }
 
     public  void  updatedata() throws SQLException {
@@ -101,12 +102,7 @@ public class UpdateCourse {
     }
 
 
-    public void cancleButtononAction(ActionEvent event){
-        Stage stage=(Stage) CloseButton.getScene().getWindow();
-        stage.close();
 
-
-    }
 
     public void AddMaterialsButton() throws SQLException {
         DatabaseConnection connectionNow=new DatabaseConnection();
@@ -137,5 +133,15 @@ public class UpdateCourse {
             e.printStackTrace();
             e.getCause();
         }
+    }
+
+    public void clearButton(){
+        coursecodefield.clear();
+        coursenamefield.clear();
+        theory_or_practicalfield.clear();
+        is_midfield.clear();
+        is_projectfield.clear();
+        creditsfield.clear();
+        Gpafiled.clear();
     }
 }
