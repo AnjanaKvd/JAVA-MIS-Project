@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.Viewattendancecontroller">
+<AnchorPane prefHeight="711.0" prefWidth="1200.0" stylesheets="@Styles/style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.ViewAttendancecontroller">
     <children>
-        <TableView fx:id="table" prefHeight="400.0" prefWidth="904.0" AnchorPane.topAnchor="0.0">
+        <TableView fx:id="table" layoutX="90.0" layoutY="105.0" prefHeight="400.0" prefWidth="904.0" AnchorPane.topAnchor="105.0">
             <columns>
                 <TableColumn fx:id="id" prefWidth="150.0" text="id" />
                 <TableColumn fx:id="student_id" prefWidth="150.0" text="student_id" />
@@ -16,6 +18,11 @@
                 <TableColumn fx:id="Status" prefWidth="150.0" text="Status" />
             </columns>
         </TableView>
+      <Label layoutX="106.0" layoutY="30.0" prefHeight="34.0" prefWidth="387.0" text="Attendance">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
     </children>
 
 </AnchorPane>

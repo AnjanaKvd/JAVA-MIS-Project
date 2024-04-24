@@ -1,5 +1,5 @@
-package university.misv2.universitymisv2.student;
 
+package university.misv2.universitymisv2.student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,32 +9,31 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class Viewattendancecontroller implements Initializable {
 
-    @FXML
-    private TableView<User> table;
+   @FXML
+     private TableColumn<User, java.util.Date> Date;
 
     @FXML
-    private TableColumn<User, Integer> id;
+    private TableColumn<User, String> Status;
 
     @FXML
-    private TableColumn<User, String> student_id;
+    private TableColumn<User, String> Theory_or_Practical;
 
     @FXML
     private TableColumn<User, String> course_code;
 
     @FXML
-    private TableColumn<User, Date> Date;
-    @FXML
-    private TableColumn<User, String> Theory_or_Practical;
+    private TableColumn<User,Integer> id;
 
     @FXML
-    private TableColumn<User, String> Status;
+    private TableColumn<User, String> student_id;
+
+    @FXML
+    private TableView<User> table;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

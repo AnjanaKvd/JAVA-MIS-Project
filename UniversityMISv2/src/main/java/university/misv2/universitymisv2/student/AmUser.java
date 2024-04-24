@@ -1,5 +1,8 @@
 package university.misv2.universitymisv2.student;
 
+
+import university.misv2.universitymisv2.DatabaseConnection;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

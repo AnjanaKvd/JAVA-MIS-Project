@@ -1,7 +1,11 @@
 package university.misv2.universitymisv2.student;
 
+
+import university.misv2.universitymisv2.DatabaseConnection;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,16 +20,16 @@ public class User {
     private String Theory_or_Practical;
     private String Status;
 
-    public User(int id, String student_id, String course_code, Date Date, String Theory_or_Practical, String Status) {
+    public User(Integer id, String student_id, String course_code, java.util.Date Date, String theory_or_Practical, String status) {
         this.id = id;
         this.student_id = student_id;
         this.course_code = course_code;
         this.Date = Date;
-        this.Theory_or_Practical = Theory_or_Practical;
-        this.Status = Status;
+        Theory_or_Practical = theory_or_Practical;
+        Status = status;
     }
 
-    public static  List<User> fetchAllUsers()  {
+    public static  List<User> fetchAllUsers()   {
         List<User> users = new ArrayList<>();
 
         DatabaseConnection connectionNow = new DatabaseConnection();
@@ -45,7 +49,7 @@ public class User {
                 String Status = result.getString("Status");
 
                 // Create a new User instance with the data from the ResultSet
-                User user = new User(id, student_id, course_code, Date, Theory_or_Practical, Status);
+                User user = new User(id, student_id, course_code,Date, Theory_or_Practical, Status);
                 users.add(user);
 
             }
@@ -58,29 +62,28 @@ public class User {
     }
 
 
-    public int get_id() {
+    public Integer getId() {
         return id;
     }
 
-    public String get_student_id() {
+    public String getStudent_id() {
         return student_id;
     }
 
-    public String get_course_code() {
+    public String getCourse_code() {
         return course_code;
-    }
-
-    public Date getDate() {
-        return Date;
     }
 
     public String getTheory_or_Practical() {
         return Theory_or_Practical;
     }
 
-    public String get_Status() {
+    public String getStatus() {
         return Status;
     }
 
-
+    public java.util.Date getDate() {
+        return Date;
+    }
 }
+

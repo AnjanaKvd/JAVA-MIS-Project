@@ -1,5 +1,6 @@
 package university.misv2.universitymisv2.student;
 
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -36,20 +37,20 @@ public class viewCourseDetailsController implements Initializable {
 //    @FXML
 //    private TableColumn<Integer, CourseUser> no_of_quiz;
 //
-//    @FXML
-//    private TableColumn<String, CourseUser> is_mid;
+    @FXML
+    private TableColumn<String, CourseUser> is_mid;
 //
 //    @FXML
 //    private TableColumn<Integer, CourseUser> mid_marks;
 //
-//    @FXML
-//    private TableColumn<String, CourseUser> is_project;
-//
+    @FXML
+    private TableColumn<String, CourseUser> is_project;
+
 //    @FXML
 //    private TableColumn<Integer, CourseUser> project_marks;
 //
-//    @FXML
-//    private TableColumn<String, CourseUser> theory_or_practical;
+    @FXML
+    private TableColumn<String, CourseUser> theory_or_practical;
 
 
 
@@ -60,14 +61,9 @@ public class viewCourseDetailsController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         credits.setCellValueFactory(new PropertyValueFactory<>("credits"));
         gpa_or_ngpa.setCellValueFactory(new PropertyValueFactory<>("gpa_or_ngpa"));
-//        department.setCellValueFactory(new PropertyValueFactory<>("department"));
-//        no_of_quiz.setCellValueFactory(new PropertyValueFactory<>("no_of_quiz"));
-//        is_mid.setCellValueFactory(new PropertyValueFactory<>("is_mid"));
-//        mid_marks.setCellValueFactory(new PropertyValueFactory<>("mid_marks"));
-//        is_project.setCellValueFactory(new PropertyValueFactory<>("is_project"));
-//        project_marks.setCellValueFactory(new PropertyValueFactory<>("project_marks"));
-//        theory_or_practical.setCellValueFactory(new PropertyValueFactory<>("theory_or_practical"));
-
+        is_mid.setCellValueFactory(new PropertyValueFactory<>("is_mid"));
+        is_project.setCellValueFactory(new PropertyValueFactory<>("is_project"));
+        theory_or_practical.setCellValueFactory(new PropertyValueFactory<>("theory_or_practical"));
 
 
         List<CourseUser> userList = CourseUser.fetchAllUsers();
@@ -79,5 +75,6 @@ public class viewCourseDetailsController implements Initializable {
         table.setItems(observableUserList);
     }
 }
+
 
 
