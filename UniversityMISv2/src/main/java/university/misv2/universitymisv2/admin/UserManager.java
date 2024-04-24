@@ -1,8 +1,5 @@
 package university.misv2.universitymisv2.admin;
 
-import javafx.scene.control.Alert;
-import university.misv2.universitymisv2.DatabaseConnection;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

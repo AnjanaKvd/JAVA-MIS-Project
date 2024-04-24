@@ -1,5 +1,4 @@
 package university.misv2.universitymisv2.lecturer;
-import university.misv2.universitymisv2.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
