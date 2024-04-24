@@ -15,12 +15,16 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+<<<<<<< HEAD
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("technicalOfficer/tec dash.fxml")));
+=======
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("lecturer/dashboard.fxml")));
+>>>>>>> abb5d291856b122fbc06817689448a9ea71618d1
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 
         primaryStage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setX(bounds.getMinX());
         primaryStage.setY(bounds.getMinY());
         primaryStage.show();

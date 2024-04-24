@@ -13,5 +13,9 @@ module university.misv2.universitymisv2 {
     opens university.misv2.universitymisv2.technicalOfficer to javafx.fxml;
     opens university.misv2.universitymisv2.lecturer to javafx.fxml;
 
+
+
     exports university.misv2.universitymisv2;
+    exports university.misv2.universitymisv2.lecturer;
+
 }

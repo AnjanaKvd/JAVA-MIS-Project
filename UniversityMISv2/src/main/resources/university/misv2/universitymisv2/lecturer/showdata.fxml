@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.ControlShow">
+    <children>
+        <TableView fx:id="table" layoutY="78.0" prefHeight="400.0" prefWidth="900.0" AnchorPane.topAnchor="78.0">
+            <columns>
+                <TableColumn fx:id="student_id" prefWidth="150.0" text="student_id" />
+                <TableColumn fx:id="user_id" prefWidth="75.0" text="user_id" />
+                <TableColumn fx:id="acedamic_status" prefWidth="150.0" text="acedamic_status" />
+                <TableColumn fx:id="address" prefWidth="150.0" text="address" />
+            <TableColumn fx:id="date_of_birth" prefWidth="150.0" text="date_of_birth" />
+            <TableColumn fx:id="department_id" prefWidth="125.0" text="department_id" />
+            <TableColumn fx:id="batch_year" prefWidth="100.0" text="batch_year" />
+            </columns>
+        </TableView>
+      <Label layoutX="357.0" layoutY="22.0" prefHeight="39.0" prefWidth="186.0" text="Student  Details" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
