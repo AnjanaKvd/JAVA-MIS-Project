@@ -3,15 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: A3FCF4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.Attendance">
    <children>
-      <AnchorPane layoutX="109.0" layoutY="90.0" prefHeight="522.0" prefWidth="464.0" style="-fx-background-color: #FFFFFF;">
+      <AnchorPane layoutX="168.0" layoutY="80.0" prefHeight="522.0" prefWidth="464.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <Button layoutX="218.0" layoutY="422.0" mnemonicParsing="false" text="Submit">
                <font>
@@ -84,14 +82,5 @@
             <Font name="Times New Roman" size="36.0" />
          </font>
       </Label>
-      <TableView layoutX="623.0" layoutY="90.0" prefHeight="391.0" prefWidth="397.0">
-        <columns>
-          <TableColumn prefWidth="94.0" text="sud_id" />
-          <TableColumn prefWidth="75.0" text="stu_id" />
-            <TableColumn prefWidth="75.0" text="stutas" />
-            <TableColumn prefWidth="75.0" text="date" />
-            <TableColumn prefWidth="75.0" text="type" />
-        </columns>
-      </TableView>
    </children>
 </AnchorPane>
