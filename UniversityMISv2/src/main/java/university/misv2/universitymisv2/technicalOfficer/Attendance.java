@@ -122,40 +122,34 @@ public class Attendance {
 
     }
 
-//    public void updateAttenOnAction(ActionEvent event) throws SQLException {
+//   public void updateAttenOnAction(ActionEvent event) throws SQLException {
 //
 //        if(!student_id.getText().isEmpty()){
 //
-//            updatedata();
-//        } else{
+//           updatedata();
+//       } else{
 //            //lablehide.setText("fail");
 //        }
 //        public  void  updatedata() throws SQLException {
 //            Connection connectDB= DatabaseConnection.getConnection();
 //
-////            String code=coursecodefield.getText();
-////            String name=coursenamefield.getText();
-////            String is_mid=is_midfield.getText();
-////            String is_project=is_projectfield.getText();
-////            String theory_or_practical=theory_or_practicalfield.getText();
-////            int credit = Integer.parseInt(creditsfield.getText());
-////            String Gpa=Gpafiled.getText();
+//
+//
 //
 //            String student_id=Student_id.getText();
 //            String Course_code= cource_code.getText();
 //            String theory_or_practical=theory_or_practicalfield.getText();
 //            String date =Datefiled.getText();
 //            String Status=status.getText();
-//            try {
+//           try {
 //                String updateQuery = "UPDATE courses SET name = ?, is_mid = ?, is_project = ?, theory_or_practical = ?, credits = ?,gpa_or_ngpa = ?  WHERE code = ?";
 //                assert connectDB != null;
 //                PreparedStatement preparedStatement = connectDB.prepareStatement(updateQuery);
-//                preparedStatement.setString(1,student_id );
+//               preparedStatement.setString(1,student_id );
 //                preparedStatement.setString(2, Course_code);
 //                preparedStatement.setString(3, theory_or_practical);
-//                preparedStatement.setString(4, date);
-//                preparedStatement.setString(5,Status);
-//
+//               preparedStatement.setString(4, date);
+//               preparedStatement.setString(5,Status);
 //
 //
 //
@@ -165,16 +159,16 @@ public class Attendance {
 //                if (rowsAffected > 0) {
 //                    //lablehide.setText("Successful");
 //                } else {
-//                    //lablehide.setText(" Not Successful");
+//                   //lablehide.setText(" Not Successful");
 //                }
 //            }
 //            catch (SQLException e){
 //                e.printStackTrace();
 //                e.getCause();
-//            }
-//        }
+//           }
+//       }
+//
+//    }
 
-    }
 
-
-//}
+}
