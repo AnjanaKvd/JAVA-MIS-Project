@@ -5,25 +5,41 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.scene.control.Button;
 
+import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalTime;
+import java.util.List;
 
 public class AdminController {
     public Label userAddedLabel;
     public Label userModifiedLabel;
     public Label userDeletedLabel;
+    public Label notificationID;
+    public Label notificationMessage;
+    public Label notificationDate;
+    public Label notificationDate1;
+    public TextArea notificationInputBox;
+    public Button notificationSendButton;
+    public AnchorPane notificationAnchorPane;
+    public ScrollPane notificationListView;
+    public Hyperlink notificationDeleteButton;
+    public VBox notificationView;
+    public BorderPane notification;
+    @FXML
+    public VBox notificationContainer;
     @FXML
     private Label profileNameLabel;
 
@@ -152,6 +168,8 @@ public class AdminController {
 
         // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
+
+        loadNotifications();
 
     }
 
@@ -353,4 +371,55 @@ public class AdminController {
         }
     }
 
+    @FXML
+    private void loadNotifications() {
+        try {
+            List<String> notifications = NotificationManager.getAllNotifications();
+            for (String notification : notifications) {
+                String[] parts = notification.split(", ");
+                String id = parts[0].substring(4); // ID
+                String message = parts[1].substring(9); //Message
+                String date = parts[2].substring(6); //Date
+                addNotification(id, message, date);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void addNotification(String id, String message, String date) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("notification.fxml"));
+            BorderPane notificationPane = loader.load();
+
+            NotificationController controller = loader.getController();
+            controller.setAdminController(this);
+            controller.setNotificationData(id, message, date);
+            notificationContainer.getChildren().add(notificationPane);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    void refreshNotifications() {
+        try {
+            notificationContainer.getChildren().clear();
+            loadNotifications();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleSendNotification(ActionEvent event) {
+        String message = notificationInputBox.getText();
+
+        if (!message.isEmpty()) {
+            try {
+                NotificationManager.addNotification(message);
+                notificationInputBox.clear();
+                refreshNotifications();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
