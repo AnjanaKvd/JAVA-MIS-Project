@@ -699,56 +699,33 @@
 
 
             <!--                Notifications tab-->
-            <AnchorPane fx:id="notificationTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
-                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0"
-                      AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+            <AnchorPane fx:id="notificationTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                     <effect>
                         <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
                             <color>
-                                <Color opacity="0.20000000298023224"/>
+                                <Color opacity="0.20000000298023224" />
                             </color>
                         </DropShadow>
                     </effect>
                     <VBox prefHeight="690.0" prefWidth="1006.0" spacing="10.0" styleClass="content-background">
                         <padding>
-                            <Insets bottom="30.0" top="10.0"/>
+                            <Insets bottom="30.0" top="10.0" />
                         </padding>
-                        <Label style="-fx-font-family: 'Poppins SemiBold'; -fx-font-size: 22.0; -fx-padding: 10.0 0.0 0.0 40.0;"
-                               text="Notifications"/>
-                        <ScrollPane maxHeight="500.0" prefHeight="487.0" prefWidth="140.0"
-                                    style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                        <Label style="-fx-font-family: 'Poppins SemiBold'; -fx-font-size: 22.0; -fx-padding: 10.0 0.0 0.0 40.0;" text="Notifications" />
+                        <ScrollPane fx:id="notificationListView" maxHeight="500.0" maxWidth="910.0" prefHeight="483.0" prefWidth="920.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                             <padding>
-                                <Insets left="50.0"/>
+                                <Insets left="50.0" />
                             </padding>
-                            <AnchorPane prefHeight="67.0" prefWidth="200.0">
-                                <BorderPane minWidth="850.0" onMouseEntered="#showDeleteButton"
-                                            onMouseExited="#hideDeleteButton" prefHeight="67.0"
-                                            prefWidth="850.0"
-                                            style="-fx-padding: 10.0; -fx-background-color: #e4ffee; -fx-background-radius: 20;">
-                                    <top>
-                                        <Label style="-fx-font-family: 'Poppins Regular'; -fx-font-size: 10.0;"
-                                               text="Date: 2024-04-13 12:31:42 AM"/>
-                                    </top>
-                                    <center>
-                                        <HBox alignment="CENTER" maxHeight="30.0" prefHeight="34.0"
-                                              prefWidth="830.0" spacing="10.0">
-                                            <Label prefHeight="18.0" prefWidth="62.0" text="ID: 1"/>
-                                            <Label prefHeight="18.0" prefWidth="660.0"
-                                                   text="Message: This is a notification message."/>
-                                            <Button style="-fx-background-color: transparent;"
-                                                    text="Delete"/>
-                                        </HBox>
-                                    </center>
-                                </BorderPane>
-                            </AnchorPane>
+                            <VBox fx:id="notificationContainer" prefHeight="477.0" prefWidth="850.0" spacing="10.0" />
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin>
                         </ScrollPane>
                         <HBox alignment="CENTER" prefHeight="50.0" spacing="30.0">
-                            <Label style="-fx-font-family: 'Poppins Regular'; -fx-font-size: 12.0;"
-                                   text="Enter message :"/>
-                            <TextArea minWidth="500.0" prefHeight="100.0" prefWidth="275.0"/>
-                            <Button style="-fx-font-family: 'Poppins Regular'; -fx-font-size: 12.0;"
-                                    text="Send"/>
+                            <Label style="-fx-font-family: 'Poppins Regular'; -fx-font-size: 12.0;" text="Enter message :" />
+                            <TextArea fx:id="notificationInputBox" minWidth="500.0" prefHeight="100.0" prefWidth="275.0" />
+                            <Button fx:id="notificationSendButton" onAction="#handleSendNotification" text="Send" />
                         </HBox>
                     </VBox>
                 </VBox>
