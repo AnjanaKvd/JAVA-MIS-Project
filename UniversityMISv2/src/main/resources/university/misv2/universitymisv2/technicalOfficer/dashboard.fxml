@@ -19,7 +19,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TechnicalOfficerController">
+<fx:root id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" type="BorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TechnicalOfficerController">
     <left>
         <VBox prefHeight="1024.0" prefWidth="343.0" styleClass="sidebar-background" BorderPane.alignment="CENTER">
             <HBox id="dashboardHeader" alignment="CENTER" prefHeight="98.0" prefWidth="302.0" spacing="20.0">
@@ -281,7 +281,7 @@
                         </Label>
                     </HBox>
                     <VBox prefHeight="916.0" prefWidth="1097.0" styleClass="content-background">
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="1091.0" spacing="500.0">
                             <padding>
                                 <Insets left="40.0" />
                             </padding>
@@ -292,49 +292,121 @@
                             </Label>
                             <HBox alignment="CENTER" maxHeight="34.0" minHeight="33.0" prefHeight="34.0" prefWidth="206.0" spacing="10.0" styleClass="search-box-background" />
                         </HBox>
-                  <AnchorPane prefHeight="297.0" prefWidth="1097.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane prefHeight="260.0" prefWidth="1091.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <Button layoutX="52.0" layoutY="261.0" mnemonicParsing="false" onAction="#AddMaterialsButton" text="Submit">
+                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#AddAttendancesButton" text="Addattendance">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="159.0" layoutY="261.0" mnemonicParsing="false" onAction="#cancleButtononAction" text="Clear">
+                        <Label layoutX="38.0" layoutY="21.0" text="Student ID">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="58.0" text="Cource ID">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="54.0" layoutY="97.0" text="Type">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="139.0" text="Date">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="173.0" text="Status">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField id="studentIdField" fx:id="studentIdField" layoutX="138.0" layoutY="19.0" prefHeight="25.0" prefWidth="195.0" promptText="Student_id" />
+                        <TextField layoutX="138.0" layoutY="56.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
+                        <TextField layoutX="138.0" layoutY="136.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
+                        <TextField layoutX="138.0" layoutY="94.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
+                        <TextField layoutX="138.0" layoutY="170.0" prefHeight="25.0" prefWidth="195.0" promptText="status" />
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="37.0" prefWidth="1091.0">
+                     <children>
+                        <Label text="Modify attendance">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="260.0" prefWidth="1091.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#modifyAttendancesButten" text="ModifyAttendance">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Button>
-                        <Label layoutX="50.0" layoutY="66.0" text="Student ID">
+                        <Label layoutX="38.0" layoutY="21.0" text="Student ID">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="51.0" layoutY="108.0" text="Cource ID">
+                        <Label layoutX="40.0" layoutY="58.0" text="Cource ID">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="53.0" layoutY="146.0" text="Type">
+                        <Label layoutX="54.0" layoutY="97.0" text="Type">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="55.0" layoutY="182.0" text="Date">
+                        <Label layoutX="56.0" layoutY="139.0" text="Date">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="55.0" layoutY="216.0" text="Status">
+                        <Label layoutX="51.0" layoutY="173.0" text="Status">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Label>
-                        <TextField id="Student_idField" fx:id="Student_idField" layoutX="159.0" layoutY="64.0" prefHeight="25.0" prefWidth="195.0" promptText="Student_id" />
-                        <TextField layoutX="159.0" layoutY="106.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
-                        <TextField layoutX="159.0" layoutY="180.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
-                        <TextField layoutX="159.0" layoutY="144.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
-                        <TextField layoutX="159.0" layoutY="214.0" prefHeight="25.0" prefWidth="195.0" promptText="status" />
-                        <Label layoutX="58.0" layoutY="23.0" prefHeight="17.0" prefWidth="108.0" text="Add attendance" />
+                        <TextField id="studentIdField" fx:id="studentIdField1" layoutX="138.0" layoutY="19.0" prefHeight="25.0" prefWidth="195.0" promptText="Student_id" />
+                        <TextField layoutX="138.0" layoutY="56.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
+                        <TextField layoutX="138.0" layoutY="136.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
+                        <TextField layoutX="138.0" layoutY="94.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
+                        <TextField layoutX="138.0" layoutY="170.0" prefHeight="25.0" prefWidth="195.0" promptText="status" />
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="33.0" prefWidth="1089.0">
+                     <children>
+                        <Label text="Delete attendance">
+                           <font>
+                              <Font name="Times New Roman" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="149.0" prefWidth="1094.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="20.0" text="Student ID">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField id="studentIdField" fx:id="studentIdField11" layoutX="134.0" layoutY="17.0" prefHeight="25.0" prefWidth="199.0" promptText="Student_id" />
+                        <Label layoutX="35.0" layoutY="72.0" text="Cource ID">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="136.0" layoutY="69.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
+                        <Button layoutX="35.0" layoutY="102.0" mnemonicParsing="false" onAction="#deleteAttendancesButten" text="DeleteAttendance">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                     </VBox>
@@ -378,4 +450,4 @@
             </AnchorPane>
         </AnchorPane>
     </center>
-</BorderPane>
+</fx:root>

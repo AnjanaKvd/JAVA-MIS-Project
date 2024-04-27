@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.util.Duration;
 import university.misv2.universitymisv2.admin.CourseManager;
 
+import java.sql.Date;
 import java.sql.SQLException;
 
 public class TechnicalOfficerController {
@@ -102,16 +103,15 @@ public class TechnicalOfficerController {
         }
     }
 
-    public void AddMaterialsButton(ActionEvent event) {
+    public void AddAttendancesButton(ActionEvent event) {
         String Student_id =Student_idField.getText();
-        String courseName = courseNameField.getText();
-        String department = departmentDropdown.getValue();
-        int credits = Integer.parseInt(creditsField.getText());
-        int hours = Integer.parseInt(hoursField.getText());
-        String lecturer = lecturerField.getText();
+        String Course_code = courseNameField.getText();
+        String theory_or_practical = departmentDropdown.getValue();
+        Date  date=kj.getValue();
+        String Status = lecturerField.getText();
         try {
 
-            CourseManager.addCourse(courseCode, courseName, department, credits, hours, lecturer);
+            CourseManager.AddAttendances(Student_id, Course_code, theory_or_practical, date, Status);
             courseCodeField.clear();
             courseNameField.clear();
             departmentDropdown.getSelectionModel().clearSelection();
@@ -124,6 +124,37 @@ public class TechnicalOfficerController {
         }
 
 
+    }
+    @FXML
+    private void modifyAttendancesButten(ActionEvent event) {
+        String newStudent_id = modifyCourseCodeField.getText();
+        String newCourse_code = newCourseNameField.getText();
+        String newtheory_or_practical = newDepartmentDropdown.getValue();
+        Date  newdate=kj.getValue();
+        String newStatus = newLecturerField.getText();
+        try {
+            CourseManager.modifyAttendances(newStudent_id, newCourse_code, newtheory_or_practical, newdate, newStatus);
+            modifyCourseCodeField.clear();
+            newCourseNameField.clear();
+            newDepartmentDropdown.getSelectionModel().clearSelection();
+            newCreditsField.clear();
+            newHoursField.clear();
+            newLecturerField.clear();
+            courseModifiedLabel.setText("Course modified successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void deleteAttendancesButten(ActionEvent event) {
+        String courseCodeToDelete = deleteCourseCodeField.getText();
+        try {
+            CourseManager.deleteCourse(courseCodeToDelete);
+            deleteCourseCodeField.clear();
+            courseDeletedLabel.setText("Course deleted successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void cancleButtononAction(ActionEvent event) {
