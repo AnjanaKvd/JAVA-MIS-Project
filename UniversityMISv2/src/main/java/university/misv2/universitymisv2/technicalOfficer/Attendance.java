@@ -93,7 +93,7 @@ public class Attendance {
         String student_id=Student_id.getText();
         String Course_code= cource_code.getText();
         String theory_or_practical=theory_or_practicalfield.getText();
-        String date =Datefiled.getText();
+        Date date = Date.valueOf(Datefiled.getText());
         String Status=status.getText();
 
 
