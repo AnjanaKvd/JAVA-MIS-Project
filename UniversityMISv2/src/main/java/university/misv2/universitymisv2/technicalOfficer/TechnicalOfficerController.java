@@ -118,7 +118,7 @@ public class TechnicalOfficerController {
             creditsField.clear();
             hoursField.clear();
             lecturerField.clear();
-            courseAddedLabel.setText("Course added successfully !");
+            courseAddedLabel.setText("Attendance added successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -140,7 +140,7 @@ public class TechnicalOfficerController {
             newCreditsField.clear();
             newHoursField.clear();
             newLecturerField.clear();
-            courseModifiedLabel.setText("Course modified successfully !");
+            courseModifiedLabel.setText("Attendance modified successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -151,11 +151,37 @@ public class TechnicalOfficerController {
         try {
             CourseManager.deleteCourse(courseCodeToDelete);
             deleteCourseCodeField.clear();
-            courseDeletedLabel.setText("Course deleted successfully !");
+            courseDeletedLabel.setText("Attendance deleted successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public void AddSubmitButton(ActionEvent event) {
+        String Medical_Id =lk.getText();
+        String Student_id =Student_idField.getText();
+        String Course_code = courseNameField.getText();
+        String theory_or_practical = departmentDropdown.getValue();
+        Date  date=kj.getValue();
+        String Status = lecturerField.getText();
+        try {
+
+            CourseManager.AddAttendances(Medical_Id,Student_id, Course_code, theory_or_practical, date, Status);
+            courseCodeField.clear();
+            courseNameField.clear();
+            departmentDropdown.getSelectionModel().clearSelection();
+            creditsField.clear();
+            hoursField.clear();
+            lecturerField.clear();
+            courseAddedLabel.setText("Course Medical successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
 
     public void cancleButtononAction(ActionEvent event) {
     }

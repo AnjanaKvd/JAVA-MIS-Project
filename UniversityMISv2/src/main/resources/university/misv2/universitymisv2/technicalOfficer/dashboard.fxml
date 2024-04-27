@@ -271,7 +271,7 @@
                     </VBox>
                 </VBox>
             </AnchorPane>
-            <AnchorPane fx:id="attendanceTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="attendanceTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Attendance">
@@ -412,7 +412,7 @@
                     </VBox>
                 </VBox>
             </AnchorPane>
-            <AnchorPane fx:id="medicalTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="medicalTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Medical">
@@ -421,7 +421,48 @@
                             </font>
                         </Label>
                     </HBox>
-                    <VBox prefHeight="916.0" prefWidth="1097.0" styleClass="content-background" />
+                    <VBox prefHeight="546.0" prefWidth="1097.0" styleClass="content-background">
+                  <children>
+                     <AnchorPane prefHeight="162.0" prefWidth="1074.0" style="-fx-background-color: #FFFFFF;">
+                        <children>
+                           <Label layoutX="38.0" layoutY="35.0" text="Student ID :">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="31.0" layoutY="78.0" text="Course Name :">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="43.0" layoutY="116.0" text="Date :">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="154.0" text="Hours :">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="45.0" layoutY="204.0" text="Type :">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <Button layoutX="50.0" layoutY="254.0" mnemonicParsing="false" onAction="#AddSubmitButton" style="-fx-background-color: #F0A3FC;" text="submit">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Button>
+                           <TextField layoutX="156.0" layoutY="33.0" prefHeight="25.0" prefWidth="211.0" />
+                           <TextField layoutX="155.0" layoutY="76.0" prefHeight="25.0" prefWidth="211.0" />
+                           <TextField layoutX="156.0" layoutY="114.0" prefHeight="25.0" prefWidth="211.0" />
+                           <TextField layoutX="155.0" layoutY="152.0" prefHeight="25.0" prefWidth="211.0" />
+                           <TextField layoutX="155.0" layoutY="192.0" prefHeight="25.0" prefWidth="211.0" />
+                        </children>
+                     </AnchorPane>
+                  </children></VBox>
                 </VBox>
             </AnchorPane>
             <AnchorPane fx:id="timetableTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
