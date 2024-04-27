@@ -38,11 +38,25 @@ public class StudentDashboardControler implements Initializable {
     @FXML
     private ImageView studentimage;
 
+    @FXML
+    private ImageView studentsimage;
+
+
+    @FXML
+    private ImageView user1;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File branding=new File("src/main/resources/university/misv2/universitymisv2/student/images/Student.png");
+        File branding=new File("C:\\Users\\iTEC\\Desktop\\Java\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\student\\images\\Student.png");
         Image UpdateImage=new Image(branding.toURI().toString());
         studentimage.setImage(UpdateImage);
+        File college=new File("C:\\Users\\iTEC\\Desktop\\Java\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\student\\images\\College Students.png");
+        Image UpdateImages=new Image(college.toURI().toString());
+        studentsimage.setImage(UpdateImages);
+        File profilepic=new File("C:\\Users\\iTEC\\Desktop\\Java\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\student\\images\\Users.png");
+        Image UpdateImages2=new Image(profilepic.toURI().toString());
+        user1.setImage(UpdateImages2);
 
     }
 

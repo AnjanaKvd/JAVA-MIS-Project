@@ -34,7 +34,7 @@ public class User {
         DatabaseConnection connectionNow = new DatabaseConnection();
         Connection connectDB = connectionNow.getConnection();
 
-        String query = "SELECT id,student_id,course_code,Date,Theory_or_Practical,Status FROM course_attendence";
+        String query = "SELECT id,student_id,course_code,Date,Theory_or_Practical,Status FROM course_attendence where student_id='20181001'";
 
         try (Statement statement = connectDB.createStatement();
              ResultSet result = statement.executeQuery(query)) {
