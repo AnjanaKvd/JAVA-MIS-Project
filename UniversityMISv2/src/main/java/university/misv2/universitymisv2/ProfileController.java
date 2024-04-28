@@ -8,19 +8,25 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.sql.SQLException;
 
 public class ProfileController {
 
+    public ImageView profileImageView;
     @FXML
     private Label profileName;
 
@@ -65,17 +71,16 @@ public class ProfileController {
 
     @FXML
     private void initialize() {
-//        try {
-//            String username = "anjana";
-//            UserProfile userProfile = UserProfileManager.getUserProfile(username);
-//
-//            if (userProfile != null) {
-//                profileName.setText(userProfile.getFullName());
-//                profileUsername.setText("@" + userProfile.getUsername());
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        String username = UserData.getLoggedInUsername();
+        System.out.println(username);
+        if (username != null) {
+            profileName.setText(UserData.getFullName());
+            profileUsername.setText("@" + username);
+        }
+//        String imagePath = UserProfileManager.getUserProfileImagePath(username);
+//        UserData.setUserProfileImage(imagePath);
+//        Image newImage = new Image(UserData.getUserProfileImage());
+//        profileImageCircle.setFill(new ImagePattern(newImage));
     }
 
     @FXML
@@ -124,8 +129,28 @@ public class ProfileController {
 
     @FXML
     private void handleProfileUploadButton(ActionEvent event) {
-        // Handle profile upload button action
-        // Add your profile upload logic here
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Profile Image");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+        );
+        File selectedFile = fileChooser.showOpenDialog(new Stage());
+        if (selectedFile != null) {
+            String uploadDirectory = "/university/misv2/universitymisv2/images/profile_images/";
+            File uploadDir = new File(uploadDirectory);
+            if (!uploadDir.exists()) {
+                uploadDir.mkdirs();
+            }
+            File destinationFile = new File(uploadDir, selectedFile.getName());
+            try {
+                Files.copy(selectedFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                String imagePath = uploadDirectory + selectedFile.getName();
+                UserProfileManager.setUserProfileImagePath(UserData.getLoggedInUsername(), imagePath);
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Handle file copying error
+            }
+        }
     }
 
     @FXML
