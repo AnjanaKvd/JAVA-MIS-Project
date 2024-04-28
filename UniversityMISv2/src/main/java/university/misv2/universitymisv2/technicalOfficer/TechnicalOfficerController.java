@@ -4,6 +4,7 @@ import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -65,7 +66,7 @@ public class TechnicalOfficerController {
     @FXML
     private AnchorPane Notices;
 
-
+//attendances
     @FXML
     private TextField Student_idField;
 
@@ -81,12 +82,30 @@ public class TechnicalOfficerController {
     @FXML
     private TextField StatusField;
 
+    @FXML
+    private Label addAttendancesLabel;
+
+    @FXML
+    private Button  AttendanceButton;
+
+
+//modyfiyeattendance
     public TextField modifyStudentField;
     public TextField newCourseNameField ;
     public  TextField newtheory_or_practicalfiled;
     public  TextField newdatamodifyField;
     public  TextField newStatusField;
+    public Label modifyAttendancesLable;
+    public  Button modifyAttendancesButton;
 
+
+//Delete attendances
+    public TextField DeleteAttStudentField;
+    public TextField DeleteCourceidField;
+    public Button DeleteAttendanceButton;
+
+
+    public TextField  AttendanceDeletedLabel;
 
     //medical
     public  TextField addmedicalFiled;
@@ -95,6 +114,11 @@ public class TechnicalOfficerController {
     public  TextField addtheory_or_practicalFiled;
     public  TextField adddateFiled;
     public  TextField addStatusFiled;
+
+    public Label MedicalAddLable;
+
+    public TextField deleteMedicalField;
+    public  Label MedicalDeletedLabel;
 
 
 
@@ -154,7 +178,7 @@ public class TechnicalOfficerController {
         }
     }
 
-    public void AddAttendancesButton(ActionEvent event) {
+    public void AddAttendancesClick(ActionEvent event) {
         String Student_id =Student_idField.getText();
         String Course_code = courseNameField.getText();
         String theory_or_practical =theory_or_practicalField .getText();
@@ -169,7 +193,7 @@ public class TechnicalOfficerController {
             dateFiled.clear();
             StatusField.clear();
             //lecturerField.clear();
-            courseAddedLabel.setText("Attendance added successfully !");
+            addAttendancesLabel.setText("Attendance added successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -177,7 +201,7 @@ public class TechnicalOfficerController {
 
     }
     @FXML
-    private void modifyAttendancesButten(ActionEvent event) {
+    private void modifyAttendancesClick(ActionEvent event) {
         String newStudent_id = modifyStudentField.getText();
         String newCourse_code = newCourseNameField.getText();
         String newtheory_or_practical = newtheory_or_practicalfiled.getText();
@@ -191,18 +215,20 @@ public class TechnicalOfficerController {
             newtheory_or_practicalfiled.clear();
             newdatamodifyField.clear();
             newStatusField.clear();
-            courseModifiedLabel.setText("Attendance modified successfully !");
+            modifyAttendancesLable.setText("Attendance modified successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     @FXML
-    private void deleteAttendancesButten(ActionEvent event) {
-        String courseCodeToDelete = deleteCourseCodeField.getText();
+    private void deleteAttendancesClick(ActionEvent event) {
+        String Student_id = DeleteAttStudentField.getText();
+        String Course_code = DeleteCourceidField.getText();
         try {
             CourseManager.deleteCourse(courseCodeToDelete);
-            deleteCourseCodeField.clear();
-            courseDeletedLabel.setText("Attendance deleted successfully !");
+            DeleteAttStudentField.clear();
+            DeleteCourceidField.clear();
+            AttendanceDeletedLabel.setText("Attendance deleted successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -217,7 +243,7 @@ public class TechnicalOfficerController {
         String Status = addStatusFiled.getText();
         try {
 
-            CourseManager.AddAttendances(Medical_Id,Student_id, Course_code, theory_or_practical, date, Status);
+            CourseManager.(Medical_Id,Student_id, Course_code, theory_or_practical, date, Status);
             addmedicalFiled.clear();
             courseNameField.clear();
             addcoursecodeField.clear();
@@ -225,12 +251,24 @@ public class TechnicalOfficerController {
             adddateFiled.clear();
             addStatusFiled.clear();
 
-            courseAddedLabel.setText("Course Medical successfully !");
+            MedicalAddLable.setText("Course Medical successfully !");
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
 
+    }
+
+    @FXML
+    private void deleteMedicalButten(ActionEvent event) {
+        String Deletemedicalid = deleteMedicalField.getText();
+        try {
+            CourseManager.deleteCourse(courseCodeToDelete);
+            deleteMedicalField.clear();
+            MedicalDeletedLabel.setText("Attendance deleted successfully !");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

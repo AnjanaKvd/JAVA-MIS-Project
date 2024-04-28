@@ -19,7 +19,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" type="BorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TechnicalOfficerController">
+<BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TechnicalOfficerController">
     <left>
         <VBox prefHeight="1024.0" prefWidth="343.0" styleClass="sidebar-background" BorderPane.alignment="CENTER">
             <HBox id="dashboardHeader" alignment="CENTER" prefHeight="98.0" prefWidth="302.0" spacing="20.0">
@@ -271,7 +271,7 @@
                     </VBox>
                 </VBox>
             </AnchorPane>
-            <AnchorPane fx:id="attendanceTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="attendanceTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Attendance">
@@ -294,7 +294,7 @@
                         </HBox>
                   <AnchorPane prefHeight="260.0" prefWidth="1091.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#AddAttendancesButton" text="Addattendance">
+                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#AddAttendancesClick" text="AddAttendance">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
@@ -329,6 +329,7 @@
                         <TextField layoutX="138.0" layoutY="136.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
                         <TextField layoutX="138.0" layoutY="94.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
                         <TextField layoutX="138.0" layoutY="170.0" prefHeight="25.0" prefWidth="195.0" promptText="status" />
+                        <Label layoutX="194.0" layoutY="208.0" prefHeight="31.0" prefWidth="395.0" />
                      </children>
                   </AnchorPane>
                   <HBox prefHeight="37.0" prefWidth="1091.0">
@@ -342,7 +343,7 @@
                   </HBox>
                   <AnchorPane prefHeight="260.0" prefWidth="1091.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#modifyAttendancesButten" text="ModifyAttendance">
+                        <Button layoutX="40.0" layoutY="209.0" mnemonicParsing="false" onAction="#modifyAttendancesClick" text="ModifyAttendance">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
@@ -377,6 +378,7 @@
                         <TextField layoutX="138.0" layoutY="136.0" prefHeight="25.0" prefWidth="195.0" promptText="Date" />
                         <TextField layoutX="138.0" layoutY="94.0" prefHeight="25.0" prefWidth="195.0" promptText="theory_or_practical" />
                         <TextField layoutX="138.0" layoutY="170.0" prefHeight="25.0" prefWidth="195.0" promptText="status" />
+                        <Label layoutX="222.0" layoutY="211.0" prefHeight="33.0" prefWidth="462.0" />
                      </children>
                   </AnchorPane>
                   <HBox prefHeight="33.0" prefWidth="1089.0">
@@ -402,17 +404,18 @@
                            </font>
                         </Label>
                         <TextField layoutX="136.0" layoutY="69.0" prefHeight="25.0" prefWidth="195.0" promptText="cource_code" />
-                        <Button layoutX="35.0" layoutY="102.0" mnemonicParsing="false" onAction="#deleteAttendancesButten" text="DeleteAttendance">
+                        <Button layoutX="35.0" layoutY="102.0" mnemonicParsing="false" onAction="#deleteAttendancesClick" text="DeleteAttendance">
                            <font>
                               <Font name="Times New Roman" size="18.0" />
                            </font>
                         </Button>
+                        <Label layoutX="206.0" layoutY="102.0" prefHeight="28.0" prefWidth="370.0" />
                      </children>
                   </AnchorPane>
                     </VBox>
                 </VBox>
             </AnchorPane>
-            <AnchorPane fx:id="medicalTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="medicalTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Medical">
@@ -421,48 +424,77 @@
                             </font>
                         </Label>
                     </HBox>
-                    <VBox prefHeight="546.0" prefWidth="1097.0" styleClass="content-background">
+                    <VBox prefHeight="324.0" prefWidth="1097.0" styleClass="content-background">
                   <children>
-                     <AnchorPane prefHeight="162.0" prefWidth="1074.0" style="-fx-background-color: #FFFFFF;">
+                     <AnchorPane prefHeight="308.0" prefWidth="1097.0" style="-fx-background-color: #FFFFFF;">
                         <children>
-                           <Label layoutX="38.0" layoutY="35.0" text="Student ID :">
+                           <Label layoutX="54.0" layoutY="85.0" text="Student ID :">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Label>
-                           <Label layoutX="31.0" layoutY="78.0" text="Course Name :">
+                           <Label layoutX="60.0" layoutY="124.0" text="Course ID">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Label>
-                           <Label layoutX="43.0" layoutY="116.0" text="Date :">
+                           <Label layoutX="61.0" layoutY="161.0" text="Date :">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Label>
-                           <Label layoutX="38.0" layoutY="154.0" text="Hours :">
+                           <Label layoutX="56.0" layoutY="195.0" text="Hours :">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Label>
-                           <Label layoutX="45.0" layoutY="204.0" text="Type :">
+                           <Label layoutX="59.0" layoutY="230.0" text="Type :">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Label>
-                           <Button layoutX="50.0" layoutY="254.0" mnemonicParsing="false" onAction="#AddSubmitButton" style="-fx-background-color: #F0A3FC;" text="submit">
+                           <Button layoutX="46.0" layoutY="266.0" mnemonicParsing="false" onAction="#AddSubmitButton" style="-fx-background-color: #F0A3FC;" text="submit">
                               <font>
                                  <Font name="Times New Roman" size="18.0" />
                               </font>
                            </Button>
-                           <TextField layoutX="156.0" layoutY="33.0" prefHeight="25.0" prefWidth="211.0" />
-                           <TextField layoutX="155.0" layoutY="76.0" prefHeight="25.0" prefWidth="211.0" />
-                           <TextField layoutX="156.0" layoutY="114.0" prefHeight="25.0" prefWidth="211.0" />
-                           <TextField layoutX="155.0" layoutY="152.0" prefHeight="25.0" prefWidth="211.0" />
-                           <TextField layoutX="155.0" layoutY="192.0" prefHeight="25.0" prefWidth="211.0" />
+                           <TextField layoutX="155.0" layoutY="83.0" prefHeight="25.0" prefWidth="211.0" promptText="Student_id" />
+                           <TextField layoutX="155.0" layoutY="122.0" prefHeight="25.0" prefWidth="211.0" promptText=" Course_code" />
+                           <TextField layoutX="155.0" layoutY="158.0" prefHeight="25.0" prefWidth="211.0" promptText="Date" />
+                           <TextField layoutX="154.0" layoutY="192.0" prefHeight="25.0" prefWidth="211.0" promptText="Hours" />
+                           <TextField layoutX="154.0" layoutY="227.0" prefHeight="25.0" prefWidth="211.0" promptText="Type" />
+                           <Label layoutX="56.0" layoutY="48.0" text="Medical ID">
+                              <font>
+                                 <Font name="Times New Roman" size="18.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="157.0" layoutY="46.0" prefHeight="25.0" prefWidth="208.0" promptText="Medical_Id" />
+                           <Label layoutX="30.0" layoutY="14.0" prefHeight="17.0" prefWidth="208.0" text="Add Medical">
+                              <font>
+                                 <Font name="Times New Roman" size="22.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="155.0" layoutY="264.0" prefHeight="27.0" prefWidth="324.0" />
                         </children>
                      </AnchorPane>
                   </children></VBox>
+               <AnchorPane prefHeight="216.0" prefWidth="1097.0">
+                  <children>
+                     <Label layoutX="18.0" layoutY="11.0" prefHeight="17.0" prefWidth="208.0" text="Delete Medical">
+                        <font>
+                           <Font name="Times New Roman" size="22.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="40.0" layoutY="54.0" text="Medical ID">
+                        <font>
+                           <Font name="Times New Roman" size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField layoutX="147.0" layoutY="52.0" prefHeight="25.0" prefWidth="225.0" promptText="Deletemedicalid" />
+                     <Button layoutX="40.0" layoutY="96.0" mnemonicParsing="false" onAction="#deleteMedicalButten" text="Delete_Medical" />
+                     <Label layoutX="165.0" layoutY="95.0" prefHeight="27.0" prefWidth="330.0" />
+                  </children>
+               </AnchorPane>
                 </VBox>
             </AnchorPane>
             <AnchorPane fx:id="timetableTab" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -491,4 +523,4 @@
             </AnchorPane>
         </AnchorPane>
     </center>
-</fx:root>
+</BorderPane>
