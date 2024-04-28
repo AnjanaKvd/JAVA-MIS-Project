@@ -35,7 +35,7 @@
                 <Font size="13.0" />
             </font>
         </Label>
-        <Button fx:id="clearfield" layoutX="375.0" layoutY="405.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #116093;" text="Clear" textFill="WHITE">
+        <Button fx:id="clearfield" layoutX="375.0" layoutY="405.0" mnemonicParsing="false" onAction="#clearTextField" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #116093;" text="Clear" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,7 +15,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 import java.io.File;
@@ -28,6 +31,7 @@ import java.util.ResourceBundle;
 
 public class LecturerController implements Initializable {
     public Button RegisterButton;
+    public Button updateProfile;
     @FXML
     private TextField FirstnameTextField;
 
@@ -202,4 +206,42 @@ public class LecturerController implements Initializable {
 
 
     }
+
+    public void profileButtonOnAction(ActionEvent event) {
+        try {
+            URL resourceUrl = getClass().getResource("Profile.fxml");
+            if (resourceUrl == null) {
+                System.err.println("Error: Profile.fxml not found");
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(resourceUrl);
+            Parent root = loader.load();
+
+            Object controller = loader.getController();
+
+            Stage stage = new Stage();
+
+            Screen screen = Screen.getPrimary();
+            Rectangle2D bounds = screen.getVisualBounds();
+
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setX(bounds.getMinX());
+            stage.setY(bounds.getMinY());
+
+            stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+
+            if (controller instanceof Initializable) {
+                ((Initializable) controller).initialize(null, null);
+            }
+
+            stage.show();
+
+            Stage dashboardStage = (Stage) updateProfile.getScene().getWindow();
+            dashboardStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

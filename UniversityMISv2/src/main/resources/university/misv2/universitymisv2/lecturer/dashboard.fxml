@@ -122,7 +122,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button fx:id="CloseButton" layoutX="72.0" layoutY="597.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+            <Button fx:id="updateProfile" layoutX="72.0" layoutY="597.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: #E96151;" text="Update Profile" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
