@@ -10,6 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1472.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
     <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1701.0" style="-fx-background-color: #2aabb7;">
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
@@ -139,6 +140,11 @@
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="129.0" prefHeight="653.0" prefWidth="1228.0">
       <center>
          <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
+=======
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" stylesheets="@StudentStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboard">
+    <children>
+        <AnchorPane prefHeight="743.0" prefWidth="325.0" style="-fx-background-color: GRAY;">
+>>>>>>> e0aa9eec078978d2c8ed382028311ef8013e54c5
             <children>
                <AnchorPane layoutX="65.0" layoutY="68.0" prefHeight="200.0" prefWidth="953.0" style="-fx-background-color: #2aabb7; -fx-background-radius: 30;">
                   <children>

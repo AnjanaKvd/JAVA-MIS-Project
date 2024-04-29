@@ -13,6 +13,13 @@ module university.misv2.universitymisv2 {
     opens university.misv2.universitymisv2.technicalOfficer to javafx.fxml;
     opens university.misv2.universitymisv2.lecturer to javafx.fxml;
 
+
+
     exports university.misv2.universitymisv2;
+<<<<<<< HEAD
     exports university.misv2.universitymisv2.student;
+=======
+    exports university.misv2.universitymisv2.lecturer;
+
+>>>>>>> e0aa9eec078978d2c8ed382028311ef8013e54c5
 }
