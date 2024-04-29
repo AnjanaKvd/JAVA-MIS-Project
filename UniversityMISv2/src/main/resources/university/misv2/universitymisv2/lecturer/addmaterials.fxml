@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Addmaterials">
+   <children>
+      <TableView fx:id="table_materials" layoutX="329.0" layoutY="163.0" prefHeight="407.0" prefWidth="574.0" stylesheets="@style1.css">
+        <columns>
+          <TableColumn fx:id="Couser_code" prefWidth="150.0" text="Couser_code" />
+          <TableColumn fx:id="Materials_name" prefWidth="287.199951171875" text="Materials_name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

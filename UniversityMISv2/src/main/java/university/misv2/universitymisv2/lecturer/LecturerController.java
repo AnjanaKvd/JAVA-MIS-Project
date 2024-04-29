@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -15,6 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -91,6 +93,9 @@ public class LecturerController implements Initializable {
 
     @FXML
     private BorderPane boarderPane;
+
+    @FXML
+    private Button addMaterials;
 
 
 
@@ -209,7 +214,7 @@ public class LecturerController implements Initializable {
 
     public void profileButtonOnAction(ActionEvent event) {
         try {
-            URL resourceUrl = getClass().getResource("Profile.fxml");
+            URL resourceUrl = getClass().getResource("/university/misv2/universitymisv2/Profile.fxml");
             if (resourceUrl == null) {
                 System.err.println("Error: Profile.fxml not found");
                 return;
@@ -244,4 +249,23 @@ public class LecturerController implements Initializable {
         }
     }
 
+    public void addmaterialsClick(ActionEvent event) throws IOException {
+//        FileChooser fileChooser = new FileChooser();
+//        fileChooser.setTitle("Open Resource File");
+//        fileChooser.getExtensionFilters().addAll(
+//                new FileChooser.ExtensionFilter("Text Files", "*.txt"),
+//                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"),
+//                new FileChooser.ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"),
+//                new FileChooser.ExtensionFilter("All Files", "*.*"));
+//        File selectedFile = fileChooser.showOpenDialog(((Node) event.getSource()).getScene().getWindow());
+//        if (selectedFile != null) {
+//            // Handle the selected file, e.g., display it
+//            // For demonstration, let's print the file path
+//            System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+//        }
+
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addmaterials.fxml")));
+        boarderPane.setCenter(root);
+    }
 }
