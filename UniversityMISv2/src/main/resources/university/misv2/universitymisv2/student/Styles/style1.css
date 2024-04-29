@@ -24,7 +24,7 @@
     -fx-background-color: transparent;
 }
 .table-row-cell:odd{
-    -fx-background-color: #2ade8d;
+    -fx-background-color: #b9ccd6;
 }
 .table-view.table-cell{
     -fx-text-fill:#86e1d0;
