@@ -186,11 +186,11 @@ public class TechnicalOfficerController {
         String Status = StatusField.getText();
         try {
 
-            CourseManager.AddAttendances(Student_id, Course_code, theory_or_practical, date, Status);
+            AttendanceManager.AddAttendances(Student_id, Course_code, theory_or_practical, date, Status);
             Student_idField.clear();
             courseNameField.clear();
             theory_or_practicalField.clear();
-            dateFiled.clear();
+            //dateFiled.clear();
             StatusField.clear();
             //lecturerField.clear();
             addAttendancesLabel.setText("Attendance added successfully !");
@@ -205,10 +205,10 @@ public class TechnicalOfficerController {
         String newStudent_id = modifyStudentField.getText();
         String newCourse_code = newCourseNameField.getText();
         String newtheory_or_practical = newtheory_or_practicalfiled.getText();
-        Date  newdate=newdatamodifyField.getValue();
+       // Date  newdate =newdatamodifyField.();
         String newStatus = newStatusField.getText();
         try {
-            CourseManager.modifyAttendances(newStudent_id, newCourse_code, newtheory_or_practical, newdate, newStatus);
+            AttendanceManager.modifyAttendances(newStudent_id, newCourse_code, newtheory_or_practical,newStatus);
             modifyStudentField.clear();
             newCourseNameField.clear();
             //newDepartmentDropdown.getSelectionModel().clearSelection();
@@ -225,7 +225,7 @@ public class TechnicalOfficerController {
         String Student_id = DeleteAttStudentField.getText();
         String Course_code = DeleteCourceidField.getText();
         try {
-            CourseManager.deleteCourse(courseCodeToDelete);
+            AttendanceManager.modifydeleteAttendance(Student_id,Course_code);
             DeleteAttStudentField.clear();
             DeleteCourceidField.clear();
             AttendanceDeletedLabel.setText("Attendance deleted successfully !");
@@ -239,16 +239,16 @@ public class TechnicalOfficerController {
         String Student_id =addStudent_idField.getText();
         String Course_code = addcoursecodeField.getText();
         String theory_or_practical = addtheory_or_practicalFiled.getText();
-        Date  date=adddateFiled.getValue();
+        //Date  date=adddateFiled.getValue();
         String Status = addStatusFiled.getText();
         try {
 
-            CourseManager.(Medical_Id,Student_id, Course_code, theory_or_practical, date, Status);
+            MedicalManager.modifyaddmedical(Medical_Id,Student_id, Course_code, theory_or_practical,Status);
             addmedicalFiled.clear();
             courseNameField.clear();
             addcoursecodeField.clear();
             addtheory_or_practicalFiled.clear();
-            adddateFiled.clear();
+            //adddateFiled.clear();
             addStatusFiled.clear();
 
             MedicalAddLable.setText("Course Medical successfully !");

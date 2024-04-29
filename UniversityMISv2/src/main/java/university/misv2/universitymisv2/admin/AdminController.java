@@ -7,21 +7,32 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import university.misv2.universitymisv2.UserData;
+import university.misv2.universitymisv2.DatabaseConnection;
+import university.misv2.universitymisv2.UserProfileManager;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Objects;
 
 public class AdminController {
     public Label userAddedLabel;
@@ -40,14 +51,12 @@ public class AdminController {
     public BorderPane notification;
     @FXML
     public VBox notificationContainer;
-    @FXML
-    private Label profileNameLabel;
+    public Label userFullName;
+    public HBox profileSection;
+    public Circle profileIconCircle;
 
     @FXML
     private Label dashboardLabel;
-
-    @FXML
-    private Label profileRoleLabel;
 
     @FXML
     private ImageView closeBtn;
@@ -165,9 +174,15 @@ public class AdminController {
         dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3, "Courses"));
         dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Timetables"));
         dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
+        profileSection.setOnMouseClicked(event -> handleProfileSectionSelect());
 
         // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
+
+        String loggedInUsername = UserData.getLoggedInUsername();
+        if (loggedInUsername != null) {
+            updateUserDetails(loggedInUsername);
+        }
 
         loadNotifications();
 
@@ -421,5 +436,32 @@ public class AdminController {
                 e.printStackTrace();
             }
         }
+    }
+    private void handleProfileSectionSelect() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/university/misv2/universitymisv2/Profile.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+
+            Stage currentStage = (Stage) profileSection.getScene().getWindow();
+            currentStage.close();
+
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void updateUserDetails(String username) {
+        String fullName = UserProfileManager.getUserFullName(username);
+        UserData.setFullName(fullName);
+        userFullName.setText(fullName);
+
+        String profileImagePath = UserProfileManager.getUserProfileImagePath(username);
+        UserData.setUserProfileImage(profileImagePath);
+
+        Image newImage = new Image(String.valueOf(Objects.requireNonNull(getClass().getResource(profileImagePath))));
+        profileIconCircle.setFill(new ImagePattern(newImage));
     }
 }

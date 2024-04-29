@@ -103,6 +103,26 @@ public class Profile {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+        }try {
+            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Scene scene = new Scene(root);
+
+            Stage stage = (Stage) logoutButton.getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }try {
+            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Scene scene = new Scene(root);
+
+            Stage stage = (Stage) logoutButton.getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

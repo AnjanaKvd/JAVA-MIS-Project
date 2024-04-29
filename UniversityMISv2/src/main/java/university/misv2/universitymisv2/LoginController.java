@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -20,13 +19,13 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
+
+import university.misv2.universitymisv2.UserData;
+
 
 public class LoginController {
 
@@ -75,8 +74,9 @@ public class LoginController {
             try (ResultSet queryResult = statement.executeQuery()) {
                 if (queryResult.next() && queryResult.getInt(1) == 1) {
                     String userType = queryResult.getString("user_type");
-                    userId = queryResult.getInt("id");
-                    openMainWindow(userType, userId);
+                    String userName = queryResult.getString("username");
+                    UserData.setLoggedInUsername(userName);
+                    openMainWindow(userType);
                 } else {
                     loginMessageLabel.setText("Invalid username or password");
                 }
@@ -87,7 +87,7 @@ public class LoginController {
         }
     }
 
-    private void openMainWindow(String userType, int userId) {
+    private void openMainWindow(String userType) {
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
@@ -102,8 +102,6 @@ public class LoginController {
             Parent root = loader.load();
 
             Object controller = loader.getController();
-            UserData.setUserId(userId);
-
             Stage stage = new Stage();
 
             Screen screen = Screen.getPrimary();
