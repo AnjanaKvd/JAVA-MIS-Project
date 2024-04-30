@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -43,7 +45,7 @@ public class StudentDashboardControler implements Initializable {
 
 
     @FXML
-    private ImageView user1;
+    private Circle user1;
 
 
     @Override
@@ -56,7 +58,7 @@ public class StudentDashboardControler implements Initializable {
         studentsimage.setImage(UpdateImages);
         File profilepic=new File("C:\\Users\\iTEC\\Desktop\\Java\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\student\\images\\Users.png");
         Image UpdateImages2=new Image(profilepic.toURI().toString());
-        user1.setImage(UpdateImages2);
+        user1.setFill(new ImagePattern(UpdateImages2));
 
     }
 

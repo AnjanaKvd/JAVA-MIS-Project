@@ -1,8 +1,4 @@
 package university.misv2.universitymisv2;
-<<<<<<< HEAD
-
-=======
->>>>>>> e0aa9eec078978d2c8ed382028311ef8013e54c5
 import javafx.scene.control.Alert;
 
 import java.sql.Connection;
@@ -10,15 +6,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-<<<<<<< HEAD
     private static final String DATABASE_NAME = "techman";
     private static final String DATABASE_USER = "root";
     private static final String DATABASE_PASSWORD = "1234";
-=======
-    private static final String DATABASE_NAME = "universitymis";
-    private static final String DATABASE_USER = "root";
-    private static final String DATABASE_PASSWORD = "admin1234";
->>>>>>> e0aa9eec078978d2c8ed382028311ef8013e54c5
     private static final String URL = "jdbc:mysql://localhost:3306/" + DATABASE_NAME;
 
     public static Connection getConnection(){
@@ -30,16 +20,6 @@ public class DatabaseConnection {
         }
 
         return null;
-<<<<<<< HEAD
-=======
-    }
-    private static void showErrorAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error connecting to database");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
->>>>>>> e0aa9eec078978d2c8ed382028311ef8013e54c5
     }
     private static void showErrorAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
