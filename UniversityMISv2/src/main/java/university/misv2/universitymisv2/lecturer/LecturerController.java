@@ -16,6 +16,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -97,6 +99,13 @@ public class LecturerController implements Initializable {
     @FXML
     private Button addMaterials;
 
+    @FXML
+    private Button materialformbutton;
+
+    @FXML
+    private Circle imagecircle;
+
+
 
 
     @Override
@@ -104,6 +113,10 @@ public class LecturerController implements Initializable {
         File branding=new File("src/main/resources/university/misv2/universitymisv2/images/Lecturer.png");
         Image UpdateImage=new Image(branding.toURI().toString());
         shieldimageView.setImage(UpdateImage);
+
+        File profilepic=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\Notice.jpg");
+        Image UpdateImages2=new Image(profilepic.toURI().toString());
+        imagecircle.setFill(new ImagePattern(UpdateImages2));
 
     }
 
@@ -266,6 +279,12 @@ public class LecturerController implements Initializable {
 
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addmaterials.fxml")));
+        boarderPane.setCenter(root);
+    }
+
+    public void addmaterialsform(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("materialform.fxml")));
         boarderPane.setCenter(root);
     }
 }

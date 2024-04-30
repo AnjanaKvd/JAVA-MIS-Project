@@ -14,7 +14,7 @@
             <children>
                 <Label layoutX="156.0" layoutY="27.0" text="Upload Marks" textFill="WHITE">
                     <font>
-                        <Font size="25.0" />
+                        <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
               <ImageView fx:id="shieldimageView" fitHeight="42.0" fitWidth="69.0" layoutX="104.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">

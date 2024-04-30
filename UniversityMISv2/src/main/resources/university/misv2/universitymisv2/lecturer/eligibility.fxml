@@ -14,7 +14,7 @@
             <children>
                 <Label layoutX="92.0" layoutY="27.0" text="Status" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
             </children></AnchorPane>

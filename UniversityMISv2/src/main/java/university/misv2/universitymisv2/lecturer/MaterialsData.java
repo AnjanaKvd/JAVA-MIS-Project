@@ -79,9 +79,8 @@ public class MaterialsData {
         fileChooser.setTitle("Open Resource File");
         File selectedFile;
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Text Files", "*.txt"),
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"),
-                new FileChooser.ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"));
+                new FileChooser.ExtensionFilter("All Files", "*.*"));
+
         selectedFile = fileChooser.showOpenDialog(((Node) event.getSource()).getScene().getWindow());
         if (selectedFile != null) {
             String filePath = selectedFile.getAbsolutePath();
@@ -101,7 +100,7 @@ public class MaterialsData {
 
         try {
             connection = DatabaseConnection.getConnection();
-            String query = "INSERT INTO coursematerials (file_path) VALUES (?)";
+            String query = "INSERT INTO coursematerials (Uploaded) VALUES (?)";
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, filePath);
             preparedStatement.executeUpdate();
