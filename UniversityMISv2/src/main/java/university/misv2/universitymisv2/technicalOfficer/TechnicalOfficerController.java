@@ -225,7 +225,7 @@ public class TechnicalOfficerController {
         String Student_id = DeleteAttStudentField.getText();
         String Course_code = DeleteCourceidField.getText();
         try {
-            AttendanceManager.modifydeleteAttendance(Student_id,Course_code);
+            AttendanceManager.deleteAttendance(Student_id,Course_code);
             DeleteAttStudentField.clear();
             DeleteCourceidField.clear();
             AttendanceDeletedLabel.setText("Attendance deleted successfully !");
@@ -263,7 +263,7 @@ public class TechnicalOfficerController {
     private void deleteMedicalButten(ActionEvent event) {
         String Deletemedicalid = deleteMedicalField.getText();
         try {
-            CourseManager.deleteCourse(courseCodeToDelete);
+            MedicalManager.deleteMedical(Medical_Id);
             deleteMedicalField.clear();
             MedicalDeletedLabel.setText("Attendance deleted successfully !");
         } catch (SQLException e) {

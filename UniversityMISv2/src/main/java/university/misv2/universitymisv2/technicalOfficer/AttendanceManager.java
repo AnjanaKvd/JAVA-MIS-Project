@@ -41,7 +41,18 @@ public class AttendanceManager {
 
     }
 
-    public static void modifydeleteAttendance(){
+
+
+    public static void deleteAttendance() throws SQLException{
+        String query = "DELETE FROM course_attendance WHERE  Student_id && course_code = ?  ";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, Student_id);
+            statement.setString(2,Course_code);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }
