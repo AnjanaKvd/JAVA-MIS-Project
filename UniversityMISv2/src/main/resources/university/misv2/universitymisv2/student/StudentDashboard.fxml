@@ -6,12 +6,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1472.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
-    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1701.0" style="-fx-background-color: #2aabb7;">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
+    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1747.0" style="-fx-background-color: #2fa99b;">
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -38,9 +36,9 @@
             <Font size="13.0" />
         </font>
     </Label>
-    <AnchorPane layoutY="129.0" prefHeight="653.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
+    <AnchorPane layoutY="131.0" prefHeight="667.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
         <children>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="242.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #4392c7;" text="Attendance" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="257.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Attendance" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -52,7 +50,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="287.0" mnemonicParsing="false" onAction="#viewCourseDetails" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #4392c7;" text="Course" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="302.0" mnemonicParsing="false" onAction="#viewCourseDetails" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Course" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -64,7 +62,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="332.0" mnemonicParsing="false" onAction="#viewAttendancemedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #4392c7;" text="Medical" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="347.0" mnemonicParsing="false" onAction="#viewAttendancemedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Medical" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -76,7 +74,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="377.0" mnemonicParsing="false" onAction="#view_Grades" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #4392c7;" text="Grade" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="392.0" mnemonicParsing="false" onAction="#view_Grades" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Grade" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -88,7 +86,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="422.0" mnemonicParsing="false" onAction="#viewTimetable" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #4392c7;" text="Timetable" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="437.0" mnemonicParsing="false" onAction="#viewTimetable" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Timetable" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -100,7 +98,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="467.0" mnemonicParsing="false" onAction="#viewNotices" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #4392c7;" text="Notices" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="482.0" mnemonicParsing="false" onAction="#viewNotices" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Notices" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -112,7 +110,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="512.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #4392c7;" text="Update Profile" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="27.0" layoutY="527.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Update Profile" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -124,19 +122,19 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button fx:id="CloseButton" layoutX="68.0" layoutY="569.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+            <Button fx:id="CloseButton" layoutX="65.0" layoutY="599.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
             </Button>
-         <Label layoutX="109.0" layoutY="205.0" text="Student" textFill="#725c5c">
-            <font>
-               <Font size="18.0" />
-            </font></Label>
-         <Circle fx:id="user1" fill="DODGERBLUE" layoutX="141.0" layoutY="101.0" radius="87.0" stroke="BLACK" strokeType="INSIDE" />
+         <ImageView fx:id="user1" fitHeight="150.0" fitWidth="200.0" layoutX="65.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/Users.png" />
+            </image>
+         </ImageView>
         </children>
     </AnchorPane>
-    <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="129.0" prefHeight="653.0" prefWidth="1228.0">
+    <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="134.0" prefHeight="711.0" prefWidth="1255.0">
       <center>
          <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
             <children>

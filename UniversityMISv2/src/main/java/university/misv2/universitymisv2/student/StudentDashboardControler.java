@@ -47,6 +47,8 @@ public class StudentDashboardControler implements Initializable {
     @FXML
     private Circle user1;
 
+    @FXML
+    private ImageView user1;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
