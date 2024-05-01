@@ -5,10 +5,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import university.misv2.universitymisv2.DatabaseConnection;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class UpdateCourse {
@@ -40,6 +42,13 @@ public class UpdateCourse {
     @FXML
     private Button updatecourse;
 
+    @FXML
+    private TextField creditsfield;
+
+    @FXML
+    private TextField Gpafiled;
+
+
     public void updatecourseOnAction(ActionEvent event) throws SQLException {
 
         if(!coursecodefield.getText().isEmpty()){
@@ -48,6 +57,7 @@ public class UpdateCourse {
         } else{
             lablehide.setText("fail");
         }
+
 
 
 
@@ -62,15 +72,21 @@ public class UpdateCourse {
         String is_mid=is_midfield.getText();
         String is_project=is_projectfield.getText();
         String theory_or_practical=theory_or_practicalfield.getText();
+        int credit = Integer.parseInt(creditsfield.getText());
+        String Gpa=Gpafiled.getText();
         try {
-            String updateQuery = "UPDATE courses SET name = ?, is_mid = ?, is_project = ?, theory_or_practical = ? WHERE code = ?";
+            String updateQuery = "UPDATE courses SET name = ?, is_mid = ?, is_project = ?, theory_or_practical = ?, credits = ?,gpa_or_ngpa = ?  WHERE code = ?";
             assert connectDB != null;
             PreparedStatement preparedStatement = connectDB.prepareStatement(updateQuery);
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, is_mid);
             preparedStatement.setString(3, is_project);
             preparedStatement.setString(4, theory_or_practical);
-            preparedStatement.setString(5, code);
+            preparedStatement.setInt(5,credit);
+            preparedStatement.setString(6,Gpa);
+            preparedStatement.setString(7, code);
+
+
 
 
             int rowsAffected = preparedStatement.executeUpdate();
@@ -88,12 +104,7 @@ public class UpdateCourse {
     }
 
 
-    public void cancleButtononAction(ActionEvent event){
-        Stage stage=(Stage) CloseButton.getScene().getWindow();
-        stage.close();
 
-
-    }
 
     public void AddMaterialsButton() throws SQLException {
         DatabaseConnection connectionNow=new DatabaseConnection();
@@ -104,11 +115,13 @@ public class UpdateCourse {
         String is_mid=is_midfield.getText();
         String is_project=is_projectfield.getText();
         String theory_or_practical=theory_or_practicalfield.getText();
+        int credit = Integer.parseInt(creditsfield.getText());
+        String Gpa=Gpafiled.getText();
 
 
 
-        String insertField="INSERT INTO courses(code,name,is_mid,is_project,theory_or_practical) VALUES ('";
-        String insertValue=code + "','" + name + "','" + is_mid + "','" + is_project + "','" + theory_or_practical + "')";
+        String insertField="INSERT INTO courses(code,name,is_mid,is_project,theory_or_practical,credits,gpa_or_ngpa) VALUES ('";
+        String insertValue=code + "','" + name + "','" + is_mid + "','" + is_project + "','" + theory_or_practical + "','" + credit + "','" + Gpa +  "')";
         String insertToRegister=insertField+insertValue;
 
         try{
@@ -122,5 +135,15 @@ public class UpdateCourse {
             e.printStackTrace();
             e.getCause();
         }
+    }
+
+    public void clearButton(){
+        coursecodefield.clear();
+        coursenamefield.clear();
+        theory_or_practicalfield.clear();
+        is_midfield.clear();
+        is_projectfield.clear();
+        creditsfield.clear();
+        Gpafiled.clear();
     }
 }

@@ -37,7 +37,6 @@
             <Label id="profile-name" fx:id="profileName" text="Anjana Kavidu" />
             <Label id="profile-username" fx:id="profileUsername" text="\@anjana" />
             <AnchorPane prefHeight="188.0">
-               <ImageView fx:id="profileImageView" fitHeight="188.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
                <Circle id="profile-image" fx:id="profileImageCircle" fill="DODGERBLUE" layoutX="176.0" layoutY="94.0" radius="94.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
                <ImageView id="profile-image-delete-button" fx:id="profileDeleteButton" fitHeight="47.0" fitWidth="35.0" layoutX="222.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                   <effect>
@@ -149,7 +148,7 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <Label id="contact-us-label" layoutX="57.0" layoutY="50.0" text="Need assistance or have inquiries?" />
                      <Label id="contact-us-label2" layoutX="56.0" layoutY="96.0" text="Contact us for support with our Student Management System" />
-                     <Button id="contact-us-button" fx:id="contactUsButton" contentDisplay="TOP" layoutX="317.0" layoutY="192.0" mnemonicParsing="false" text="Contact us">
+                     <Button id="contact-us-button" fx:id="contactUsButton" contentDisplay="TOP" layoutX="317.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleContactUsButton" text="Contact us">
                         <graphic>
                            <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                               <Image url="@images/contact-us-logo.png" />

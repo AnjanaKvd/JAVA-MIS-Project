@@ -1,6 +1,7 @@
 package university.misv2.universitymisv2.admin;
 
 import javafx.animation.RotateTransition;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -160,6 +161,14 @@ public class AdminController {
     public TextField deleteTimetableIdField;
     public Button deleteTimetableButton;
     public Label timetableDeletedLabel;
+    @FXML
+    private TableView<String[]> userTableView;
+
+    @FXML
+    private TableColumn<String[], String> usernameColumn;
+
+    @FXML
+    private TableColumn<String[], String> userRoleColumn;
 
     @FXML
     private void initialize() {
@@ -179,12 +188,29 @@ public class AdminController {
         dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
         profileSection.setOnMouseClicked(event -> handleProfileSectionSelect());
 
-        // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
 
         String loggedInUsername = UserData.getLoggedInUsername();
         if (loggedInUsername != null) {
             updateUserDetails(loggedInUsername);
+        }
+
+        usernameColumn.setCellValueFactory(cellData -> {
+            String[] userData = cellData.getValue();
+            return new SimpleStringProperty(userData[0]);
+        });
+
+        userRoleColumn.setCellValueFactory(cellData -> {
+            String[] userData = cellData.getValue(); // Assuming the user role is a String
+            return new SimpleStringProperty(userData[1]);
+        });
+
+
+        try {
+            ObservableList<String[]> userList = UserManager.getUsers();
+            userTableView.setItems(userList);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         loadNotifications();

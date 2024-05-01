@@ -135,3 +135,33 @@
     -fx-font-size: 20;
     -fx-font-weight: lighter;
 }
+.user-table {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 20;
+}
+.username-column, .user-role-column {
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+}
+.user-table .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.user-table .table-row-cell:even {
+    -fx-background-color: #f0f0f0;
+}
+.user-table .column-header {
+    -fx-background-color: #cccccc;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+}
+.user-table .table-row-cell:selected {
+    -fx-background-color: #a8d1ff;
+}
+.user-table .table-row-cell:hover {
+    -fx-background-color: #e6e6e6;
+}
+

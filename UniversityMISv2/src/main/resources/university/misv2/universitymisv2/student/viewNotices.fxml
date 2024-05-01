@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" stylesheets="@Styles/style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.viewNoticesController">
+<children>
+    <TableView fx:id="table" layoutX="54.0" layoutY="100.0" prefHeight="499.0" prefWidth="955.0" stylesheets="@Styles/style1.css">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="170.0" text="ID" />
+            <TableColumn fx:id="message" prefWidth="479.0" text="Message" />
+            <TableColumn fx:id="date_time" prefWidth="295.0" text="Date Time" />
+
+        </columns>
+    </TableView>
+      <Label layoutX="75.0" layoutY="26.0" prefHeight="63.0" prefWidth="208.0" text="Notices" textFill="#1d4cda">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="43.0" />
+         </font>
+      </Label>
+</children>
+</AnchorPane>

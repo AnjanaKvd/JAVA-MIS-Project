@@ -9,6 +9,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -164,7 +166,7 @@
     <center>
         <!--        Dashboard tab -->
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <AnchorPane fx:id="dashboardTab" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="dashboardTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Hello">
@@ -244,22 +246,24 @@
                             <padding>
                                 <Insets left="40.0" />
                             </padding>
-                            <Label id="allUsersLabel" text="All Users">
+                            <Label id="allUsersLabel" text="Users">
                                 <font>
                                     <Font name="Poppins SemiBold" size="22.0" />
                                 </font>
                             </Label>
-                            <HBox alignment="CENTER" maxHeight="34.0" minHeight="33.0" prefHeight="34.0" prefWidth="206.0" spacing="10.0" styleClass="search-box-background">
-                                <ImageView fitHeight="30.0" fitWidth="25.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
-                                    <Image url="@../images/Search.png" />
-                                </ImageView>
-                                <TextField id="searchField" prefHeight="30.0" prefWidth="149.0" promptText="Search">
-                                    <font>
-                                        <Font name="Poppins Regular" size="12.0" />
-                                    </font>
-                                </TextField>
-                            </HBox>
                         </HBox>
+                        <TableView fx:id="userTableView" prefHeight="302.0" prefWidth="652.0" styleClass="user-table">
+                            <columns>
+                                <TableColumn fx:id="usernameColumn" prefWidth="75.0" styleClass="username-column" text="Username" />
+                                <TableColumn fx:id="userRoleColumn" prefWidth="75.0" styleClass="user-role-column" text="UserRole" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="100.0" right="100.0" />
+                            </VBox.margin>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
                     </VBox>
                     <effect>
                         <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
@@ -680,7 +684,7 @@
 
 
             <!--                Notifications tab-->
-            <AnchorPane fx:id="notificationTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="notificationTab" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                 <VBox prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                     <effect>
                         <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">

@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import university.misv2.universitymisv2.DatabaseConnection;
 
 import java.sql.Connection;
@@ -51,6 +50,23 @@ public class UploadMarks {
     @FXML
     private TextField student_id;
 
+    @FXML
+    private Button clearfield;
+
+    @FXML
+    void clearTextField(ActionEvent event) {
+            Coursecode.clear();
+            end_marks.clear();
+            mid_marks.clear();
+            project_marks.clear();
+            quiz1_marks.clear();
+            quiz2_marks.clear();
+            quiz3_marks.clear();
+            student_id.clear();
+            quiz1_marks.clear();
+
+    }
+
 
     public void addDataAction(ActionEvent event) throws SQLException {
         Connection connectDB = DatabaseConnection.getConnection();
@@ -87,8 +103,5 @@ public class UploadMarks {
         }
     }
 
-    public void cancelButtonAction(ActionEvent event) {
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
-    }
+
 }

@@ -18,12 +18,17 @@ import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Objects;
 import java.util.Random;
+
+import java.awt.Desktop;
 
 public class ProfileController {
 
@@ -148,8 +153,20 @@ public class ProfileController {
 
     @FXML
     private void handleContactUsButton(ActionEvent event) {
-        // Handle contact us button action
-        // Add your contact us logic here
+        String emailAddress = "customersupport@teclms.com";
+        String subject = "Customer Support Inquiry";
+
+        try {
+            String uriString = String.format("mailto:%s?subject=%s",
+                    URLEncoder.encode(emailAddress, "UTF-8"),
+                    URLEncoder.encode(subject, "UTF-8"));
+
+            URI uri = new URI(uriString);
+
+            Desktop.getDesktop().mail(uri);
+        } catch (URISyntaxException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -1,124 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" stylesheets="@StudentStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboard">
-    <children>
-        <AnchorPane prefHeight="743.0" prefWidth="325.0" style="-fx-background-color: GRAY;">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1394.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
+    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1760.0" style="-fx-background-color: #2fa99b;">
+        <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="302.0" layoutY="18.0" prefHeight="57.0" prefWidth="78.0" text="Student" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+      <ImageView id="CloseButton" fx:id="CloseButton" fitHeight="34.0" fitWidth="36.0" layoutX="1696.0" layoutY="23.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Close.png" />
+         </image>
+      </ImageView>
+    </AnchorPane>
+    <ImageView fx:id="studentimage" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/User.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="169.0" layoutY="89.0" prefHeight="27.0" prefWidth="208.0" textFill="#0196ec">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <Label layoutX="204.0" layoutY="315.0" prefHeight="19.0" prefWidth="208.0" textFill="#eb2002">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <AnchorPane layoutY="129.0" prefHeight="676.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
+        <children>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="262.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Attendance" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/attendanceicon2.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="307.0" mnemonicParsing="false" onAction="#viewCourseDetails" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Course" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/Course.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="352.0" mnemonicParsing="false" onAction="#viewAttendancemedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Medical" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/DoctorsBag.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="397.0" mnemonicParsing="false" onAction="#view_Grades" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Grade" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/GpaCalculator.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="442.0" mnemonicParsing="false" onAction="#viewTimetable" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Timetable" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/Timetable.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="487.0" mnemonicParsing="false" onAction="#viewNotices" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Notices" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/Notification.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="updateprofile" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="532.0" mnemonicParsing="false" onAction="#profile_update" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Update Profile" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="13.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/Settings.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+         <Circle fx:id="user1" fill="DODGERBLUE" layoutX="145.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
+         <Label fx:id="userFullNameLabel" layoutX="95.0" layoutY="197.0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+        </children>
+    </AnchorPane>
+    <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="134.0" prefHeight="711.0" prefWidth="1255.0">
+      <center>
+         <AnchorPane prefHeight="711.0" prefWidth="1347.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="66.0" fitWidth="76.0" layoutX="15.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-                             <Image url="@../images/key-square.png" /></ImageView>
-                <Label layoutX="93.0" layoutY="28.0" prefHeight="51.0" prefWidth="218.0" text="Student Dasboard">
-               <font>
-                  <Font size="27.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="59.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="dashboardLabel" layoutX="120.0" layoutY="122.0" onMouseClicked="#handleDashboardClick" text="Dashboard">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="57.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="AttendanceLabel" layoutX="120.0" layoutY="190.0" onMouseClicked="#viewAttendance" text="Attendance">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="55.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="MedicalLabel" layoutX="119.0" layoutY="260.0" onMouseClicked="#viewMedicalDetails" text="Medical">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="56.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="CourseLabel" layoutX="120.0" layoutY="328.0" onMouseClicked="#viewCourseDetails" text="Courses">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="56.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="GradesLabel" layoutX="119.0" layoutY="396.0" onMouseClicked="#viewGrades" text="Grades">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="55.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="TimetableLabel" layoutX="117.0" layoutY="469.0" onMouseClicked="#viewTimetable" text="Timetable">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="56.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="NotificationLabel" layoutX="120.0" layoutY="532.0" onMouseClicked="#viewNotices" text="Notification">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="57.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label fx:id="HelpLabel" layoutX="125.0" layoutY="592.0" onMouseClicked="#showAlert" text="Help">
-               <font>
-                  <Font size="23.0" />
-               </font></Label>
-                <ImageView fitHeight="36.0" fitWidth="52.0" layoutX="79.0" layoutY="686.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label layoutX="127.0" layoutY="683.0" text="Ashen">
-               <font>
-                  <Font size="17.0" />
-               </font></Label>
-                <Label layoutX="131.0" layoutY="708.0" prefHeight="17.0" prefWidth="52.0" text="Student" textFill="#615f5f" />
+               <AnchorPane layoutX="128.0" layoutY="71.0" prefHeight="200.0" prefWidth="1010.0" style="-fx-background-color: #2aabb7; -fx-background-radius: 30;">
+                  <children>
+                     <Circle fill="#b9ccd6" layoutX="63.0" layoutY="93.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+                     <ImageView fitHeight="65.0" fitWidth="62.0" layoutX="32.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/Classroom.png" />
+                        </image></ImageView>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2aabb7" height="168.0" layoutX="308.0" layoutY="14.0" stroke="#eeeeee" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="7.0" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2aabb7" height="168.0" layoutX="623.0" layoutY="16.0" stroke="#ebe5e5" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="7.0" />
+                     <Circle fill="#b9ccd6" layoutX="697.0" layoutY="97.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
+                     <ImageView fitHeight="66.0" fitWidth="63.0" layoutX="666.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/Users.png" />
+                        </image></ImageView>
+                     <Circle fill="#b9ccd6" layoutX="372.0" layoutY="96.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
+                     <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="342.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/Courses.png" />
+                        </image></ImageView>
+                     <Label layoutX="144.0" layoutY="75.0" text="Total Users">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="800.0" layoutY="72.0" text="Online ">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="475.0" layoutY="74.0" text="Courses">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="177.0" layoutY="128.0" text="1600">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="821.0" layoutY="115.0" text="35">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="501.0" layoutY="122.0" text="60">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                  </children></AnchorPane>
+               <ImageView fx:id="studentsimage" fitHeight="273.0" fitWidth="570.0" layoutX="325.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/CollegeStudents.png" />
+                  </image></ImageView>
             </children>
-        </AnchorPane>
-        <AnchorPane layoutX="327.0" layoutY="-1.0" prefHeight="213.0" prefWidth="1030.0" style="-fx-background-color: yellow;">
-            <children>
-                <Label layoutX="47.0" layoutY="29.0" prefHeight="46.0" prefWidth="226.0" text="Hello Ashen 🖐,">
-                    <font>
-                        <Font size="26.0" />
-                    </font>
-                </Label>
-                <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="117.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <TextField layoutX="823.0" layoutY="19.0" promptText="Search" />
-                <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="779.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="487.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="741.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../images/key-square.png" /></ImageView>
-                <Label layoutX="171.0" layoutY="92.0" text="Courses Enrolled">
-               <font>
-                  <Font size="33.0" />
-               </font></Label>
-                <Label layoutX="539.0" layoutY="95.0" text="Credits">
-               <font>
-                  <Font size="33.0" />
-               </font></Label>
-                <Label layoutX="790.0" layoutY="95.0" text="Active Courses">
-               <font>
-                  <Font size="33.0" />
-               </font></Label>
-                <Label layoutX="275.0" layoutY="129.0" prefHeight="36.0" prefWidth="42.0" text="10">
-                    <font>
-                        <Font size="33.0" />
-                    </font>
-                </Label>
-                <Label layoutX="579.0" layoutY="129.0" prefHeight="36.0" prefWidth="42.0" text="20">
-                    <font>
-                        <Font size="33.0" />
-                    </font>
-                </Label>
-                <Label layoutX="878.0" layoutY="126.0" prefHeight="36.0" prefWidth="42.0" text="05">
-                    <font>
-                        <Font size="33.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
-        <AnchorPane layoutX="324.0" layoutY="214.0" prefHeight="527.0" prefWidth="1033.0" style="-fx-background-color: pink;" />
-    </children>
+         </AnchorPane>
+      </center></BorderPane>
 </AnchorPane>

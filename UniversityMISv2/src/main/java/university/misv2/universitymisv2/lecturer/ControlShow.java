@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import university.misv2.universitymisv2.lecturer.User;
 
 import java.net.URL;
 import java.sql.SQLException;

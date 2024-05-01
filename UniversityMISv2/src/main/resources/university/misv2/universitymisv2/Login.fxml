@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -17,10 +16,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.LoginController">
+<BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.LoginController">
    <center>
       <AnchorPane id="centerPane" maxHeight="200.0" maxWidth="500.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <VBox id="loginBox" alignment="CENTER_LEFT" layoutX="1.0" layoutY="-1.0" prefHeight="732.0" prefWidth="547.0">
+         <VBox id="loginBox" alignment="CENTER_LEFT" layoutX="1.0" layoutY="-1.0" prefHeight="471.0" prefWidth="547.0">
             <padding>
                <Insets left="50.0" />
             </padding>
@@ -49,11 +48,6 @@
                            <Font name="Poppins Regular" size="16.0" />
                         </font>
                      </Label>
-                     <Hyperlink id="hideLink" text="Hide">
-                        <font>
-                           <Font name="Poppins Regular" size="18.0" />
-                        </font>
-                     </Hyperlink>
                   </HBox>
                   <PasswordField id="passwordField" fx:id="enterPasswordField" maxHeight="56.0" maxWidth="459.0" minHeight="56.0" prefHeight="56.0" />
                </VBox>
@@ -66,17 +60,15 @@
                   </Label>
                </HBox>
                <HBox id="checkBoxBox" prefHeight="100.0" prefWidth="200.0">
-                  <CheckBox id="rememberMeCheckBox" mnemonicParsing="false">
-                     <graphic>
-                        <Label text="Remember me" />
-                     </graphic>
-                  </CheckBox>
                   <Hyperlink id="needHelpLink" text="Need help?" />
                </HBox>
             </VBox>
-            <HBox id="forgotPasswordBox" prefHeight="100.0" prefWidth="200.0">
+            <HBox id="forgotPasswordBox" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="497.0">
                <Label id="forgotPasswordLabel" text="Forgot password?" />
                <Hyperlink id="resetPasswordLink" text="Reset password" />
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
             </HBox>
             <effect>
                <DropShadow height="63.11" radius="47.43000000000001" spread="0.16" width="128.61" />
