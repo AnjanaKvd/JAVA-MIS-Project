@@ -135,7 +135,7 @@
                 </font>
             </Button>
          <Circle fx:id="user1" fill="DODGERBLUE" layoutX="137.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
-         <Label layoutX="109.0" layoutY="197.0" text="Profile Name" />
+         <Label layoutX="109.0" layoutY="197.0" text="Student" />
         </children>
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="134.0" prefHeight="711.0" prefWidth="1255.0">

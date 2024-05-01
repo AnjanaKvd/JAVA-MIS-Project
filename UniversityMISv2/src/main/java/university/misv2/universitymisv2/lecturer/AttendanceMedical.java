@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import university.misv2.universitymisv2.student.AmUser;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -73,11 +74,7 @@ public class AttendanceMedical implements Initializable {
 
         // Load the list of users from the database
         List<AmUser> amuser = null;
-        try {
-            amuser = AmUser.fetchAllUsers();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        amuser = AmUser.fetchAllUsers();
 
         // Convert the list to an ObservableList
         ObservableList<AmUser> observableAmList = FXCollections.observableArrayList(amuser);
