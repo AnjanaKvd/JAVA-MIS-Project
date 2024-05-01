@@ -1,8 +1,5 @@
 package university.misv2.universitymisv2.lecturer;
 
-<<<<<<< HEAD
-public class LecturerController {
-=======
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -296,5 +293,4 @@ public class LecturerController implements Initializable {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("materialform.fxml")));
         boarderPane.setCenter(root);
     }
->>>>>>> 2507664d64deed775b446ca7cde5aa32854f04f8
 }
