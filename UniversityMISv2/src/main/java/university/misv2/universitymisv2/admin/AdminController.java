@@ -1,23 +1,62 @@
 package university.misv2.universitymisv2.admin;
 
 import javafx.animation.RotateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import university.misv2.universitymisv2.UserData;
+import university.misv2.universitymisv2.DatabaseConnection;
+import university.misv2.universitymisv2.UserProfileManager;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalTime;
+import java.util.List;
+import java.util.Objects;
 
 public class AdminController {
+    public Label userAddedLabel;
+    public Label userModifiedLabel;
+    public Label userDeletedLabel;
+    public Label notificationID;
+    public Label notificationMessage;
+    public Label notificationDate;
+    public Label notificationDate1;
+    public TextArea notificationInputBox;
+    public Button notificationSendButton;
+    public AnchorPane notificationAnchorPane;
+    public ScrollPane notificationListView;
+    public Hyperlink notificationDeleteButton;
+    public VBox notificationView;
+    public BorderPane notification;
+    @FXML
+    public VBox notificationContainer;
+    public Label userFullName;
+    public HBox profileSection;
+    public Circle profileIconCircle;
 
     @FXML
-    private Label profileNameLabel;
-
-    @FXML
-    private Label profileRoleLabel;
+    private Label dashboardLabel;
 
     @FXML
     private ImageView closeBtn;
@@ -38,6 +77,88 @@ public class AdminController {
     private HBox dashboardOption5;
 
     @FXML
+    private AnchorPane dashboardTab;
+
+    @FXML
+    private AnchorPane usersTab;
+
+    @FXML
+    private AnchorPane coursesTab;
+
+    @FXML
+    public AnchorPane timetablesTab;
+
+    @FXML
+    private AnchorPane notificationTab;
+
+
+    @FXML
+    private TextField usernameField;
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private ComboBox<String> userTypeDropdown;
+
+    @FXML
+    private TextField modifyUsernameField;
+
+    @FXML
+    private TextField newUsernameField;
+
+    @FXML
+    private PasswordField newPasswordField;
+
+    @FXML
+    private ComboBox<String> userTypeDropdown2;
+
+    @FXML
+    private TextField deleteUsernameField;
+
+    public TextField courseCodeField;
+    public TextField courseNameField;
+    public ComboBox<String> departmentDropdown;
+    public TextField creditsField;
+    public TextField hoursField;
+    public TextField lecturerField;
+    public Button addCourseButton;
+    public Label courseAddedLabel;
+    public TextField modifyCourseCodeField;
+    public TextField newCourseNameField;
+    public ComboBox<String> newDepartmentDropdown;
+    public TextField newCreditsField;
+    public TextField newHoursField;
+    public TextField newLecturerField;
+    public Button modifyCourseButton;
+    public Label courseModifiedLabel;
+    public TextField deleteCourseCodeField;
+    public Button deleteCourseButton;
+    public Label courseDeletedLabel;
+
+    public TextField startTimeField;
+    public TextField endTimeField;
+    public Button addTimetableButton;
+    public Label timetableAddedLabel;
+    public TextField timetableCourseCodeField;
+    public TextField timetablelecturerField;
+    public TextField timetablecourseNameField;
+    public TextField timetableclassroomField;
+    public ComboBox<String> dayOfWeekDropdown;
+    public TextField timetableIdField;
+    public TextField newTimetableCourseNameField;
+    public TextField newTimetableLecturerField;
+    public TextField newTimetableClassroomField;
+    public ComboBox<String> newDayOfWeekDropdown;
+    public TextField newTimetableStartTimeField;
+    public TextField newTimetableEndTimeField;
+    public Button modifyTimetableButton;
+    public Label timetableModifiedLabel;
+    public TextField deleteTimetableIdField;
+    public Button deleteTimetableButton;
+    public Label timetableDeletedLabel;
+
+    @FXML
     private void initialize() {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
         rotateTransition.setByAngle(360);
@@ -48,14 +169,23 @@ public class AdminController {
         closeBtn.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
 
         // Add event handlers for side options
-        dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1));
-        dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2));
-        dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3));
-        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4));
-        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5));
+        dashboardOption1.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption1, "Dashboard"));
+        dashboardOption2.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption2, "Users"));
+        dashboardOption3.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption3, "Courses"));
+        dashboardOption4.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption4, "Timetables"));
+        dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
+        profileSection.setOnMouseClicked(event -> handleProfileSectionSelect());
 
-//         Set the default selected option
-        handleDashboardOptionSelected(dashboardOption1);
+        // Set the default selected option
+        handleDashboardOptionSelected(dashboardOption1, "Dashboard");
+
+        String loggedInUsername = UserData.getLoggedInUsername();
+        if (loggedInUsername != null) {
+            updateUserDetails(loggedInUsername);
+        }
+
+        loadNotifications();
+
     }
 
     @FXML
@@ -64,7 +194,7 @@ public class AdminController {
         stage.close();
     }
 
-    private void handleDashboardOptionSelected(HBox selectedOption) {
+    private void handleDashboardOptionSelected(HBox selectedOption, String optionText) {
         VBox dashboardOptionsContainer = (VBox) selectedOption.getParent();
         dashboardOptionsContainer.getChildren().forEach(option -> option.getStyleClass().setAll("dashboard-option"));
         selectedOption.getStyleClass().setAll("dashboard-option-selected");
