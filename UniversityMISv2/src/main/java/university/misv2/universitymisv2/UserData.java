@@ -1,5 +1,7 @@
 package university.misv2.universitymisv2;
 
+import java.nio.file.Paths;
+
 public class UserData {
     private static String loggedInUsername;
     private static String fullName;
@@ -22,12 +24,20 @@ public class UserData {
     }
     public static String getUserProfileImage() {
         if(userProfileImage == null){
-            return "/university/misv2/universitymisv2/images/profile_images/profile-default.jpeg";
+            String currentAbsolutePath = Paths.get("").toAbsolutePath().toString();
+            String defaultImagePath = "/profile_images/profile-default.jpeg";
+           return currentAbsolutePath + defaultImagePath;
         }else{
             return userProfileImage;
         }
     }
     public static void setUserProfileImage(String profileImage) {
         userProfileImage = profileImage;
+    }
+
+    public static void clearUserData(){
+        loggedInUsername = null;
+        fullName = null;
+        userProfileImage = null;
     }
 }
