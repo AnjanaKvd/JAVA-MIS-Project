@@ -14,8 +14,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        Application.setUserAgentStylesheet("E:\\project update\\JAVA-MIS-Project\\AtlantaFX.zip");
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("lecturer/dashboard.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Login.fxml")));
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 

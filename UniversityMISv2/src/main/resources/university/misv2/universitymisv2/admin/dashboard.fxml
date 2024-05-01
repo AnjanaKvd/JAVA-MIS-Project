@@ -23,8 +23,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -116,30 +114,13 @@
                 </HBox>
             </VBox>
             <VBox id="profileSection" alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0" styleClass="profile-background" BorderPane.alignment="CENTER">
-                <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
+                <HBox fx:id="profileSection" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
                     <padding>
                         <Insets left="50.0" />
                     </padding>
-                    <Circle id="profileCircle" radius="20.0" stroke="BLACK" strokeType="INSIDE">
-                        <fill>
-                            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                <stops>
-                                    <Stop>
-                                        <color>
-                                            <Color />
-                                        </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                        <color>
-                                            <Color red="1.0" green="1.0" blue="1.0" />
-                                        </color>
-                                    </Stop>
-                                </stops>
-                            </RadialGradient>
-                        </fill>
-                    </Circle>
+               <Circle id="profileCircle" fx:id="profileIconCircle" fill="DODGERBLUE" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                        <Label id="profileNameLabel" text="Anjana">
+                        <Label id="profileNameLabel" fx:id="userFullName" text="Anjana">
                             <font>
                                 <Font name="Poppins Regular" size="14.0" />
                             </font>

@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -23,13 +22,14 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
+import java.util.Objects;
+
+import university.misv2.universitymisv2.UserData;
+
 
 public class LoginController {
 
@@ -76,16 +76,25 @@ public class LoginController {
 
     private void validateLogin() {
         try (Connection connectDB = DatabaseConnection.getConnection();
-             PreparedStatement statement = connectDB.prepareStatement("SELECT * FROM user WHERE username = ? AND password = ?")) {
+             PreparedStatement statement = connectDB.prepareStatement("SELECT * FROM user WHERE username = ?")) {
 
             statement.setString(1, usernameTextField.getText());
-            statement.setString(2, enterPasswordField.getText());
 
             try (ResultSet queryResult = statement.executeQuery()) {
-                if (queryResult.next() && queryResult.getInt(1) == 1) {
-                    String userType = queryResult.getString("user_type");
-                    userId = queryResult.getInt("id");
-                    openMainWindow(userType, userId);
+                if (queryResult.next()) {
+                    String storedPassword = queryResult.getString("password");
+                    String enteredPassword = enterPasswordField.getText();
+
+                    String storedUsername = queryResult.getString("username");
+                    String enteredUsername = enterPasswordField.getText();
+                    if (Objects.equals(enteredUsername, storedUsername) && Objects.equals(enteredPassword, storedPassword)) {
+                        String userType = queryResult.getString("user_type");
+                        String userName = queryResult.getString("username");
+                        UserData.setLoggedInUsername(userName);
+                        openMainWindow(userType);
+                    } else {
+                        loginMessageLabel.setText("Invalid username or password");
+                    }
                 } else {
                     loginMessageLabel.setText("Invalid username or password");
                 }
@@ -96,23 +105,23 @@ public class LoginController {
         }
     }
 
-    private void openMainWindow(String userType, int userId) {
+    private void openMainWindow(String userType) {
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
                 fxmlPath = "admin/dashboard.fxml";
             } else if ("lecturer".equals(userType)) {
                 fxmlPath = "lecturer/dashboard.fxml";
-            } else {
+            } else if ("student".equals(userType)) {
+                fxmlPath = "student/dashboard.fxml";
+            } else if ("technical officer".equals(userType)) {
+                fxmlPath = "technicalOfficer/dashboard.fxml";
+            }else{
                 return;
             }
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
-
-            Object controller = loader.getController();
-            UserData.setUserId(userId);
-
             Stage stage = new Stage();
 
             Screen screen = Screen.getPrimary();
@@ -123,17 +132,11 @@ public class LoginController {
             stage.setY(bounds.getMinY());
 
             stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
-
-
-
-            if (controller instanceof Initializable) {
-                ((Initializable) controller).initialize(null, null);
-            }
-
             stage.show();
 
             Stage loginStage = (Stage) loginButton.getScene().getWindow();
             loginStage.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
