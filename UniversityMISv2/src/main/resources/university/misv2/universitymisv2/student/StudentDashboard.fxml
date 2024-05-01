@@ -11,11 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1394.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
-<<<<<<< HEAD
-    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1621.0" style="-fx-background-color: #2fa99b;">
-=======
     <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1760.0" style="-fx-background-color: #2fa99b;">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -26,25 +22,15 @@
                 <Font size="18.0" />
             </font>
         </Label>
-<<<<<<< HEAD
-      <ImageView id="CloseButton" fx:id="CloseButton" fitHeight="34.0" fitWidth="36.0" layoutX="1557.0" layoutY="8.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/Close.png" />
-=======
       <ImageView id="CloseButton" fx:id="CloseButton" fitHeight="34.0" fitWidth="36.0" layoutX="1696.0" layoutY="23.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/Close.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
          </image>
       </ImageView>
     </AnchorPane>
     <ImageView fx:id="studentimage" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
         <image>
-<<<<<<< HEAD
-            <Image url="@images/User.png" />
-=======
             <Image url="@../images/User.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
         </image>
     </ImageView>
     <Label layoutX="169.0" layoutY="89.0" prefHeight="27.0" prefWidth="208.0" textFill="#0196ec">
@@ -57,206 +43,122 @@
             <Font size="13.0" />
         </font>
     </Label>
-<<<<<<< HEAD
-    <AnchorPane layoutY="131.0" prefHeight="667.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
-        <children>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="250.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Attendance" textAlignment="CENTER" textFill="WHITE">
-=======
     <AnchorPane layoutY="129.0" prefHeight="676.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
         <children>
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="262.0" mnemonicParsing="false" onAction="#viewAttendance" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Attendance" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/attendanceicon2.png" />
-=======
                             <Image url="@../images/attendanceicon2.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="295.0" mnemonicParsing="false" onAction="#viewCourseDetails" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Course" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="307.0" mnemonicParsing="false" onAction="#viewCourseDetails" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Course" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Course.png" />
-=======
                             <Image url="@../images/Course.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="340.0" mnemonicParsing="false" onAction="#viewAttendancemedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Medical" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="352.0" mnemonicParsing="false" onAction="#viewAttendancemedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Medical" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Doctors Bag.png" />
-=======
                             <Image url="@../images/DoctorsBag.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="385.0" mnemonicParsing="false" onAction="#view_Grades" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Grade" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="397.0" mnemonicParsing="false" onAction="#view_Grades" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Grade" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Gpa Calculator.png" />
-=======
                             <Image url="@../images/GpaCalculator.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="430.0" mnemonicParsing="false" onAction="#viewTimetable" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Timetable" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="442.0" mnemonicParsing="false" onAction="#viewTimetable" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Timetable" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Timetable.png" />
-=======
                             <Image url="@../images/Timetable.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="475.0" mnemonicParsing="false" onAction="#viewNotices" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Notices" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="487.0" mnemonicParsing="false" onAction="#viewNotices" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Notices" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Notification.png" />
-=======
                             <Image url="@../images/Notification.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button fx:id="updateprofile" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="520.0" mnemonicParsing="false" onAction="#profile_update" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Update Profile" textAlignment="CENTER" textFill="WHITE">
-=======
             <Button fx:id="updateprofile" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="532.0" mnemonicParsing="false" onAction="#profile_update" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Update Profile" textAlignment="CENTER" textFill="WHITE">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                 <font>
                     <Font size="13.0" />
                 </font>
                 <graphic>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                            <Image url="@images/Settings.png" />
-=======
                             <Image url="@../images/Settings.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-<<<<<<< HEAD
-            <Button fx:id="Logout" layoutX="65.0" layoutY="580.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Log Out" textFill="WHITE">
-                <font>
-                    <Font size="13.0" />
-                </font>
-            </Button>
-         <Circle fx:id="user1" fill="DODGERBLUE" layoutX="137.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
-         <Label layoutX="109.0" layoutY="197.0" text="Profile Name" />
-=======
          <Circle fx:id="user1" fill="DODGERBLUE" layoutX="145.0" layoutY="97.0" radius="83.0" stroke="BLACK" strokeType="INSIDE" />
          <Label fx:id="userFullNameLabel" layoutX="95.0" layoutY="197.0">
             <font>
                <Font name="System Bold" size="16.0" />
             </font>
          </Label>
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
         </children>
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="134.0" prefHeight="711.0" prefWidth="1255.0">
       <center>
          <AnchorPane prefHeight="711.0" prefWidth="1347.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
             <children>
-<<<<<<< HEAD
-               <AnchorPane layoutX="65.0" layoutY="68.0" prefHeight="200.0" prefWidth="953.0" style="-fx-background-color: #2aabb7; -fx-background-radius: 30;">
-=======
                <AnchorPane layoutX="128.0" layoutY="71.0" prefHeight="200.0" prefWidth="1010.0" style="-fx-background-color: #2aabb7; -fx-background-radius: 30;">
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                   <children>
                      <Circle fill="#b9ccd6" layoutX="63.0" layoutY="93.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
                      <ImageView fitHeight="65.0" fitWidth="62.0" layoutX="32.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                           <Image url="@images/Classroom.png" />
-=======
                            <Image url="@../images/Classroom.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image></ImageView>
                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2aabb7" height="168.0" layoutX="308.0" layoutY="14.0" stroke="#eeeeee" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="7.0" />
                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2aabb7" height="168.0" layoutX="623.0" layoutY="16.0" stroke="#ebe5e5" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="7.0" />
                      <Circle fill="#b9ccd6" layoutX="697.0" layoutY="97.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
                      <ImageView fitHeight="66.0" fitWidth="63.0" layoutX="666.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                           <Image url="@images/User.png" />
-=======
                            <Image url="@../images/Users.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image></ImageView>
                      <Circle fill="#b9ccd6" layoutX="372.0" layoutY="96.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
                      <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="342.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-<<<<<<< HEAD
-                           <Image url="@images/Course.png" />
-=======
                            <Image url="@../images/Courses.png" />
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
                         </image></ImageView>
                      <Label layoutX="144.0" layoutY="75.0" text="Total Users">
                         <font>
@@ -289,18 +191,10 @@
                         </font>
                      </Label>
                   </children></AnchorPane>
-<<<<<<< HEAD
-               <ImageView fx:id="studentsimage" fitHeight="273.0" fitWidth="570.0" layoutX="257.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/College Students.png" />
-                  </image>
-               </ImageView>
-=======
                <ImageView fx:id="studentsimage" fitHeight="273.0" fitWidth="570.0" layoutX="325.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../images/CollegeStudents.png" />
                   </image></ImageView>
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
             </children>
          </AnchorPane>
       </center></BorderPane>

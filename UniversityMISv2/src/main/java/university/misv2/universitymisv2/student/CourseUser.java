@@ -6,10 +6,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-<<<<<<< HEAD
-
-=======
->>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
 import java.util.List;
 
 public class CourseUser {

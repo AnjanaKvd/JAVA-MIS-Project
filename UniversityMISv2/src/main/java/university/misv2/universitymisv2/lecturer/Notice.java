@@ -13,45 +13,41 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Mggpa implements Initializable {
+public class Notice implements Initializable {
 
     @FXML
-    private TableColumn<String, MggpaData> CGPA1;
+    private TableColumn<String, NoticeData> notic_date_time;
+
+   @FXML
+    private TableColumn<String, NoticeData> notice_id;
 
     @FXML
-    private TableColumn<String,MggpaData> student_id;
+    private TableColumn<String, NoticeData> notice_message;
 
     @FXML
-    private TableColumn<String,MggpaData> SGPA;
-
-
-    @FXML
-    private TableView<MggpaData> table;
-
-
+    private TableView<NoticeData> table;
 
 
     public void initialize(URL location, ResourceBundle resources) {
         // Configure the columns with the property names matching the User class
-        student_id.setCellValueFactory(new PropertyValueFactory<>("student_id"));
-        SGPA.setCellValueFactory(new PropertyValueFactory<>("SGPA"));
-        CGPA1.setCellValueFactory(new PropertyValueFactory<>("CGPA"));
-
-
+       notice_id.setCellValueFactory(new PropertyValueFactory<>("notice_id"));
+        notice_message.setCellValueFactory(new PropertyValueFactory<>("notice_message"));
+        notic_date_time.setCellValueFactory(new PropertyValueFactory<>("notic_date_time"));
 
 
         // Load the list of users from the database
-        List<MggpaData> mggpa = null;
+        List<NoticeData> noticeData = null;
         try {
-            mggpa = MggpaData.fetchAllUsers();
+            noticeData = NoticeData.fetchAllUsers();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
         // Convert the list to an ObservableList
-        ObservableList<MggpaData> observableAmList = FXCollections.observableArrayList(mggpa);
+        ObservableList<NoticeData> observableAmList = FXCollections.observableArrayList(noticeData);
 
         // Set the data in the table
         table.setItems(observableAmList);
+
     }
 }

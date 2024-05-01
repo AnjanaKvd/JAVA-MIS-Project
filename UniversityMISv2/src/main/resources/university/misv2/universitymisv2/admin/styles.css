@@ -87,3 +87,364 @@
     -fx-prompt-text-fill: #9197B3;
 }
 
+/*User management tab */
+/* User Tab Title Style */
+#allUsersLabel {
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#usernameField,
+#passwordField,
+#modifyUsernameField,
+#newUsernameField,
+#newPasswordField,
+#deleteUsernameField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#userTypeDropdown,
+#modifyUserTypeDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addUserButton,
+#modifyUserButton,
+#deleteUserButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addUserButton:hover,
+#modifyUserButton:hover,
+#deleteUserButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#usernameField:focused,
+#passwordField:focused,
+#modifyUsernameField:focused,
+#newUsernameField:focused,
+#newPasswordField:focused,
+#deleteUsernameField:focused,
+#userTypeDropdown:focused,
+#modifyUserTypeDropdown:focused,
+#addUserButton:focused,
+#modifyUserButton:focused,
+#deleteUserButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addUserButton:default:hover,
+#modifyUserButton:default:hover,
+#deleteUserButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}
+
+#userAddedLabel{
+    -fx-text-fill: blue;
+}
+#userModifiedLabel{
+    -fx-text-fill: green;
+}
+#userDeletedLabel{
+    -fx-text-fill: red;
+}
+
+/*Course management tab*/
+#allCoursesLabel {
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#courseCodeField,
+#courseNameField,
+#creditsField,
+#hoursField,
+#lecturerField,
+#modifyCourseCodeField,
+#newCourseNameField,
+#newCreditsField,
+#newHoursField,
+#newLecturerField,
+#deleteCourseCodeField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#departmentDropdown,
+#newDepartmentDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addCourseButton,
+#modifyCourseButton,
+#deleteCourseButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addCourseButton:hover,
+#modifyCourseButton:hover,
+#deleteCourseButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#courseCodeField:focused,
+#courseNameField:focused,
+#creditsField:focused,
+#hoursField:focused,
+#lecturerField:focused,
+#modifyCourseCodeField:focused,
+#newCourseNameField:focused,
+#newCreditsField:focused,
+#newHoursField:focused,
+#newLecturerField:focused,
+#departmentDropdown:focused,
+#newDepartmentDropdown:focused,
+#addCourseButton:focused,
+#modifyCourseButton:focused,
+#deleteCourseButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addCourseButton:default:hover,
+#modifyCourseButton:default:hover,
+#deleteCourseButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}
+
+#courseAddedLabel{
+    -fx-text-fill: blue;
+}
+#courseModifiedLabel{
+    -fx-text-fill: green;
+}
+#courseDeletedLabel{
+    -fx-text-fill: red;
+}
+
+/* --- Timetable management tab --- */
+#addTimetableLabel,
+#modifyTimetableLabel,
+#deleteTimetableLabel{
+    -fx-text-fill: #2c3e50; /* Dark Blue */
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Input Box Style */
+#timetableIdField,
+#courseCodeField,
+#courseNameField,
+#lecturerField,
+#classroomField,
+#modifyTimetableIdField,
+#newCourseNameField,
+#newLecturerField,
+#startTimeField,
+#endTimeField,
+#newClassroomField,
+#newEndTimeField,
+#newStartTimeField,
+#deleteTimetableIdField {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-max-width: 300;
+}
+
+/* Dropdown Style */
+#dayOfWeekDropdown,
+#newDayOfWeekDropdown {
+    -fx-background-color: #ecf0f1; /* Light Grey */
+    -fx-border-color: #bdc3c7; /* Silver */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+/* Button Style */
+#addTimetableButton,
+#modifyTimetableButton,
+#deleteTimetableButton {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+#addTimetableButton:hover,
+#modifyTimetableButton:hover,
+#deleteTimetableButton:hover {
+    -fx-background-color: #3498db; /* Light Blue */
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Remove Default Focus Border */
+#courseCodeField:focused,
+#courseNameField:focused,
+#lecturerField:focused,
+#classroomField:focused,
+#modifyTimetableIdField:focused,
+#newCourseNameField:focused,
+#newLecturerField:focused,
+#newClassroomField:focused,
+#dayOfWeekDropdown:focused,
+#newDayOfWeekDropdown:focused,
+#addTimetableButton:focused,
+#modifyTimetableButton:focused,
+#deleteTimetableButton:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-color: #ecf0f1; /* Light Grey */
+}
+
+/* Remove Default Button Focus Outline */
+#addTimetableButton:default:hover,
+#modifyTimetableButton:default:hover,
+#deleteTimetableButton:default:hover {
+    -fx-background-color: #2980b9; /* Dark Blue */
+    -fx-border-color: transparent;
+}
+
+/* Label Styles */
+#timetableAddedLabel {
+    -fx-text-fill: blue;
+}
+
+#timetableModifiedLabel {
+    -fx-text-fill: green;
+}
+
+#timetableDeletedLabel {
+    -fx-text-fill: red;
+}
+
+/*Notifications tab*/
+#notificationTab {
+    -fx-background-color: #f4f4f4;
+}
+
+.scroll-pane {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button, .scroll-pane .scroll-bar:vertical .decrement-button,
+.scroll-pane .scroll-bar:horizontal .increment-button, .scroll-pane .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-arrow, .scroll-pane .scroll-bar:vertical .decrement-arrow,
+.scroll-pane .scroll-bar:horizontal .increment-arrow, .scroll-pane .scroll-bar:horizontal .decrement-arrow {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #cccccc;
+}
+
+.scroll-pane .scroll-bar .thumb:hover {
+    -fx-background-color: #999999;
+}
+
+.scroll-pane .scroll-bar .thumb:pressed {
+    -fx-background-color: #666666;
+}
+
+.notification-section{
+    -fx-padding : 10;
+    -fx-background-color:  #e4ffee;
+    -fx-background-radius : 20;
+}
+.notification-section Hyperlink{
+    -fx-underline: false;
+    -fx-font-family: 'Poppins Regular';
+    -fx-text-fill: red;
+    -fx-cursor: hand;
+    -fx-font-size: 12.0;
+}
+#notificationMessage{
+    -fx-font-weight: bold;
+}
+#notificationDate{
+    -fx-text-fill: blue;
+}

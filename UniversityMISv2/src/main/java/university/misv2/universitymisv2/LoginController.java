@@ -13,14 +13,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,10 +40,6 @@ public class LoginController {
     private int userId;
 
     @FXML
-    private Circle imagecircle;
-
-
-    @FXML
     private void initialize() {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
         rotateTransition.setByAngle(360);
@@ -55,8 +48,6 @@ public class LoginController {
         closeBtn.setOnMouseEntered(event -> rotateTransition.play());
         closeBtn.setOnMouseExited(event -> rotateTransition.stop());
         closeBtn.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
-
-
     }
 
     @FXML
