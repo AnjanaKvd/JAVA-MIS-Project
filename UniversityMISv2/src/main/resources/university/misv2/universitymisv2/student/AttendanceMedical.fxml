@@ -18,7 +18,7 @@
                 <TableColumn fx:id="submitted_date" prefWidth="150.0" text="submitted_date" />
             </columns>
         </TableView>
-        <Label layoutX="141.0" layoutY="42.0" prefHeight="58.0" prefWidth="264.0" text="Medical ">
+        <Label layoutX="117.0" layoutY="28.0" prefHeight="58.0" prefWidth="264.0" text="Medical " textFill="#1d4cda">
             <font>
                 <Font size="43.0" />
             </font>

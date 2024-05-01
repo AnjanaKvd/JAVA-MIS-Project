@@ -10,8 +10,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
-    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1747.0" style="-fx-background-color: #2fa99b;">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1394.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.StudentDashboardControler">
+    <AnchorPane layoutX="-228.0" prefHeight="130.0" prefWidth="1621.0" style="-fx-background-color: #2fa99b;">
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
@@ -22,6 +22,11 @@
                 <Font size="18.0" />
             </font>
         </Label>
+      <ImageView id="CloseButton" fx:id="CloseButton" fitHeight="34.0" fitWidth="36.0" layoutX="1557.0" layoutY="8.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Close.png" />
+         </image>
+      </ImageView>
     </AnchorPane>
     <ImageView fx:id="studentimage" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
         <image>
@@ -124,7 +129,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button fx:id="CloseButton" layoutX="65.0" layoutY="580.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+            <Button layoutX="65.0" layoutY="580.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -135,7 +140,7 @@
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="134.0" prefHeight="711.0" prefWidth="1255.0">
       <center>
-         <AnchorPane prefHeight="711.0" prefWidth="1230.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
+         <AnchorPane prefHeight="711.0" prefWidth="1347.0" stylesheets="@Styles/style1.css" BorderPane.alignment="CENTER">
             <children>
                <AnchorPane layoutX="65.0" layoutY="68.0" prefHeight="200.0" prefWidth="953.0" style="-fx-background-color: #2aabb7; -fx-background-radius: 30;">
                   <children>

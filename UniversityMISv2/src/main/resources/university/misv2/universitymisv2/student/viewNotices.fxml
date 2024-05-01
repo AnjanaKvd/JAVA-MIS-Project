@@ -16,9 +16,9 @@
 
         </columns>
     </TableView>
-      <Label layoutX="64.0" layoutY="25.0" prefHeight="63.0" prefWidth="208.0" text="Notices">
+      <Label layoutX="75.0" layoutY="26.0" prefHeight="63.0" prefWidth="208.0" text="Notices" textFill="#1d4cda">
          <font>
-            <Font name="Bookshelf Symbol 7" size="54.0" />
+            <Font name="Bookshelf Symbol 7" size="43.0" />
          </font>
       </Label>
 </children>

@@ -1,4 +1,5 @@
 package university.misv2.universitymisv2.student;
+import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,17 +10,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class StudentDashboardControler implements Initializable {
@@ -38,8 +40,9 @@ public class StudentDashboardControler implements Initializable {
     @FXML
     private Button updateprofile;
 
+
     @FXML
-    private Button CloseButton;
+    private ImageView CloseButton;
 
     @FXML
     private BorderPane boarderPane;
@@ -64,12 +67,20 @@ public class StudentDashboardControler implements Initializable {
         File profilepic=new File("C:\\Users\\iTEC\\Documents\\New Java\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\student\\images\\studentuser.jpg");
         Image UpdateImages2=new Image(profilepic.toURI().toString());
         user1.setFill(new ImagePattern(UpdateImages2));
+//close button rotate
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), CloseButton);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setAutoReverse(false);
+        rotateTransition.setCycleCount(1);
+        CloseButton.setOnMouseEntered(event -> rotateTransition.play());
+        CloseButton.setOnMouseExited(event -> rotateTransition.stop());
+        CloseButton.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
 
     }
 
     @FXML
-    public void cancelButtonOnAction(ActionEvent event){
-        Stage stage=(Stage) CloseButton.getScene().getWindow();
+    public void cancelButtonOnAction(MouseEvent event){
+        Stage stage = (Stage) CloseButton.getScene().getWindow();
         stage.close();
 
 

@@ -18,9 +18,9 @@
                 <TableColumn fx:id="Status" prefWidth="150.0" text="Status" />
             </columns>
         </TableView>
-      <Label layoutX="106.0" layoutY="30.0" prefHeight="34.0" prefWidth="387.0" text="Attendance">
+      <Label layoutX="113.0" layoutY="27.0" prefHeight="34.0" prefWidth="387.0" text="Attendance" textFill="#1d4cda">
          <font>
-            <Font size="37.0" />
+            <Font size="43.0" />
          </font>
       </Label>
     </children>

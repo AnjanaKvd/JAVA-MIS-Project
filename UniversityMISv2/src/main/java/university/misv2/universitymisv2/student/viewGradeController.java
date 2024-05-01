@@ -1,4 +1,5 @@
 package university.misv2.universitymisv2.student;
+import university.misv2.universitymisv2.student.GPAUser;
 
 
 import javafx.collections.FXCollections;
@@ -46,6 +47,23 @@ public class viewGradeController implements Initializable {
         private TableView<GradeUser> table;
 
 
+        @FXML
+        private TableColumn<GPAUser, String> CGPA;
+
+        @FXML
+        private TableColumn<GPAUser, String> SGPA;
+
+
+//        @FXML
+//        private TableColumn<GPAUser, String> student_id1;
+
+
+        @FXML
+        private TableView<GPAUser> table1;
+
+
+
+
 
 
 
@@ -63,6 +81,9 @@ public class viewGradeController implements Initializable {
         end_marks.setCellValueFactory(new PropertyValueFactory<>("end_marks"));
 
 
+
+
+
         List<GradeUser> userList = GradeUser.fetchAllUsers();
 
         // Convert the list to an ObservableList
@@ -70,6 +91,32 @@ public class viewGradeController implements Initializable {
 
         // Set the data in the table
         table.setItems(observableUserList);
+
+
+        //GPA User
+
+//        List<GPAUser> userList1 = GPAUser.fetchAllUsers();
+//
+//        // Convert the list to an ObservableList
+//        ObservableList<GPAUser> observableUserList1 = FXCollections.observableArrayList(userList1);
+//
+//        // Set the data in the table
+//        table1.setItems(observableUserList1);
+
+       // student_id1.setCellValueFactory(new PropertyValueFactory<>("student_id"));
+        SGPA.setCellValueFactory(new PropertyValueFactory<>("SGPA"));
+        CGPA.setCellValueFactory(new PropertyValueFactory<>("CGPA"));
+
+        // Load the list of users from the database
+        List<GPAUser> gpauser = null;
+        gpauser = GPAUser.fetchAllUsers();
+
+        // Convert the list to an ObservableList
+        ObservableList<GPAUser> observableAmList1 = FXCollections.observableArrayList(gpauser);
+
+        // Set the data in the table
+        table1.setItems(observableAmList1);
+
     }
 }
 

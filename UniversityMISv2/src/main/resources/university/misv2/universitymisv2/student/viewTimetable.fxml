@@ -20,9 +20,9 @@
             <TableColumn fx:id="end_time" prefWidth="138.0" text="End_time" />
         </columns>
     </TableView>
-      <Label layoutX="87.0" layoutY="51.0" prefHeight="75.0" prefWidth="404.0" text="Timetable">
+      <Label layoutX="52.0" layoutY="44.0" prefHeight="75.0" prefWidth="404.0" text="Timetable" textFill="#1d4cda">
          <font>
-            <Font size="39.0" />
+            <Font size="43.0" />
          </font>
       </Label>
 </children>
