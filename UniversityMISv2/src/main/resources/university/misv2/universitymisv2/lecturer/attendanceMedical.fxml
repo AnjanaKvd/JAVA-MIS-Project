@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.AttendanceMedical">
+    <TableView fx:id="table" layoutX="210.0" layoutY="70.0" prefHeight="238.0" prefWidth="813.0">
+      <columns>
+          <TableColumn fx:id="id" prefWidth="100.0" text="id" />
+          <TableColumn fx:id="reason" prefWidth="100.0" text="reason" />
+          <TableColumn fx:id="start_date" prefWidth="150.0" text="start_date" />
+          <TableColumn fx:id="end_date" prefWidth="150.0" text="end_date" />
+          <TableColumn fx:id="is_day_medical" prefWidth="150.0" text="is_day_medical" />
+          <TableColumn fx:id="submitted_date" prefWidth="150.0" text="submitted_date" />
+      </columns>
+    </TableView>
+    <Label layoutX="579.0" layoutY="20.0" prefHeight="35.0" prefWidth="93.0" text=" Medical">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="556.0" layoutY="333.0" prefHeight="35.0" prefWidth="129.0" text="Attendance">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Label>
+    <TableView fx:id="tabletwo" layoutX="210.0" layoutY="405.0" prefHeight="254.0" prefWidth="811.0">
+      <columns>
+          <TableColumn fx:id="student_id" prefWidth="150.0" text="student_id" />
+          <TableColumn fx:id="course_code" prefWidth="150.0" text="course_code" />
+          <TableColumn fx:id="Date" prefWidth="150.0" text="Date" />
+          <TableColumn fx:id="Theory_or_Practical" prefWidth="175.0" text="Theory_or_Practical" />
+          <TableColumn fx:id="Status" prefWidth="180.0" text="Status" />
+      </columns>
+    </TableView>
+</AnchorPane>

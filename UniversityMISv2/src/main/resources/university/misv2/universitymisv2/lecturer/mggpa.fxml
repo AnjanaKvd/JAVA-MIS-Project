@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Mggpa">
+   <children>
+      <TableView fx:id="table" layoutX="302.0" layoutY="175.0" prefHeight="347.0" prefWidth="682.0" stylesheets="@style1.css">
+        <columns>
+          <TableColumn fx:id="student_id" prefWidth="323.9999694824219" text="student_id" />
+            <TableColumn fx:id="CGPA" prefWidth="352.00006103515625" text="CGPA" />
+        </columns>
+      </TableView>
+      <Label layoutX="534.0" layoutY="71.0" text="Marks &amp; Grade &amp; GPA">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
