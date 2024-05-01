@@ -8,20 +8,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Attendance {
     private String student_id;
     private String course_code;
     private String Theory_or_Practical;
+    private Date Date;
     private String Status;
 
 
 
-    public Attendance(String student_id, String course_code, String Theory_or_Practical, String Status) {
+    public Attendance(String student_id, String course_code, String Theory_or_Practical, java.util.Date Date,String Status) {
         this.student_id = student_id;
         this.course_code = course_code;
         this.Theory_or_Practical = Theory_or_Practical;
+        this.Date = Date;
         this.Status = Status;
 
     }
@@ -30,7 +33,7 @@ public class Attendance {
         List<Attendance> attendance = new ArrayList<>();
         Connection connectDB = DatabaseConnection.getConnection();
 
-        String query = "SELECT student_id, course_code, Theory_or_Practical, Status FROM course_attendence";
+        String query = "SELECT student_id, course_code, Theory_or_Practical,Date, Status FROM course_attendence";
 
         try {
             assert connectDB != null;
@@ -41,13 +44,14 @@ public class Attendance {
                     String student_id = result.getString("student_id");
                     String course_code = result.getString("course_code");
                     String Theory_or_Practical = result.getString("Theory_or_Practical");
+                    Date Date = result.getDate("Date");
                     String Status = result.getString("Status");
 
 
 
 
                     // Create a new User instance with the data from the ResultSet
-                    Attendance attendancedata = new Attendance(student_id, course_code, Theory_or_Practical, Status);
+                    Attendance attendancedata = new Attendance(student_id, course_code, Theory_or_Practical,Date,Status);
                     attendance.add(attendancedata);
                 }
 
@@ -75,4 +79,7 @@ public class Attendance {
         return Status;
     }
 
+    public java.util.Date getDate() {
+        return Date;
+    }
 }

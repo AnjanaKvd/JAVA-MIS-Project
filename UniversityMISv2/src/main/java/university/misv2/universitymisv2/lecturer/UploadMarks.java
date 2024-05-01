@@ -51,6 +51,23 @@ public class UploadMarks {
     @FXML
     private TextField student_id;
 
+    @FXML
+    private Button clearfield;
+
+    @FXML
+    void clearTextField(ActionEvent event) {
+            Coursecode.clear();
+            end_marks.clear();
+            mid_marks.clear();
+            project_marks.clear();
+            quiz1_marks.clear();
+            quiz2_marks.clear();
+            quiz3_marks.clear();
+            student_id.clear();
+            quiz1_marks.clear();
+
+    }
+
 
     public void addDataAction(ActionEvent event) throws SQLException {
         Connection connectDB = DatabaseConnection.getConnection();
@@ -87,8 +104,5 @@ public class UploadMarks {
         }
     }
 
-    public void cancelButtonAction(ActionEvent event) {
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
-    }
+
 }

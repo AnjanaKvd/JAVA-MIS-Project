@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Eligibility">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="688.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Eligibility">
     <children>
-        <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E96151;">
+        <AnchorPane prefHeight="82.0" prefWidth="688.0" style="-fx-background-color: #116093;">
             <children>
                 <Label layoutX="92.0" layoutY="27.0" text="Status" textFill="WHITE">
                     <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
             </children></AnchorPane>
@@ -23,33 +23,33 @@
                 <Image url="@../images/User.png" />
             </image>
         </ImageView>
-        <Label layoutX="92.0" layoutY="138.0" text="student_id">
+        <Label layoutX="116.0" layoutY="162.0" text="student_id">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <TextField fx:id="student_id" layoutX="92.0" layoutY="172.0" prefHeight="25.0" prefWidth="336.0" promptText="student_id" />
-        <TextField fx:id="course_code" layoutX="92.0" layoutY="226.0" prefHeight="25.0" prefWidth="336.0" promptText="course_code" />
-        <Label layoutX="92.0" layoutY="198.0" text="course_code">
+        <TextField fx:id="student_id" layoutX="116.0" layoutY="197.0" prefHeight="26.0" prefWidth="297.0" promptText="student_id" />
+        <TextField fx:id="course_code" layoutX="116.0" layoutY="278.0" prefHeight="25.0" prefWidth="297.0" promptText="course_code" />
+        <Label layoutX="116.0" layoutY="249.0" text="course_code">
             <font>
                 <Font size="13.0" />
             </font>
         </Label>
-        <Button fx:id="CloseButton" layoutX="92.0" layoutY="311.0" mnemonicParsing="false" onAction="#cancleButtononAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Close" textFill="WHITE">
+        <Button fx:id="clearButton" layoutX="219.0" layoutY="463.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: #116093;" text="clear" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-        <Button fx:id="eligibilityButton" layoutX="92.0" layoutY="265.0" mnemonicParsing="false" onAction="#eligibilityButtonClick" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #E96151;" text="Check Eligibility" textFill="WHITE">
+        <Button fx:id="eligibilityButton" layoutX="219.0" layoutY="399.0" mnemonicParsing="false" onAction="#eligibilityButtonClick" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: #116093;" text="Check Eligibility" textFill="WHITE">
             <font>
                 <Font size="13.0" />
             </font>
         </Button>
-      <Label fx:id="hidemessage" layoutX="408.0" layoutY="98.0" prefHeight="18.0" prefWidth="72.0" text=" " textFill="#1297d4" />
-      <Label fx:id="statusmessage" layoutX="213.0" layoutY="125.0" prefHeight="26.0" prefWidth="139.0" textFill="#d91818">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+        <Label fx:id="hidemessage" layoutX="548.0" layoutY="97.0" prefHeight="18.0" prefWidth="72.0" text=" " textFill="#1297d4" />
+        <Label fx:id="statusmessage" layoutX="284.0" layoutY="122.0" prefHeight="49.0" prefWidth="213.0" textFill="#d91818">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

@@ -48,6 +48,9 @@ public class AttendanceMedical implements Initializable {
     @FXML
     private TableColumn<String, Attendance> Status;
 
+    @FXML
+    private TableColumn<Date, Attendance> Date;
+
 
 
 
@@ -88,7 +91,9 @@ public class AttendanceMedical implements Initializable {
         student_id.setCellValueFactory(new PropertyValueFactory<>("student_id"));
         course_code.setCellValueFactory(new PropertyValueFactory<>("course_code"));
         Theory_or_Practical.setCellValueFactory(new PropertyValueFactory<>("Theory_or_Practical"));
+        Date.setCellValueFactory(new PropertyValueFactory<>("Date"));
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
+
 
 
 
