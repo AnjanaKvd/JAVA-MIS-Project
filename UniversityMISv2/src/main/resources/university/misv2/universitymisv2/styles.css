@@ -48,7 +48,7 @@
 .profile-main-background{
     -fx-font-family: Poppins;
     -fx-background-color: linear-gradient(to top, #F5F5F5, #9cf8b8);
-    -fx-padding: 30 20 30 20;
+    -fx-padding: 0 20 30 20;
 }
 .profile-left-section, .profile-right-section, .profile-left-bottom-section{
     -fx-background-color: white;
@@ -79,6 +79,12 @@
     -fx-font-size: 20;
     -fx-background-color: red;
     -fx-text-fill: white;
+}
+#backButton{
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-background-color: blue;
 }
 /*#profile-tab-pane{*/
 /*    -fx-font-size: 20;*/

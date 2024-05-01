@@ -97,6 +97,7 @@ public class LoginController {
     }
 
     private void openMainWindow(String userType) {
+        UserData.setLoggedRole(userType);
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
@@ -104,9 +105,9 @@ public class LoginController {
             } else if ("lecturer".equals(userType)) {
                 fxmlPath = "lecturer/dashboard.fxml";
             } else if ("student".equals(userType)) {
-                fxmlPath = "student/StudentDashboard.fxml";
+                fxmlPath = "student/TechnicalDashboard.fxml";
             } else if ("technical officer".equals(userType)) {
-                fxmlPath = "technicalOfficer/dashboard.fxml";
+                fxmlPath = "technicalOfficer/TechnicalDashboard.fxml";
             }else{
                 return;
             }

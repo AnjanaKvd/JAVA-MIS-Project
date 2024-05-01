@@ -1,5 +1,6 @@
 package university.misv2.universitymisv2;
 
+import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,6 +36,8 @@ public class ProfileController {
 
     public ImageView profileImageView;
     public Label updateDetailsLabel;
+    public ImageView closeBtn;
+    public Button profileBackButton;
     @FXML
     private Label profileName;
 
@@ -77,6 +81,14 @@ public class ProfileController {
     private Button contactUsButton;
 
     public void initialize(){
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setAutoReverse(false);
+        rotateTransition.setCycleCount(1);
+        closeBtn.setOnMouseEntered(event -> rotateTransition.play());
+        closeBtn.setOnMouseExited(event -> rotateTransition.stop());
+        closeBtn.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
+
         String username = UserData.getLoggedInUsername();
         String name = UserData.getFullName();
         String profileImage = UserProfileManager.getUserProfileImagePath(username);
@@ -96,6 +108,8 @@ public class ProfileController {
         Image profileImg = new Image(profileImage);
         profileImageCircle.setFill(new ImagePattern(profileImg));
 
+
+
         profileDeleteButton.setOnMouseClicked(event -> {
             try {
                 handleProfileDeleteButton();
@@ -103,6 +117,11 @@ public class ProfileController {
                 throw new RuntimeException(e);
             }
         });
+    }
+    @FXML
+    private void handleCloseButtonAction() {
+        Stage stage = (Stage) closeBtn.getScene().getWindow();
+        stage.close();
     }
     @FXML
     private void handleLogoutButton(ActionEvent event) {
@@ -221,5 +240,43 @@ public class ProfileController {
         UserData.setUserProfileImage(imagePath);
         profileImageCircle.setFill(new ImagePattern(new Image(imagePath)));
 
+    }
+    @FXML
+    private void handleBackButton(ActionEvent event) {
+        String userType = UserData.getLoggedRole();
+        try {
+            String fxmlPath;
+            if ("admin".equals(userType)) {
+                fxmlPath = "admin/dashboard.fxml";
+            } else if ("lecturer".equals(userType)) {
+                fxmlPath = "lecturer/dashboard.fxml";
+            } else if ("student".equals(userType)) {
+                fxmlPath = "student/TechnicalDashboard.fxml";
+            } else if ("technical officer".equals(userType)) {
+                fxmlPath = "technicalOfficer/TechnicalDashboard.fxml";
+            }else{
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+
+            Screen screen = Screen.getPrimary();
+            Rectangle2D bounds = screen.getVisualBounds();
+
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setX(bounds.getMinX());
+            stage.setY(bounds.getMinY());
+
+            stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+            stage.show();
+
+            Stage loginStage = (Stage) profileBackButton.getScene().getWindow();
+            loginStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
