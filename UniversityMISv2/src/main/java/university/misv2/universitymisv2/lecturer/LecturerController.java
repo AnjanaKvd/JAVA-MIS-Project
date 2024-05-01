@@ -105,6 +105,9 @@ public class LecturerController implements Initializable {
     @FXML
     private Circle imagecircle;
 
+    @FXML
+    private ImageView lecturerimg;
+
 
 
 
@@ -118,6 +121,9 @@ public class LecturerController implements Initializable {
         Image UpdateImages2=new Image(profilepic.toURI().toString());
         imagecircle.setFill(new ImagePattern(UpdateImages2));
 
+        File lecimg=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\LecturersMeeting.png");
+        Image lecimageupdate=new Image(lecimg.toURI().toString());
+        lecturerimg.setImage(lecimageupdate);
     }
 
 

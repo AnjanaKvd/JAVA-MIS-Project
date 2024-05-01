@@ -6,6 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
@@ -140,15 +141,57 @@
                </ImageView>
             </graphic>
          </Button>
-         <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="140.0" layoutY="91.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="151.0" layoutY="84.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
         </children>
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="128.0" prefHeight="717.0" prefWidth="1263.0">
       <center>
-         <ImageView fitHeight="540.0" fitWidth="758.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-            <image>
-               <Image url="@../images/lecture.jpg" />
-            </image>
-         </ImageView>
+         <AnchorPane prefHeight="586.0" prefWidth="1110.0" BorderPane.alignment="CENTER">
+            <children>
+               <VBox alignment="CENTER" layoutX="462.0" layoutY="121.0" prefHeight="206.0" prefWidth="272.0" style="-fx-background-color: #2fa99b; -fx-background-radius: 10;">
+                  <children>
+                     <Label text="Notification" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="34.0" />
+                        </font>
+                     </Label>
+                     <Label text="30" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" layoutX="113.0" layoutY="121.0" prefHeight="206.0" prefWidth="258.0" style="-fx-background-color: #2fa99b; -fx-background-radius: 10;">
+                  <children>
+                     <Label alignment="BASELINE_CENTER" text="Courses" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="34.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" text="24" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" layoutX="842.0" layoutY="117.0" prefHeight="222.0" prefWidth="254.0" style="-fx-background-color: #2fa99b; -fx-background-radius: 10;">
+                  <children>
+                     <Label text="Materials" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="34.0" />
+                        </font>
+                     </Label>
+                     <Label text="10" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <ImageView fx:id="lecturerimg" fitHeight="277.0" fitWidth="570.0" layoutX="296.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+         </AnchorPane>
       </center></BorderPane>
 </AnchorPane>
