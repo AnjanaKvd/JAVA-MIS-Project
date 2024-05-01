@@ -461,7 +461,7 @@ public class AdminController {
         String profileImagePath = UserProfileManager.getUserProfileImagePath(username);
         UserData.setUserProfileImage(profileImagePath);
 
-        Image newImage = new Image(String.valueOf(Objects.requireNonNull(getClass().getResource(profileImagePath))));
+        Image newImage = new Image(profileImagePath);
         profileIconCircle.setFill(new ImagePattern(newImage));
     }
 }
