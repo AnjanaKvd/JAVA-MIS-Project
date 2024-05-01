@@ -98,7 +98,15 @@ public class Materialform {
 
     }
 
-    public void deleteButton(String code) throws SQLException{
+//    public void deleteButton(String code) throws SQLException{
+//
+//    }
+
+    @FXML
+    public void deleteButton(ActionEvent event) {
+        // Retrieve the course code from your UI or somewhere else in your code
+        String code = CoursecodeField.getText(); // Assuming CoursecodeField is a TextField where the user enters the course code
+
         DatabaseConnection connectionNow = new DatabaseConnection();
         Connection connectDB = connectionNow.getConnection();
         String query = "DELETE FROM courseMaterialsform WHERE Course_code = ?";
@@ -109,11 +117,12 @@ public class Materialform {
             preparedStatement.setString(1, code);
             preparedStatement.executeUpdate();
             preparedStatement.close();
-            System.out.println("Data deleted");
+            hidelable.setText("Data deleted");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Error: " + e.getMessage());
+            hidelable.setText("Error");
         }
     }
+
 
 }

@@ -45,7 +45,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Button fx:id="drop" layoutX="264.0" layoutY="509.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: #2980b9;" text="Delete" textFill="WHITE">
+            <Button fx:id="drop" layoutX="264.0" layoutY="509.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: #2980b9;" text="Delete" textFill="WHITE">
                <font>
                   <Font size="13.0" />
                </font>
