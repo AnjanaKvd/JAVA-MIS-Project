@@ -13,11 +13,13 @@ public class MggpaData {
 
     private String student_id;
     private String CGPA;
+    private String SGPA;
 
 
-    public MggpaData(String student_id, String CGPA) {
+    public MggpaData(String student_id, String CGPA, String SGPA) {
         this.student_id = student_id;
         this.CGPA = CGPA;
+        this.SGPA = SGPA;
     }
 
     public static List<MggpaData> fetchAllUsers() throws SQLException {
@@ -26,20 +28,21 @@ public class MggpaData {
         DatabaseConnection connectionNow = new DatabaseConnection();
         Connection connectDB = connectionNow.getConnection();
 
-        String query = "SELECT student_id, CGPA FROM Cumulative_GPA";
+        String query = "select s.student_id, s.SGPA,c.CGPA from SGPA s INNER JOIN CGPA c ON s.student_id=c.student_id";
 
         try (Statement statement = connectDB.createStatement();
              ResultSet result = statement.executeQuery(query)) {
 
             while (result.next()) {
                 String student_id = result.getString("student_id");
+                String SGPA = result.getString("SGPA");
                 String CGPA = result.getString("CGPA");
 
 
 
 
                 // Create a new User instance with the data from the ResultSet
-                MggpaData mggpadata = new MggpaData(student_id,CGPA);
+                MggpaData mggpadata = new MggpaData(student_id,SGPA,CGPA);
                 mggpa.add(mggpadata);
             }
 
@@ -56,6 +59,10 @@ public class MggpaData {
 
     public String getCGPA() {
         return CGPA;
+    }
+
+    public String getSGPA() {
+        return SGPA;
     }
 }
 

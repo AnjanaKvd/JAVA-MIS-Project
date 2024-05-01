@@ -6,7 +6,7 @@ module university.misv2.universitymisv2 {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires java.sql;
-    requires jdk.unsupported;
+    requires java.desktop;
 
     opens university.misv2.universitymisv2 to javafx.fxml;
     opens university.misv2.universitymisv2.admin to javafx.fxml;
@@ -15,6 +15,5 @@ module university.misv2.universitymisv2 {
     opens university.misv2.universitymisv2.lecturer to javafx.fxml;
 
     exports university.misv2.universitymisv2;
-    exports university.misv2.universitymisv2.student;
 
 }

@@ -1,41 +1,42 @@
 package university.misv2.universitymisv2.lecturer;
 
+import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
-import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import javafx.util.Duration;
+import university.misv2.universitymisv2.UserData;
+import university.misv2.universitymisv2.UserProfileManager;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LecturerController implements Initializable {
     public Button RegisterButton;
     public Button updateProfile;
+    public Label userFullNameLabel;
+    public ImageView CloseButtonMain;
     @FXML
     private TextField FirstnameTextField;
 
@@ -113,20 +114,45 @@ public class LecturerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File branding=new File("src/main/resources/university/misv2/universitymisv2/images/Lecturer.png");
-        Image UpdateImage=new Image(branding.toURI().toString());
-        shieldimageView.setImage(UpdateImage);
 
-        File profilepic=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\Notice.jpg");
-        Image UpdateImages2=new Image(profilepic.toURI().toString());
-        imagecircle.setFill(new ImagePattern(UpdateImages2));
+//        File branding=new File("src/main/resources/university/misv2/universitymisv2/images/Lecturer.png");
+//        Image UpdateImage=new Image(branding.toURI().toString());
+//        shieldimageView.setImage(UpdateImage);
+//
+//        File profilepic=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\Notice.jpg");
+//        Image UpdateImages2=new Image(profilepic.toURI().toString());
+//        imagecircle.setFill(new ImagePattern(UpdateImages2));
+//
+//        File lecimg=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\LecturersMeeting.png");
+//        Image lecimageupdate=new Image(lecimg.toURI().toString());
+//        lecturerimg.setImage(lecimageupdate);
 
-        File lecimg=new File("E:\\project update\\JAVA-MIS-Project\\UniversityMISv2\\src\\main\\resources\\university\\misv2\\universitymisv2\\images\\LecturersMeeting.png");
-        Image lecimageupdate=new Image(lecimg.toURI().toString());
-        lecturerimg.setImage(lecimageupdate);
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), CloseButtonMain);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setAutoReverse(false);
+        rotateTransition.setCycleCount(1);
+        CloseButtonMain.setOnMouseEntered(event -> rotateTransition.play());
+        CloseButtonMain.setOnMouseExited(event -> rotateTransition.stop());
+        CloseButtonMain.setOnMouseExited(event -> rotateTransition.setFromAngle(0));
+
+        String loggedInUsername = UserData.getLoggedInUsername();
+        if (loggedInUsername != null) {
+            updateUserDetails(loggedInUsername);
+        }
+
     }
 
+    private void updateUserDetails(String username) {
+        String fullName = UserProfileManager.getUserFullName(username);
+        UserData.setFullName(fullName);
+        userFullNameLabel.setText(fullName);
 
+        String profileImagePath = UserProfileManager.getUserProfileImagePath(username);
+        UserData.setUserProfileImage(profileImagePath);
+
+        Image newImage = new Image(profileImagePath);
+        imagecircle.setFill(new ImagePattern(newImage));
+    }
 
 
 //    public void RegisterButtonOnAction(ActionEvent event) throws SQLException {

@@ -15,6 +15,14 @@
         <Label layoutX="92.0" layoutY="27.0" text="Lecture" textFill="WHITE">
             <font>
                 <Font size="18.0" />
+<<<<<<< HEAD
+            </font>
+        </Label>
+        <Label layoutX="301.0" layoutY="23.0" prefHeight="18.0" prefWidth="93.0" text="Lecture" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+=======
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
             </font>
         </Label>
         <Label layoutX="301.0" layoutY="23.0" prefHeight="18.0" prefWidth="93.0" text="Lecture" textFill="WHITE">
@@ -22,6 +30,11 @@
                 <Font size="24.0" />
             </font>
         </Label>
+      <ImageView id="CloseButton" fx:id="CloseButtonMain" fitHeight="34.0" fitWidth="36.0" layoutX="1715.0" layoutY="25.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Close.png" />
+         </image>
+      </ImageView>
     </AnchorPane>
     <ImageView fx:id="shieldimageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
         <image>
@@ -39,6 +52,7 @@
         </font>
     </Label>
     <AnchorPane layoutY="130.0" prefHeight="699.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
+<<<<<<< HEAD
         <children>
             <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="177.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="GPA" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -143,6 +157,113 @@
          </Button>
          <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="151.0" layoutY="84.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
         </children>
+=======
+        <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="203.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="GPA" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/GpaCalculator.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="eligibilityButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="255.0" mnemonicParsing="false" onAction="#eligibilityClick" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Eligibility " textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Courses.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="notificationButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="305.0" mnemonicParsing="false" onAction="#noticeClick" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Notification" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Notification.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="uplode_Marks" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="355.0" mnemonicParsing="false" onAction="#UplodeMarks" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Uplode Marks" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Courses.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="attendanceandmedicalField" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="407.0" mnemonicParsing="false" onAction="#attendanceMedical" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text=" Attendance &amp; medical" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/attendanceicon2.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="updateCourse" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="461.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #2980b9;" text="Update Course" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/updatecourse.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="checkButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="513.0" mnemonicParsing="false" onAction="#viewtabledata" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Student Details" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/studentdetails.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="updateProfile" layoutX="73.0" layoutY="622.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: #E96151;" text="Update Profile" textFill="WHITE">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="materialformbutton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="28.0" layoutY="564.0" mnemonicParsing="false" onAction="#addmaterialsform" prefHeight="34.0" prefWidth="239.0" style="-fx-background-color: #2980b9;" text="Add Materials" textAlignment="CENTER" textFill="WHITE">
+           <font>
+               <Font size="13.0" />
+           </font>
+           <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@../images/Course.png" />
+                   </image>
+               </ImageView>
+           </graphic>
+        </Button>
+        <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="137.0" layoutY="83.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+        <Label fx:id="userFullNameLabel" layoutX="114.0" layoutY="164.0">
+           <font>
+               <Font name="System Bold" size="18.0" />
+           </font>
+        </Label>
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
     </AnchorPane>
     <BorderPane fx:id="boarderPane" layoutX="294.0" layoutY="128.0" prefHeight="717.0" prefWidth="1263.0">
       <center>
@@ -190,7 +311,14 @@
                      </Label>
                   </children>
                </VBox>
+<<<<<<< HEAD
                <ImageView fx:id="lecturerimg" fitHeight="277.0" fitWidth="570.0" layoutX="296.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
+=======
+               <ImageView fx:id="lecturerimg" fitHeight="277.0" fitWidth="570.0" layoutX="296.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/LecturersMeeting.png" />
+                  </image></ImageView>
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
             </children>
          </AnchorPane>
       </center></BorderPane>

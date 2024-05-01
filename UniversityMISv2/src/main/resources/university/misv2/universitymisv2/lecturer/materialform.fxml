@@ -45,6 +45,14 @@
                   </Label>
                </children>
             </AnchorPane>
+<<<<<<< HEAD
+=======
+            <Button fx:id="drop" layoutX="264.0" layoutY="509.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="27.0" prefWidth="250.0" style="-fx-background-color: #2980b9;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
          </children>
       </AnchorPane>
    </children>

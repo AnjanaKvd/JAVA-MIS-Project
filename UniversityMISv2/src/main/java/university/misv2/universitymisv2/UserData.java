@@ -4,6 +4,7 @@ import java.nio.file.Paths;
 
 public class UserData {
     private static String loggedInUsername;
+    public static String loggedRole;
     private static String fullName;
     private static String userProfileImage;
 
@@ -39,5 +40,12 @@ public class UserData {
         loggedInUsername = null;
         fullName = null;
         userProfileImage = null;
+    }
+    public static String getLoggedRole() {
+        return loggedRole;
+    }
+
+    public static void setLoggedRole(String role) {
+        loggedRole = role;
     }
 }

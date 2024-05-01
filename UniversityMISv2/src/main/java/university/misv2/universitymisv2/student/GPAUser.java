@@ -21,7 +21,11 @@ public class GPAUser {
         DatabaseConnection connectionNow = new DatabaseConnection();
         Connection connectDB = connectionNow.getConnection();
 
+<<<<<<< HEAD
         String query ="select s.SGPA,c.CGPA from SGPA_View s INNER JOIN CGPA_View c ON s.student_id=c.student_id where s.student_id='S001'";
+=======
+        String query ="select s.SGPA,c.CGPA from SGPA s INNER JOIN CGPA c ON s.student_id=c.student_id where s.student_id='20171001'";
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
 
         try (Statement statement = connectDB.createStatement();
              ResultSet result = statement.executeQuery(query)) {

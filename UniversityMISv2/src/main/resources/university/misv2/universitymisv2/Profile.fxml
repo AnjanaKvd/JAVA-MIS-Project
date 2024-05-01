@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -14,6 +15,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -37,7 +39,6 @@
             <Label id="profile-name" fx:id="profileName" text="Anjana Kavidu" />
             <Label id="profile-username" fx:id="profileUsername" text="\@anjana" />
             <AnchorPane prefHeight="188.0">
-               <ImageView fx:id="profileImageView" fitHeight="188.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
                <Circle id="profile-image" fx:id="profileImageCircle" fill="DODGERBLUE" layoutX="176.0" layoutY="94.0" radius="94.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
                <ImageView id="profile-image-delete-button" fx:id="profileDeleteButton" fitHeight="47.0" fitWidth="35.0" layoutX="222.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                   <effect>
@@ -53,6 +54,7 @@
             <Button id="profile-upload-button" fx:id="profileUploadButton" mnemonicParsing="false" onAction="#handleProfileUploadButton" text="Upload Profile Image" />
          </VBox>
          <Button id="logout-button" fx:id="logoutButton" layoutX="92.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="49.0" prefWidth="163.0" text="Logout" />
+         <Button id="backButton" fx:id="profileBackButton" layoutX="136.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
       </AnchorPane>
    </left>
    <center>
@@ -141,14 +143,15 @@
                            <TextField fx:id="confirmEmailBox" styleClass="profile-input-box" />
                         </VBox>
                      </GridPane>
-                     <Button id="profile-update-button" fx:id="updateInfoButton" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" text="Update info" />
+                     <Button id="profile-update-button" fx:id="updateInfoButton" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleUpdateInfoButton" text="Update info" />
+                     <Label id="update-details-label" fx:id="updateDetailsLabel" layoutX="236.0" layoutY="411.0" />
                   </AnchorPane>
                </Tab>
                <Tab text="Contact us">
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <Label id="contact-us-label" layoutX="57.0" layoutY="50.0" text="Need assistance or have inquiries?" />
                      <Label id="contact-us-label2" layoutX="56.0" layoutY="96.0" text="Contact us for support with our Student Management System" />
-                     <Button id="contact-us-button" fx:id="contactUsButton" contentDisplay="TOP" layoutX="317.0" layoutY="192.0" mnemonicParsing="false" text="Contact us">
+                     <Button id="contact-us-button" fx:id="contactUsButton" contentDisplay="TOP" layoutX="317.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleContactUsButton" text="Contact us">
                         <graphic>
                            <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                               <Image url="@images/contact-us-logo.png" />
@@ -161,4 +164,14 @@
          </VBox>
       </AnchorPane>
    </center>
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1240.0" BorderPane.alignment="CENTER">
+         <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="35.0" fitWidth="36.0" nodeOrientation="INHERIT" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <Image url="@images/Close.png" />
+         </ImageView>
+      </HBox>
+   </top>
 </BorderPane>

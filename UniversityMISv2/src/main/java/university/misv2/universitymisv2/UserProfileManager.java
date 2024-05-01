@@ -38,7 +38,7 @@ public class UserProfileManager {
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     String profileImagePath = resultSet.getString("profile_image_path");
-                    if (profileImagePath != null && !profileImagePath.isEmpty()) {
+                    if (profileImagePath != null) {
                         fullImagePath = profileImagePath;
                     }
                 }
@@ -63,6 +63,54 @@ public class UserProfileManager {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+    public static String getUserEmail(String username) {
+        try (Connection connectDB = DatabaseConnection.getConnection();
+             PreparedStatement statement = connectDB.prepareStatement("SELECT email FROM userdetails WHERE username = ?")) {
+            statement.setString(1, username);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getString("email");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+    public static String modifyUserDetails(String username, String newUsername, String fullName, String password, String email) {
+        try (Connection connection = DatabaseConnection.getConnection()) {
+            connection.setAutoCommit(false);
+            try (PreparedStatement userStatement = connection.prepareStatement("UPDATE user SET username = ?, password = ? WHERE username = ?")) {
+                userStatement.setString(1, newUsername);
+                userStatement.setString(2, password);
+                userStatement.setString(3, username);
+                int userRowsUpdated = userStatement.executeUpdate();
+                if (userRowsUpdated <= 0) {
+                    connection.rollback(); // Rollback transaction if update fails
+                    return "Failed to update user profile data.";
+                }
+            }
+            try (PreparedStatement detailsStatement = connection.prepareStatement("UPDATE userdetails SET username = ?, full_name = ?, email = ? WHERE username = ?")) {
+                detailsStatement.setString(1, newUsername);
+                detailsStatement.setString(2, fullName);
+                detailsStatement.setString(3, email);
+                detailsStatement.setString(4, username);
+                int detailsRowsUpdated = detailsStatement.executeUpdate();
+                if (detailsRowsUpdated <= 0) {
+                    connection.rollback();
+                    return "Failed to update user details data.";
+                }
+            }
+
+            connection.commit();
+            return "Profile data updated successfully.";
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "Database error";
         }
     }
 

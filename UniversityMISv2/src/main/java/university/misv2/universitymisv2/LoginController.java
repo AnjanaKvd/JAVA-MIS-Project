@@ -86,17 +86,17 @@ public class LoginController {
                     String enteredPassword = enterPasswordField.getText();
 
                     String storedUsername = queryResult.getString("username");
-                    String enteredUsername = enterPasswordField.getText();
-                    if (Objects.equals(enteredUsername, storedUsername) && Objects.equals(enteredPassword, storedPassword)) {
+                    String enteredUsername = usernameTextField.getText();
+
+                    if (enteredUsername.equals(storedUsername) && enteredPassword.equals(storedPassword)) {
                         String userType = queryResult.getString("user_type");
-                        String userName = queryResult.getString("username");
-                        UserData.setLoggedInUsername(userName);
+                        UserData.setLoggedInUsername(storedUsername);
                         openMainWindow(userType);
                     } else {
                         loginMessageLabel.setText("Invalid username or password");
                     }
                 } else {
-                    loginMessageLabel.setText("Invalid username or password");
+                    loginMessageLabel.setText("Username not found");
                 }
             }
         } catch (SQLException e) {
@@ -106,6 +106,7 @@ public class LoginController {
     }
 
     private void openMainWindow(String userType) {
+        UserData.setLoggedRole(userType);
         try {
             String fxmlPath;
             if ("admin".equals(userType)) {
@@ -113,9 +114,9 @@ public class LoginController {
             } else if ("lecturer".equals(userType)) {
                 fxmlPath = "lecturer/dashboard.fxml";
             } else if ("student".equals(userType)) {
-                fxmlPath = "student/dashboard.fxml";
+                fxmlPath = "student/TechnicalDashboard.fxml";
             } else if ("technical officer".equals(userType)) {
-                fxmlPath = "technicalOfficer/dashboard.fxml";
+                fxmlPath = "technicalOfficer/TechnicalDashboard.fxml";
             }else{
                 return;
             }

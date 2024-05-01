@@ -17,10 +17,13 @@ import java.util.ResourceBundle;
 public class Mggpa implements Initializable {
 
     @FXML
-    private TableColumn<String, MggpaData> CGPA;
+    private TableColumn<String, MggpaData> CGPA1;
 
     @FXML
     private TableColumn<String,MggpaData> student_id;
+
+    @FXML
+    private TableColumn<String,MggpaData> SGPA;
 
 
     @FXML
@@ -32,7 +35,8 @@ public class Mggpa implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         // Configure the columns with the property names matching the User class
         student_id.setCellValueFactory(new PropertyValueFactory<>("student_id"));
-        CGPA.setCellValueFactory(new PropertyValueFactory<>("CGPA"));
+        SGPA.setCellValueFactory(new PropertyValueFactory<>("SGPA"));
+        CGPA1.setCellValueFactory(new PropertyValueFactory<>("CGPA"));
 
 
 

@@ -8,10 +8,18 @@
 
 <AnchorPane prefHeight="711.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.lecturer.Mggpa">
    <children>
+<<<<<<< HEAD
       <TableView fx:id="table" layoutX="302.0" layoutY="175.0" prefHeight="347.0" prefWidth="682.0" stylesheets="@style1.css">
         <columns>
           <TableColumn fx:id="student_id" prefWidth="323.9999694824219" text="student_id" />
             <TableColumn fx:id="CGPA" prefWidth="352.00006103515625" text="CGPA" />
+=======
+      <TableView fx:id="table" layoutX="302.0" layoutY="175.0" prefHeight="347.0" prefWidth="609.0" stylesheets="@style1.css">
+        <columns>
+          <TableColumn fx:id="student_id" prefWidth="200.0" text="student_id" />
+            <TableColumn fx:id="SGPA" prefWidth="200.0" text="SGPA" />
+            <TableColumn fx:id="CGPA1" prefWidth="200.0" text="CGPA" />
+>>>>>>> 6738ea658a1898f11e78f5cefef821f8f2f2f939
         </columns>
       </TableView>
       <Label layoutX="534.0" layoutY="71.0" text="Marks &amp; Grade &amp; GPA">

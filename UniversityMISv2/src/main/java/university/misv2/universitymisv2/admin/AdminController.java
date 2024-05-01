@@ -1,12 +1,14 @@
 package university.misv2.universitymisv2.admin;
 
 import javafx.animation.RotateTransition;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -19,7 +21,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import university.misv2.universitymisv2.UserData;
 import university.misv2.universitymisv2.DatabaseConnection;
@@ -157,6 +161,14 @@ public class AdminController {
     public TextField deleteTimetableIdField;
     public Button deleteTimetableButton;
     public Label timetableDeletedLabel;
+    @FXML
+    private TableView<String[]> userTableView;
+
+    @FXML
+    private TableColumn<String[], String> usernameColumn;
+
+    @FXML
+    private TableColumn<String[], String> userRoleColumn;
 
     @FXML
     private void initialize() {
@@ -176,12 +188,29 @@ public class AdminController {
         dashboardOption5.setOnMouseClicked(event -> handleDashboardOptionSelected(dashboardOption5, "Notifications"));
         profileSection.setOnMouseClicked(event -> handleProfileSectionSelect());
 
-        // Set the default selected option
         handleDashboardOptionSelected(dashboardOption1, "Dashboard");
 
         String loggedInUsername = UserData.getLoggedInUsername();
         if (loggedInUsername != null) {
             updateUserDetails(loggedInUsername);
+        }
+
+        usernameColumn.setCellValueFactory(cellData -> {
+            String[] userData = cellData.getValue();
+            return new SimpleStringProperty(userData[0]);
+        });
+
+        userRoleColumn.setCellValueFactory(cellData -> {
+            String[] userData = cellData.getValue(); // Assuming the user role is a String
+            return new SimpleStringProperty(userData[1]);
+        });
+
+
+        try {
+            ObservableList<String[]> userList = UserManager.getUsers();
+            userTableView.setItems(userList);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         loadNotifications();
@@ -443,7 +472,15 @@ public class AdminController {
             Parent root = loader.load();
 
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            Screen screen = Screen.getPrimary();
+            Rectangle2D bounds = screen.getVisualBounds();
+
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setX(bounds.getMinX());
+            stage.setY(bounds.getMinY());
+
+            stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+            stage.show();
 
             Stage currentStage = (Stage) profileSection.getScene().getWindow();
             currentStage.close();
