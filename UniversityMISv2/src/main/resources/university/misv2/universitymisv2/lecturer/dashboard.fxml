@@ -40,7 +40,7 @@
     </Label>
     <AnchorPane layoutY="130.0" prefHeight="699.0" prefWidth="294.0" style="-fx-background-color: #b9ccd6;">
         <children>
-            <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="177.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="Marks&amp;Grades &amp;GPA" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="MGGButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="29.0" layoutY="177.0" mnemonicParsing="false" onAction="#mggpaClick" prefHeight="34.0" prefWidth="237.0" style="-fx-background-color: #2980b9;" text="GPA" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="13.0" />
                 </font>
