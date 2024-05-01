@@ -29,6 +29,10 @@ public class Materialform {
     private Button meterialButton;
 
     @FXML
+    private Button drop;
+
+
+    @FXML
     private Label hidelable;
 
     private String uploadedFilePath;
@@ -81,6 +85,11 @@ public class Materialform {
         }
     }
 
+
+
+
+
+
     public void clearFields() {
         CoursecodeField.clear();
         MaterialsnameField.clear();
@@ -88,4 +97,23 @@ public class Materialform {
 
 
     }
+
+    public void deleteButton(String code) throws SQLException{
+        DatabaseConnection connectionNow = new DatabaseConnection();
+        Connection connectDB = connectionNow.getConnection();
+        String query = "DELETE FROM courseMaterialsform WHERE Course_code = ?";
+
+        try {
+            assert connectDB != null;
+            PreparedStatement preparedStatement = connectDB.prepareStatement(query);
+            preparedStatement.setString(1, code);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            System.out.println("Data deleted");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
 }
