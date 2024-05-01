@@ -1,133 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
 <BorderPane id="loginPane" maxHeight="1024.0" maxWidth="1440.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1358.0" styleClass="main-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.admin.AdminController">
     <left>
         <VBox prefHeight="1024.0" prefWidth="343.0" styleClass="sidebar-background" BorderPane.alignment="CENTER">
             <HBox id="dashboardHeader" alignment="CENTER" prefHeight="98.0" prefWidth="302.0" spacing="20.0">
                 <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@../images/gear-wheel.png" />
+                    <Image url="@../images/gear-wheel.png"/>
                 </ImageView>
-                <Label id="dashboardLabel" fx:id="dashboardLabel" text="Dashboard">
+                <Label id="dashboardLabel" text="Dashboard">
                     <font>
-                        <Font name="Poppins SemiBold" size="26.0" />
+                        <Font name="Poppins SemiBold" size="26.0"/>
                     </font>
                 </Label>
             </HBox>
             <VBox prefHeight="264.0" prefWidth="343.0" spacing="10.0">
                 <padding>
-                    <Insets left="30.0" right="30.0" />
+                    <Insets left="30.0" right="30.0"/>
                 </padding>
                 <VBox.margin>
-                    <Insets top="30.0" />
+                    <Insets top="30.0"/>
                 </VBox.margin>
-                <HBox id="dashboardOption1" fx:id="dashboardOption1" alignment="CENTER_LEFT" maxHeight="39.0" minHeight="39.0" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                <HBox id="dashboardOption1" fx:id="dashboardOption1" alignment="CENTER_LEFT" maxHeight="39.0"
+                      minHeight="39.0" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
                     <padding>
-                        <Insets left="50.0" />
+                        <Insets left="50.0"/>
                     </padding>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/key-square.png" />
+                        <Image url="@../images/key-square.png"/>
                     </ImageView>
                     <Label text="Dashboard" textFill="WHITE">
                         <font>
-                            <Font name="Poppins Regular" size="14.0" />
+                            <Font name="Poppins Regular" size="14.0"/>
                         </font>
                     </Label>
                 </HBox>
-                <HBox id="dashboardOption2" fx:id="dashboardOption2" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                <HBox id="dashboardOption2" fx:id="dashboardOption2" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
                     <padding>
-                        <Insets left="50.0" />
+                        <Insets left="50.0"/>
                     </padding>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/user-square.png" />
+                        <Image url="@../images/user-square.png"/>
                     </ImageView>
                     <Label text="Users" textFill="#9197b3">
                         <font>
-                            <Font name="Poppins Regular" size="14.0" />
+                            <Font name="Poppins Regular" size="14.0"/>
                         </font>
                     </Label>
                 </HBox>
-                <HBox id="dashboardOption3" fx:id="dashboardOption3" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                <HBox id="dashboardOption3" fx:id="dashboardOption3" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
                     <padding>
-                        <Insets left="50.0" />
+                        <Insets left="50.0"/>
                     </padding>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/3d-square.png" />
+                        <Image url="@../images/3d-square.png"/>
                     </ImageView>
                     <Label text="Courses" textFill="#9197b3">
                         <font>
-                            <Font name="Poppins Regular" size="14.0" />
+                            <Font name="Poppins Regular" size="14.0"/>
                         </font>
                     </Label>
                 </HBox>
-                <HBox id="dashboardOption4" fx:id="dashboardOption4" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                <HBox id="dashboardOption4" fx:id="dashboardOption4" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
                     <padding>
-                        <Insets left="50.0" />
+                        <Insets left="50.0"/>
                     </padding>
                     <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/discount-shape.png" />
-                    </ImageView>
-                    <Label text="Timetables" textFill="#9197b3">
-                        <font>
-                            <Font name="Poppins Regular" size="14.0" />
-                        </font>
-                    </Label>
-                </HBox>
-                <HBox id="dashboardOption5" fx:id="dashboardOption5" alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
-                    <padding>
-                        <Insets left="50.0" />
-                    </padding>
-                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/message-question.png" />
+                        <Image url="@../images/discount-shape.png"/>
                     </ImageView>
                     <Label text="Notifications" textFill="#9197b3">
                         <font>
-                            <Font name="Poppins Regular" size="14.0" />
+                            <Font name="Poppins Regular" size="14.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox id="dashboardOption5" fx:id="dashboardOption5" alignment="CENTER_LEFT" prefHeight="39.0"
+                      prefWidth="250.0" spacing="20.0" styleClass="dashboard-option">
+                    <padding>
+                        <Insets left="50.0"/>
+                    </padding>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/message-question.png"/>
+                    </ImageView>
+                    <Label text="Help" textFill="#9197b3">
+                        <font>
+                            <Font name="Poppins Regular" size="14.0"/>
                         </font>
                     </Label>
                 </HBox>
             </VBox>
-            <VBox id="profileSection" alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0" styleClass="profile-background" BorderPane.alignment="CENTER">
-                <HBox fx:id="profileSection" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
+            <VBox id="profileSection" alignment="BOTTOM_CENTER" prefHeight="282.0" prefWidth="343.0"
+                  styleClass="profile-background" BorderPane.alignment="CENTER">
+                <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="343.0">
                     <padding>
-                        <Insets left="50.0" />
+                        <Insets left="50.0"/>
                     </padding>
-               <Circle id="profileCircle" fx:id="profileIconCircle" fill="DODGERBLUE" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+                    <Circle id="profileCircle" radius="20.0" stroke="BLACK" strokeType="INSIDE">
+                        <fill>
+                            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                <stops>
+                                    <Stop>
+                                        <color>
+                                            <Color/>
+                                        </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                        <color>
+                                            <Color red="1.0" green="1.0" blue="1.0"/>
+                                        </color>
+                                    </Stop>
+                                </stops>
+                            </RadialGradient>
+                        </fill>
+                    </Circle>
                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                        <Label id="profileNameLabel" fx:id="userFullName" text="Anjana">
+                        <Label id="profileNameLabel" text="Anjana">
                             <font>
-                                <Font name="Poppins Regular" size="14.0" />
+                                <Font name="Poppins Regular" size="14.0"/>
                             </font>
                         </Label>
                         <Label id="profileRoleLabel" text="Admin" textFill="#757575">
                             <font>
-                                <Font name="Poppins Regular" size="12.0" />
+                                <Font name="Poppins Regular" size="12.0"/>
                             </font>
                         </Label>
                     </VBox>
@@ -162,10 +178,8 @@
         </HBox>
     </top>
     <center>
-        <!--        Dashboard tab -->
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <AnchorPane fx:id="dashboardTab" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <VBox layoutX="72.0" layoutY="36.0" prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                     <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="914.0" spacing="10.0">
                         <Label id="helloLabel" text="Hello">
                             <font>
@@ -261,457 +275,7 @@
                             </HBox>
                         </HBox>
                     </VBox>
-                    <effect>
-                        <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                            <color>
-                                <Color opacity="0.10000000149011612" />
-                            </color>
-                        </DropShadow>
-                    </effect>
                 </VBox>
             </AnchorPane>
-
-            <!--                User Management tab-->
-            <AnchorPane fx:id="usersTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                    <VBox alignment="CENTER" prefHeight="646.0" prefWidth="914.0" styleClass="content-background">
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="allUsersLabel" text="Add User">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="usernameField" fx:id="usernameField" promptText="Username" />
-                            <PasswordField id="passwordField" fx:id="passwordField" promptText="Password" />
-
-                            <ComboBox id="userTypeDropdown" fx:id="userTypeDropdown" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="Admin" />
-                                        <String fx:value="Lecturer" />
-                                        <String fx:value="Student" />
-                                        <String fx:value="Technical Officer" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                <Button id="addUserButton" onAction="#addUserClicked" prefHeight="22.0" prefWidth="115.2" text="Add User" />
-                                <Label id="userAddedLabel" fx:id="userAddedLabel">
-                                    <font>
-                                        <Font name="Poppins Italic" size="13.0" />
-                                    </font>
-                                </Label>
-                            </HBox>
-                        </VBox>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="allUsersLabel" text="Modify User">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="modifyUsernameField" fx:id="modifyUsernameField" promptText="Username to Modify" />
-                            <TextField id="newUsernameField" fx:id="newUsernameField" promptText="New Username" />
-                            <PasswordField id="newPasswordField" fx:id="newPasswordField" promptText="New Password" />
-
-                            <ComboBox id="modifyUserTypeDropdown" fx:id="userTypeDropdown2" layoutX="50" layoutY="50" prefWidth="200" promptText="Select User Type">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="Admin" />
-                                        <String fx:value="Lecturer" />
-                                        <String fx:value="Student" />
-                                        <String fx:value="Technical Officer" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                <Button id="modifyUserButton" onAction="#modifyUserClicked" prefHeight="22.0" prefWidth="115.2" text="Modify User" />
-                                <Label id="userModifiedLabel" fx:id="userModifiedLabel">
-                                    <font>
-                                        <Font name="Poppins Italic" size="13.0" />
-                                    </font>
-                                </Label>
-                            </HBox>
-                        </VBox>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="500.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="allUsersLabel" text="Delete User">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="deleteUsernameField" fx:id="deleteUsernameField" promptText="Username to Delete" />
-                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                <Button id="deleteUserButton" onAction="#deleteUserClicked" prefHeight="22.0" prefWidth="115.2" text="Delete User" />
-                                <Label id="userDeletedLabel" fx:id="userDeletedLabel">
-                                    <font>
-                                        <Font name="Poppins Italic" size="13.0" />
-                                    </font>
-                                </Label>
-                            </HBox>
-                        </VBox>
-                        <padding>
-                            <Insets bottom="10.0" top="10.0" />
-                        </padding>
-                        <VBox.margin>
-                            <Insets />
-                        </VBox.margin>
-                    </VBox>
-                    <effect>
-                        <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                            <color>
-                                <Color opacity="0.09726444631814957" />
-                            </color>
-                        </DropShadow>
-                    </effect>
-                </VBox>
-            </AnchorPane>
-
-            <!--                Course management tab -->
-            <AnchorPane fx:id="coursesTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                    <VBox alignment="CENTER" prefHeight="636.0" prefWidth="914.0" styleClass="content-background">
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="addCoursesLabel" text="Add Course">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="courseCodeField" fx:id="courseCodeField" prefHeight="31.0" prefWidth="230.0" promptText="Course Code" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                            <TextField id="courseNameField" fx:id="courseNameField" promptText="Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                            <ComboBox fx:id="departmentDropdown" prefHeight="43.0" prefWidth="238.0" promptText="Select Department" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="ICT" />
-                                        <String fx:value="ET" />
-                                        <String fx:value="BST" />
-                                        <String fx:value="MDS" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <TextField id="creditsField" fx:id="creditsField" prefHeight="31.0" prefWidth="238.0" promptText="No of Credits" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                            <TextField id="hoursField" fx:id="hoursField" promptText="Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                            <TextField id="lecturerField" fx:id="lecturerField" promptText="Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-                            <Button id="addCourseButton" fx:id="addCourseButton" onAction="#addCourseClicked" prefHeight="23.0" prefWidth="144.0" text="Add Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                            <Label id="courseAddedLabel" fx:id="courseAddedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                <font>
-                                    <Font name="Poppins Italic" size="13.0" />
-                                </font>
-                            </Label>
-                            <columnConstraints>
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                        </GridPane>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="modifyCourseLabel" text="Modify Course">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="modifyCourseCodeField" fx:id="modifyCourseCodeField" prefHeight="31.0" prefWidth="238.4" promptText="Course Code to Modify" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                            <TextField id="newCourseNameField" fx:id="newCourseNameField" promptText="New Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                            <ComboBox fx:id="newDepartmentDropdown" prefWidth="238.4" promptText="Select New Department" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="ICT" />
-                                        <String fx:value="ET" />
-                                        <String fx:value="BST" />
-                                        <String fx:value="MDS" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <TextField id="newCreditsField" fx:id="newCreditsField" prefWidth="238.4" promptText="New No of Credits" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                            <TextField id="newHoursField" fx:id="newHoursField" promptText="New Course Hours" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                            <TextField id="newLecturerField" fx:id="newLecturerField" promptText="New Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-                            <Button id="modifyCourseButton" fx:id="modifyCourseButton" onAction="#modifyCourseClicked" prefWidth="144.0" text="Modify Course" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                            <Label id="courseModifiedLabel" fx:id="courseModifiedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                <font>
-                                    <Font name="Poppins Italic" size="13.0" />
-                                </font>
-                            </Label>
-                            <columnConstraints>
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                        </GridPane>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="deleteCourseLabel" text="Delete Course">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="deleteCourseCodeField" fx:id="deleteCourseCodeField" promptText="Course Code to Delete" />
-                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                <Button id="deleteCourseButton" fx:id="deleteCourseButton" onAction="#deleteCourseClicked" prefHeight="22.0" prefWidth="144.0" text="Delete Course" />
-                                <Label id="courseDeletedLabel" fx:id="courseDeletedLabel">
-                                    <font>
-                                        <Font name="Poppins Italic" size="13.0" />
-                                    </font>
-                                </Label>
-                            </HBox>
-                        </VBox>
-                        <padding>
-                            <Insets bottom="10.0" top="10.0" />
-                        </padding>
-                    </VBox>
-                    <effect>
-                        <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                            <color>
-                                <Color opacity="0.09726444631814957" />
-                            </color>
-                        </DropShadow>
-                    </effect>
-                </VBox>
-            </AnchorPane>
-
-
-            <!--                Timetables management tab-->
-            <AnchorPane fx:id="timetablesTab" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefHeight="645.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                    <VBox alignment="CENTER" prefHeight="636.0" prefWidth="914.0" styleClass="content-background">
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="addTimetableLabel" text="Add Timetable">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="courseCodeField" fx:id="timetableCourseCodeField" prefHeight="31.0" prefWidth="230.0" promptText="Course Code" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                            <TextField id="courseNameField" fx:id="timetablecourseNameField" promptText="Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                            <TextField id="lecturerField" fx:id="timetablelecturerField" promptText="Lecturer" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                            <TextField id="classroomField" fx:id="timetableclassroomField" promptText="Classroom" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                            <ComboBox fx:id="dayOfWeekDropdown" prefHeight="43.0" prefWidth="238.0" promptText="Select Day of Week" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="Monday" />
-                                        <String fx:value="Tuesday" />
-                                        <String fx:value="Wednesday" />
-                                        <String fx:value="Thursday" />
-                                        <String fx:value="Friday" />
-                                        <String fx:value="Saturday" />
-                                        <String fx:value="Sunday" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <TextField id="startTimeField" fx:id="startTimeField" prefHeight="31.0" prefWidth="238.0" promptText="Start Time (HH:MM:SS)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                            <TextField id="endTimeField" fx:id="endTimeField" promptText="End Time (HH:MM:SS)" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-
-                            <Button id="addTimetableButton" fx:id="addTimetableButton" onAction="#addTimetableClicked" prefHeight="23.0" prefWidth="144.0" text="Add Timetable" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                            <Label id="timetableAddedLabel" fx:id="timetableAddedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                <font>
-                                    <Font name="Poppins Italic" size="13.0" />
-                                </font>
-                            </Label>
-                            <columnConstraints>
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                        </GridPane>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="modifyTimetableLabel" text="Modify Timetable">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <GridPane hgap="10.0" prefHeight="100.0" prefWidth="200.0" vgap="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="timetableIdField" fx:id="timetableIdField" prefHeight="31.0" prefWidth="238.4" promptText="Timetable ID to Modify" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                            <TextField id="newCourseNameField" fx:id="newTimetableCourseNameField" promptText="New Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                            <TextField id="newLecturerField" fx:id="newTimetableLecturerField" promptText="New Lecturer" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                            <TextField id="newClassroomField" fx:id="newTimetableClassroomField" promptText="New Classroom" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                            <ComboBox fx:id="newDayOfWeekDropdown" prefWidth="238.4" promptText="Select New Day of Week" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                        <String fx:value="Monday" />
-                                        <String fx:value="Tuesday" />
-                                        <String fx:value="Wednesday" />
-                                        <String fx:value="Thursday" />
-                                        <String fx:value="Friday" />
-                                        <String fx:value="Saturday" />
-                                        <String fx:value="Sunday" />
-                                    </FXCollections>
-                                </items>
-                            </ComboBox>
-                            <TextField id="newStartTimeField" fx:id="newTimetableStartTimeField" promptText="New Start Time (HH:MM:SS)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                            <TextField id="newEndTimeField" fx:id="newTimetableEndTimeField" promptText="New End Time (HH:MM:SS)" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-
-                            <Button id="modifyTimetableButton" fx:id="modifyTimetableButton" onAction="#modifyTimetableClicked" prefWidth="144.0" text="Modify Timetable" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                            <Label id="timetableModifiedLabel" fx:id="timetableModifiedLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                <font>
-                                    <Font name="Poppins Italic" size="13.0" />
-                                </font>
-                            </Label>
-                            <columnConstraints>
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                                <ColumnConstraints />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                        </GridPane>
-                        <HBox prefHeight="50.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="914.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <Label id="deleteTimetableLabel" text="Delete Timetable">
-                                <font>
-                                    <Font name="Poppins SemiBold" size="22.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <VBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                            <padding>
-                                <Insets left="40.0" />
-                            </padding>
-                            <TextField id="deleteTimetableIdField" fx:id="deleteTimetableIdField" promptText="Timetable ID to Delete" />
-                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                                <Button id="deleteTimetableButton" fx:id="deleteTimetableButton" onAction="#deleteTimetableClicked" prefHeight="22.0" prefWidth="144.0" text="Delete Timetable" />
-                                <Label id="timetableDeletedLabel" fx:id="timetableDeletedLabel">
-                                    <font>
-                                        <Font name="Poppins Italic" size="13.0" />
-                                    </font>
-                                </Label>
-                            </HBox>
-                        </VBox>
-                        <padding>
-                            <Insets bottom="10.0" top="10.0" />
-                        </padding>
-                    </VBox>
-                    <effect>
-                        <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                            <color>
-                                <Color opacity="0.09726444631814957" />
-                            </color>
-                        </DropShadow>
-                    </effect>
-                </VBox>
-            </AnchorPane>
-
-
-            <!--                Notifications tab-->
-            <AnchorPane fx:id="notificationTab" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <VBox prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
-                    <effect>
-                        <DropShadow height="50.0" radius="24.5" spread="0.5" width="50.0">
-                            <color>
-                                <Color opacity="0.20000000298023224" />
-                            </color>
-                        </DropShadow>
-                    </effect>
-                    <VBox prefHeight="690.0" prefWidth="1006.0" spacing="10.0" styleClass="content-background">
-                        <padding>
-                            <Insets bottom="30.0" top="10.0" />
-                        </padding>
-                        <Label style="-fx-font-family: 'Poppins SemiBold'; -fx-font-size: 22.0; -fx-padding: 10.0 0.0 0.0 40.0;" text="Notifications" />
-                        <ScrollPane fx:id="notificationListView" maxHeight="500.0" maxWidth="910.0" prefHeight="483.0" prefWidth="920.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
-                            <padding>
-                                <Insets left="50.0" />
-                            </padding>
-                            <VBox fx:id="notificationContainer" prefHeight="477.0" prefWidth="850.0" spacing="10.0" />
-                     <VBox.margin>
-                        <Insets left="2.0" />
-                     </VBox.margin>
-                        </ScrollPane>
-                        <HBox alignment="CENTER" prefHeight="50.0" spacing="30.0">
-                            <Label style="-fx-font-family: 'Poppins Regular'; -fx-font-size: 12.0;" text="Enter message :" />
-                            <TextArea fx:id="notificationInputBox" minWidth="500.0" prefHeight="100.0" prefWidth="275.0" />
-                            <Button fx:id="notificationSendButton" onAction="#handleSendNotification" text="Send" />
-                        </HBox>
-                    </VBox>
-                </VBox>
-            </AnchorPane>
-
-        </AnchorPane>
     </center>
 </BorderPane>

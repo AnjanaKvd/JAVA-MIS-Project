@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" stylesheets="@Styles/style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.student.viewGradeController">
+<children>
+    <TableView fx:id="table" layoutX="67.0" layoutY="95.0" prefHeight="260.0" prefWidth="915.0" AnchorPane.topAnchor="95.0">
+        <columns>
+            <TableColumn fx:id="course_code" prefWidth="119.0" text="course_code" />
+            <TableColumn fx:id="student_id" prefWidth="112.0" text="student_id" />
+            <TableColumn fx:id="quiz1_marks" prefWidth="119.0" text="quiz1_marks" />
+            <TableColumn fx:id="quiz2_marks" prefWidth="109.0" text="quiz2_marks" />
+            <TableColumn fx:id="quiz3_marks" prefWidth="106.0" text="quiz3_marks" />
+            <TableColumn fx:id="mid_marks" prefWidth="97.0" text="mid_marks" />
+            <TableColumn fx:id="project_marks" prefWidth="129.0" text="project_marks" />
+            <TableColumn fx:id="end_marks" prefWidth="118.0" text="end_marks" />
+        </columns>
+    </TableView>
+      <Label layoutX="88.0" layoutY="17.0" prefHeight="70.0" prefWidth="246.0" text="Grade" textFill="#1d4cda">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="384.0" text="GPA" textFill="#1d4cda">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table1" layoutX="227.0" layoutY="481.0" prefHeight="70.0" prefWidth="159.0">
+        <columns>
+          <TableColumn fx:id="SGPA" prefWidth="75.0" text="SGPA" />
+            <TableColumn fx:id="CGPA" prefWidth="75.0" text="CGPA" />
+        </columns>
+      </TableView>
+</children>
+
+</AnchorPane>
