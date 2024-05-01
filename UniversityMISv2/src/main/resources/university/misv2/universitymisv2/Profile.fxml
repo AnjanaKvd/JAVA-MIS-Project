@@ -34,8 +34,8 @@
             </DropShadow>
          </effect>
          <VBox alignment="CENTER" layoutX="126.0" layoutY="166.0" prefHeight="403.0" prefWidth="352.0" spacing="15.0" styleClass="profile-left-section" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <Label id="profile-name" text="Anjana Kavidu" />
-            <Label id="profile-username" text="\@anjana" />
+            <Label id="profile-name" fx:id="profileName" text="Anjana Kavidu" />
+            <Label id="profile-username" fx:id="profileUsername" text="\@anjana" />
             <AnchorPane prefHeight="188.0">
                <ImageView fx:id="profileImageView" fitHeight="188.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
                <Circle id="profile-image" fx:id="profileImageCircle" fill="DODGERBLUE" layoutX="176.0" layoutY="94.0" radius="94.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />

@@ -1,10 +1,10 @@
 package university.misv2.universitymisv2;
 
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 
 public class UserProfileManager {
     public static String getUserFullName(String username) {
@@ -28,7 +28,9 @@ public class UserProfileManager {
     }
 
     public static String getUserProfileImagePath(String username) {
-        String imagePath = "/university/misv2/universitymisv2/images/profile_images/profile-default.jpeg";
+        String absolutePath = Paths.get("").toAbsolutePath().toString();
+        String imagePath = "/profile_images/profile-default.jpeg";
+        String fullImagePath = absolutePath+imagePath;
         try (Connection connectDB = DatabaseConnection.getConnection();
              PreparedStatement statement = connectDB.prepareStatement("SELECT profile_image_path FROM userdetails WHERE username = ?")) {
             statement.setString(1, username);
@@ -37,16 +39,16 @@ public class UserProfileManager {
                 if (resultSet.next()) {
                     String profileImagePath = resultSet.getString("profile_image_path");
                     if (profileImagePath != null && !profileImagePath.isEmpty()) {
-                        imagePath = profileImagePath;
+                        fullImagePath = profileImagePath;
                     }
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            imagePath = "Error";
+            fullImagePath = "Error";
         }
 
-        return imagePath;
+        return fullImagePath;
     }
     public static void setUserProfileImagePath(String username, String imagePath) {
         try (Connection connection = DatabaseConnection.getConnection();
