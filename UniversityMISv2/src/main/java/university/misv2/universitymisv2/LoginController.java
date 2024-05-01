@@ -77,17 +77,17 @@ public class LoginController {
                     String enteredPassword = enterPasswordField.getText();
 
                     String storedUsername = queryResult.getString("username");
-                    String enteredUsername = enterPasswordField.getText();
-                    if (Objects.equals(enteredUsername, storedUsername) && Objects.equals(enteredPassword, storedPassword)) {
+                    String enteredUsername = usernameTextField.getText();
+
+                    if (enteredUsername.equals(storedUsername) && enteredPassword.equals(storedPassword)) {
                         String userType = queryResult.getString("user_type");
-                        String userName = queryResult.getString("username");
-                        UserData.setLoggedInUsername(userName);
+                        UserData.setLoggedInUsername(storedUsername);
                         openMainWindow(userType);
                     } else {
                         loginMessageLabel.setText("Invalid username or password");
                     }
                 } else {
-                    loginMessageLabel.setText("Invalid username or password");
+                    loginMessageLabel.setText("Username not found");
                 }
             }
         } catch (SQLException e) {

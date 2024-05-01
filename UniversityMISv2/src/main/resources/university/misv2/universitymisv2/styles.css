@@ -62,7 +62,6 @@
     -fx-font-size: 15;
 }
 #profile-image{
-    -fx-fill: red;
     -fx-stroke: none;
 }
 #profile-image-delete-button{
@@ -130,4 +129,9 @@
     -fx-border-color: red;
     -fx-border-radius: 20;
     -fx-cursor: hand;
+}
+#update-details-label{
+    -fx-text-fill: blue;
+    -fx-font-size: 20;
+    -fx-font-weight: lighter;
 }

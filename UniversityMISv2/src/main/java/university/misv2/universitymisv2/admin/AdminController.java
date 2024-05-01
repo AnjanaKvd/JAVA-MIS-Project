@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -19,7 +20,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import university.misv2.universitymisv2.UserData;
 import university.misv2.universitymisv2.DatabaseConnection;
@@ -443,7 +446,15 @@ public class AdminController {
             Parent root = loader.load();
 
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            Screen screen = Screen.getPrimary();
+            Rectangle2D bounds = screen.getVisualBounds();
+
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setX(bounds.getMinX());
+            stage.setY(bounds.getMinY());
+
+            stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+            stage.show();
 
             Stage currentStage = (Stage) profileSection.getScene().getWindow();
             currentStage.close();

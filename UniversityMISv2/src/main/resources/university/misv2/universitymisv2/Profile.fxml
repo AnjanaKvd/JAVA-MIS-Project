@@ -141,7 +141,8 @@
                            <TextField fx:id="confirmEmailBox" styleClass="profile-input-box" />
                         </VBox>
                      </GridPane>
-                     <Button id="profile-update-button" fx:id="updateInfoButton" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" text="Update info" />
+                     <Button id="profile-update-button" fx:id="updateInfoButton" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleUpdateInfoButton" text="Update info" />
+                     <Label id="update-details-label" fx:id="updateDetailsLabel" layoutX="236.0" layoutY="411.0" />
                   </AnchorPane>
                </Tab>
                <Tab text="Contact us">
