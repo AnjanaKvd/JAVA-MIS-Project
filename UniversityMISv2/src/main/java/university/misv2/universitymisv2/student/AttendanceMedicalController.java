@@ -47,7 +47,7 @@ public class AttendanceMedicalController implements Initializable {
         is_day_medical.setCellValueFactory(new PropertyValueFactory<>("is_day_medical"));
         submitted_date.setCellValueFactory(new PropertyValueFactory<>("submitted_date"));
 
-//
+
         // Load the list of users from the database
 //        List<AmUser> amuser = null;
 //        try {

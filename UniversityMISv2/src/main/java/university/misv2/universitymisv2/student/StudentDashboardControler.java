@@ -18,6 +18,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import university.misv2.universitymisv2.UserData;
 
 import java.io.File;
 import java.io.IOException;
@@ -52,6 +53,8 @@ public class StudentDashboardControler implements Initializable {
     @FXML
     private ImageView studentsimage;
 
+    @FXML
+    private Button Logout;
 
     @FXML
     private Circle user1;
@@ -163,6 +166,7 @@ public class StudentDashboardControler implements Initializable {
             e.printStackTrace();
         }
     }
+
 
 
 

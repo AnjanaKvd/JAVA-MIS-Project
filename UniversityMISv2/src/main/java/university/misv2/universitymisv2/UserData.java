@@ -26,7 +26,7 @@ public class UserData {
         if(userProfileImage == null){
             String currentAbsolutePath = Paths.get("").toAbsolutePath().toString();
             String defaultImagePath = "/profile_images/profile-default.jpeg";
-           return currentAbsolutePath + defaultImagePath;
+            return currentAbsolutePath + defaultImagePath;
         }else{
             return userProfileImage;
         }
