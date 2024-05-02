@@ -229,10 +229,8 @@ public class ProfileController {
     @FXML
     private void handleProfileDeleteButton() throws IOException {
         UserProfileManager.setUserProfileImagePath(UserData.getLoggedInUsername(), null);
-        System.out.println(Paths.get(UserData.getUserProfileImage()));
         Path path = Paths.get(UserData.getUserProfileImage());
         String fileName = path.getFileName().toString();
-        System.out.println(fileName);
         if (!fileName.equals("profile-default.jpeg")){
             Files.delete(path);
         }

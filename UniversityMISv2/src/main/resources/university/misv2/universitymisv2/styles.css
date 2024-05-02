@@ -86,12 +86,7 @@
     -fx-font-size: 20;
     -fx-background-color: blue;
 }
-/*#profile-tab-pane{*/
-/*    -fx-font-size: 20;*/
-/*}*/
-/*.tab {*/
-/*    -fx-background-color: white;*/
-/*}*/
+
 #profile-tab-pane .tab-pane {
     -fx-background-color: white;
     -fx-font-size: 20;
