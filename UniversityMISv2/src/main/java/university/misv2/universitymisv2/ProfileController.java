@@ -229,10 +229,8 @@ public class ProfileController {
     @FXML
     private void handleProfileDeleteButton() throws IOException {
         UserProfileManager.setUserProfileImagePath(UserData.getLoggedInUsername(), null);
-        System.out.println(Paths.get(UserData.getUserProfileImage()));
         Path path = Paths.get(UserData.getUserProfileImage());
         String fileName = path.getFileName().toString();
-        System.out.println(fileName);
         if (!fileName.equals("profile-default.jpeg")){
             Files.delete(path);
         }
@@ -251,9 +249,9 @@ public class ProfileController {
             } else if ("lecturer".equals(userType)) {
                 fxmlPath = "lecturer/dashboard.fxml";
             } else if ("student".equals(userType)) {
-                fxmlPath = "student/TechnicalDashboard.fxml";
+                fxmlPath = "student/StudentDashboard.fxml";
             } else if ("technical officer".equals(userType)) {
-                fxmlPath = "technicalOfficer/TechnicalDashboard.fxml";
+                fxmlPath = "technicalOfficer/TechnicalOfficerDashboard.fxml";
             }else{
                 return;
             }

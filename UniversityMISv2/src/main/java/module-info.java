@@ -17,5 +17,8 @@ module university.misv2.universitymisv2 {
 
 
     exports university.misv2.universitymisv2;
+    exports university.misv2.universitymisv2.student;
+    exports university.misv2.universitymisv2.lecturer;
+    exports university.misv2.universitymisv2.technicalOfficer;
 
 }

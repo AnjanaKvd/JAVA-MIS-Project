@@ -64,4 +64,37 @@ public class UserManager {
             System.out.println(e.getMessage());
         }
     }
+    public static String getUserCount() throws SQLException {
+        String query = "SELECT COUNT(*) AS userCount FROM user";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            if (resultSet.next()) {
+                int userCount = resultSet.getInt("userCount");
+                System.out.println("Total number of users: " + userCount);
+                return String.valueOf(userCount);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return String.valueOf(0);
+    }
+
+    public static String getAdminUserCount() throws SQLException {
+        String query = "SELECT COUNT(*) AS adminCount FROM user WHERE user_type = 'admin'";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            if (resultSet.next()) {
+                int adminCount = resultSet.getInt("adminCount");
+                System.out.println("Total number of admin users: " + adminCount);
+                return String.valueOf(adminCount);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return String.valueOf(0);
+    }
 }

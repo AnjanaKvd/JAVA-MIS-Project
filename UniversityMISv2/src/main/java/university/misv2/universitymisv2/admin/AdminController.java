@@ -58,6 +58,9 @@ public class AdminController {
     public Label userFullName;
     public HBox profileSection;
     public Circle profileIconCircle;
+    public Label totalUsers;
+    public Label totalCourses;
+    public Label adminUserCount;
 
     @FXML
     private Label dashboardLabel;
@@ -171,7 +174,7 @@ public class AdminController {
     private TableColumn<String[], String> userRoleColumn;
 
     @FXML
-    private void initialize() {
+    private void initialize() throws SQLException {
         RotateTransition rotateTransition = new RotateTransition(Duration.seconds(0.4), closeBtn);
         rotateTransition.setByAngle(360);
         rotateTransition.setAutoReverse(false);
@@ -205,6 +208,9 @@ public class AdminController {
             return new SimpleStringProperty(userData[1]);
         });
 
+        totalUsers.setText(UserManager.getUserCount());
+        totalCourses.setText(CourseManager.getCourseCount());
+        adminUserCount.setText(UserManager.getAdminUserCount());
 
         try {
             ObservableList<String[]> userList = UserManager.getUsers();

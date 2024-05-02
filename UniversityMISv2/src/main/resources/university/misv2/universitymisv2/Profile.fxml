@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -22,7 +23,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="profile-main-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.ProfileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="profile-main-background" stylesheets="@primer-dark.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.ProfileController">
    <left>
       <AnchorPane maxHeight="663.0" prefHeight="663.0" prefWidth="352.0" BorderPane.alignment="TOP_CENTER">
          <BorderPane.margin>
@@ -36,8 +37,8 @@
             </DropShadow>
          </effect>
          <VBox alignment="CENTER" layoutX="126.0" layoutY="166.0" prefHeight="403.0" prefWidth="352.0" spacing="15.0" styleClass="profile-left-section" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <Label id="profile-name" fx:id="profileName" text="Anjana Kavidu" />
-            <Label id="profile-username" fx:id="profileUsername" text="\@anjana" />
+            <Label id="profile-name" fx:id="profileName" styleClass="title-2" text="Anjana Kavidu" />
+            <Label id="profile-username" fx:id="profileUsername" styleClass="title-4" text="\@anjana" />
             <AnchorPane prefHeight="188.0">
                <Circle id="profile-image" fx:id="profileImageCircle" fill="DODGERBLUE" layoutX="176.0" layoutY="94.0" radius="94.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
                <ImageView id="profile-image-delete-button" fx:id="profileDeleteButton" fitHeight="47.0" fitWidth="35.0" layoutX="222.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
@@ -51,10 +52,22 @@
                   <Image url="@images/trash3.png" />
                </ImageView>
             </AnchorPane>
-            <Button id="profile-upload-button" fx:id="profileUploadButton" mnemonicParsing="false" onAction="#handleProfileUploadButton" text="Upload Profile Image" />
+            <Button id="profile-upload-button" fx:id="profileUploadButton" mnemonicParsing="false" onAction="#handleProfileUploadButton" text="Upload Profile Image">
+               <styleClass>
+                  <String fx:value="accent" />
+                  <String fx:value="button-outlined" />
+               </styleClass></Button>
          </VBox>
-         <Button id="logout-button" fx:id="logoutButton" layoutX="92.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="49.0" prefWidth="163.0" text="Logout" />
-         <Button id="backButton" fx:id="profileBackButton" layoutX="136.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+         <Button id="logout-button" fx:id="logoutButton" layoutX="92.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="49.0" prefWidth="163.0" text="Logout">
+            <styleClass>
+               <String fx:value="danger" />
+               <String fx:value="button-outlined" />
+            </styleClass></Button>
+         <Button id="backButton" fx:id="profileBackButton" layoutX="150.0" layoutY="579.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back">
+            <styleClass>
+               <String fx:value="success" />
+               <String fx:value="button-outlined" />
+            </styleClass></Button>
       </AnchorPane>
    </left>
    <center>
@@ -94,53 +107,77 @@
                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         </rowConstraints>
-                        <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="342.0">
+                        <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="342.0" spacing="10.0">
                            <Label styleClass="profile-input-label" text="Full Name">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <TextField fx:id="fullNameBox" styleClass="profile-input-box" />
+                           <TextField fx:id="fullNameBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></TextField>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
                            <Label styleClass="profile-input-label" text="Username">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <TextField fx:id="usernameBox" styleClass="profile-input-box" />
+                           <TextField fx:id="usernameBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></TextField>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="331.0" GridPane.rowIndex="1">
+                        <VBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="331.0" spacing="10.0" GridPane.rowIndex="1">
                            <Label styleClass="profile-input-label" text="Password">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <PasswordField fx:id="passwordBox" styleClass="profile-input-box" />
+                           <PasswordField fx:id="passwordBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></PasswordField>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <Label styleClass="profile-input-label" text="Confirm Password">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <PasswordField fx:id="confirmPasswordBox" styleClass="profile-input-box" />
+                           <PasswordField fx:id="confirmPasswordBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></PasswordField>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.rowIndex="2">
                            <Label styleClass="profile-input-label" text="Email Address">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <TextField fx:id="emailBox" styleClass="profile-input-box" />
+                           <TextField fx:id="emailBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></TextField>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <Label styleClass="profile-input-label" text="Confirm Email Address">
                               <font>
                                  <Font size="15.0" />
                               </font>
                            </Label>
-                           <TextField fx:id="confirmEmailBox" styleClass="profile-input-box" />
+                           <TextField fx:id="confirmEmailBox" style="-fx-max-width: 250;">
+                              <styleClass>
+                                 <String fx:value="profile-input-box" />
+                                 <String fx:value="rounded" />
+                              </styleClass></TextField>
                         </VBox>
                      </GridPane>
                      <Button id="profile-update-button" fx:id="updateInfoButton" layoutX="35.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleUpdateInfoButton" text="Update info" />
@@ -165,12 +202,12 @@
       </AnchorPane>
    </center>
    <top>
-      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1240.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="35.0" fitWidth="36.0" nodeOrientation="INHERIT" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
-            <Image url="@images/Close.png" />
+            <Image url="@images/CloseWhite.png" />
          </ImageView>
       </HBox>
    </top>

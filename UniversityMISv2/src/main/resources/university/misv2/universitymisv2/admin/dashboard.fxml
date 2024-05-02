@@ -197,7 +197,7 @@
                                         <Font name="Poppins Regular" size="14.0" />
                                     </font>
                                 </Label>
-                                <Label text="5423">
+                                <Label fx:id="totalUsers" text="5423">
                                     <font>
                                         <Font name="Poppins SemiBold" size="32.0" />
                                     </font>
@@ -215,7 +215,7 @@
                                         <Font name="Poppins Regular" size="14.0" />
                                     </font>
                                 </Label>
-                                <Label text="60">
+                                <Label fx:id="totalCourses" text="60">
                                     <font>
                                         <Font name="Poppins SemiBold" size="32.0" />
                                     </font>
@@ -233,7 +233,7 @@
                                         <Font name="Poppins Regular" size="14.0" />
                                     </font>
                                 </Label>
-                                <Label text="2">
+                                <Label fx:id="adminUserCount" text="2">
                                     <font>
                                         <Font name="Poppins SemiBold" size="32.0" />
                                     </font>

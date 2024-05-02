@@ -14,6 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -25,7 +26,6 @@ import javafx.util.Duration;
 import university.misv2.universitymisv2.UserData;
 import university.misv2.universitymisv2.UserProfileManager;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -37,6 +37,9 @@ public class LecturerController implements Initializable {
     public Button updateProfile;
     public Label userFullNameLabel;
     public ImageView CloseButtonMain;
+    public Label courseCount;
+    public Label materialCount;
+    public Label notificationCount;
     @FXML
     private TextField FirstnameTextField;
 
@@ -139,6 +142,22 @@ public class LecturerController implements Initializable {
         if (loggedInUsername != null) {
             updateUserDetails(loggedInUsername);
         }
+        try {
+            courseCount.setText(Counts.getCourseCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            materialCount.setText(Counts.getMaterialCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            notificationCount.setText(Counts.getNotificationCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 
@@ -181,21 +200,12 @@ public class LecturerController implements Initializable {
 
 
 
-    public void cancleButtononAction(ActionEvent event){
+    public void cancleButtononAction(MouseEvent event){
         Stage stage=(Stage) CloseButton.getScene().getWindow();
         stage.close();
 
 
     }
-
-
-
-
-    public void cancelButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) CloseButton.getScene().getWindow();
-        stage.close();
-    }
-
 
 
 
@@ -318,5 +328,11 @@ public class LecturerController implements Initializable {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("materialform.fxml")));
         boarderPane.setCenter(root);
+    }
+
+    @FXML
+    private void handleCloseButtonAction() {
+        Stage stage = (Stage) CloseButtonMain.getScene().getWindow();
+        stage.close();
     }
 }
