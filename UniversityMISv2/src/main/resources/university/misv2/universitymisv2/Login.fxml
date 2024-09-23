@@ -19,7 +19,9 @@
 <BorderPane id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1440.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.LoginController">
    <center>
       <AnchorPane id="centerPane" maxHeight="200.0" maxWidth="500.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <VBox id="loginBox" alignment="CENTER_LEFT" layoutX="1.0" layoutY="-1.0" prefHeight="471.0" prefWidth="547.0">
+
+         <VBox id="loginBox" alignment="CENTER_LEFT" layoutX="1.0" layoutY="-1.0" prefHeight="471.0" prefWidth="547.0" spacing="10.0">
+
             <padding>
                <Insets left="50.0" />
             </padding>
@@ -28,7 +30,7 @@
                   <Font name="Poppins Medium" size="32.0" />
                </font>
             </Label>
-            <VBox id="inputBox" prefHeight="203.0" prefWidth="486.0">
+            <VBox id="inputBox" prefHeight="203.0" prefWidth="486.0" spacing="10.0">
                <VBox id="usernameBox" prefHeight="200.0" prefWidth="100.0">
                   <Label id="usernameLabel" text="Username">
                      <font>
@@ -52,7 +54,10 @@
                   <PasswordField id="passwordField" fx:id="enterPasswordField" maxHeight="56.0" maxWidth="459.0" minHeight="56.0" prefHeight="56.0" />
                </VBox>
                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                  <Button id="signInButton" fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonOnAction" text="Sign in" />
+                  <Button id="signInButton" fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="27.0" prefWidth="75.0" text="Sign in">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
                   <Label fx:id="loginMessageLabel" textFill="#006af4">
                      <font>
                         <Font name="Poppins Thin Italic" size="12.0" />

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1255.0" stylesheets="@../technicalOfficer/Styles/style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.TimetableController">
+<children>
+    <TableView fx:id="table" layoutX="31.0" layoutY="120.0" prefHeight="400.0" prefWidth="1021.0" AnchorPane.topAnchor="120.0">
+        <columns>
+            <TableColumn fx:id="timetable_id" prefWidth="134.0" text="Timetable_id" />
+            <TableColumn fx:id="course_code" prefWidth="110.0" text="Course_code" />
+            <TableColumn fx:id="course_name" prefWidth="104.0" text="Course_name" />
+            <TableColumn fx:id="lecturer" prefWidth="127.0" text="Lecturer" />
+            <TableColumn fx:id="classroom" prefWidth="132.0" text="Classroom" />
+            <TableColumn fx:id="day_of_week" prefWidth="148.0" text="Day_of_week" />
+            <TableColumn fx:id="start_time" prefWidth="123.0" text="Start_time" />
+            <TableColumn fx:id="end_time" prefWidth="138.0" text="End_time" />
+        </columns>
+    </TableView>
+      <Label layoutX="87.0" layoutY="51.0" prefHeight="75.0" prefWidth="404.0" text="Timetable">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+</children>
+</AnchorPane>

@@ -13,7 +13,7 @@ import java.util.List;
 public class NotificationManager {
 
     public static void addNotification(String message) throws SQLException {
-        String query = "INSERT INTO notification (message, date) VALUES (?, ?)";
+        String query = "INSERT INTO notification (message, date_time) VALUES (?, ?)";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, message);
@@ -24,14 +24,14 @@ public class NotificationManager {
 
     public static List<String> getAllNotifications() throws SQLException {
         List<String> notifications = new ArrayList<>();
-        String query = "SELECT id, message, date FROM notification";
+        String query = "SELECT id, message, date_time FROM notification";
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String message = resultSet.getString("message");
-                LocalDateTime date = resultSet.getObject("date", LocalDateTime.class);
+                LocalDateTime date = resultSet.getObject("date_time", LocalDateTime.class);
                 notifications.add("ID: " + id + ", Message: " + message + ", Date: " + date);
             }
         }

@@ -14,6 +14,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import javafx.scene.input.MouseEvent;
+
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -25,7 +28,9 @@ import javafx.util.Duration;
 import university.misv2.universitymisv2.UserData;
 import university.misv2.universitymisv2.UserProfileManager;
 
+
 import java.io.File;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -37,6 +42,11 @@ public class LecturerController implements Initializable {
     public Button updateProfile;
     public Label userFullNameLabel;
     public ImageView CloseButtonMain;
+
+    public Label courseCount;
+    public Label materialCount;
+    public Label notificationCount;
+
     @FXML
     private TextField FirstnameTextField;
 
@@ -138,9 +148,30 @@ public class LecturerController implements Initializable {
         String loggedInUsername = UserData.getLoggedInUsername();
         if (loggedInUsername != null) {
             updateUserDetails(loggedInUsername);
+
+        }
+        try {
+            courseCount.setText(Counts.getCourseCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            materialCount.setText(Counts.getMaterialCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            notificationCount.setText(Counts.getNotificationCount());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+
         }
 
     }
+
+
+    }
+
 
     private void updateUserDetails(String username) {
         String fullName = UserProfileManager.getUserFullName(username);
@@ -181,12 +212,15 @@ public class LecturerController implements Initializable {
 
 
 
-    public void cancleButtononAction(ActionEvent event){
+
+    public void cancleButtononAction(MouseEvent event){
+
         Stage stage=(Stage) CloseButton.getScene().getWindow();
         stage.close();
 
 
     }
+
 
 
 
@@ -203,11 +237,34 @@ public class LecturerController implements Initializable {
     void UplodeMarks(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("uploadMarks.fxml")));
+
+    @FXML
+    void UplodeMarks(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("uploadMarks.fxml")));
         boarderPane.setCenter(root);
 
     }
 
     @FXML
+    void attendanceMedical(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("attendanceMedical.fxml")));
+        boarderPane.setCenter(root);
+    }
+
+
+    @FXML
+    void eligibilityClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("eligibility.fxml")));
+
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+
     void attendanceMedical(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("attendanceMedical.fxml")));
@@ -287,6 +344,71 @@ public class LecturerController implements Initializable {
 
             stage.show();
 
+
+    void mggpaClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mggpa.fxml")));
+        boarderPane.setCenter(root);
+
+
+    }
+
+    @FXML
+    void noticeClick(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("notice.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void registerUser(ActionEvent event) throws SQLException, IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("updateCourse.fxml")));
+        boarderPane.setCenter(root);
+
+    }
+
+    @FXML
+    void viewtabledata(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("showdata.fxml")));
+        boarderPane.setCenter(root);
+
+
+    }
+
+    public void profileButtonOnAction(ActionEvent event) {
+        try {
+            URL resourceUrl = getClass().getResource("/university/misv2/universitymisv2/Profile.fxml");
+            if (resourceUrl == null) {
+                System.err.println("Error: Profile.fxml not found");
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(resourceUrl);
+            Parent root = loader.load();
+
+            Object controller = loader.getController();
+
+            Stage stage = new Stage();
+
+            Screen screen = Screen.getPrimary();
+            Rectangle2D bounds = screen.getVisualBounds();
+
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setX(bounds.getMinX());
+            stage.setY(bounds.getMinY());
+
+            stage.setScene(new Scene(root, bounds.getWidth(), bounds.getHeight()));
+
+            if (controller instanceof Initializable) {
+                ((Initializable) controller).initialize(null, null);
+            }
+
+            stage.show();
+
+
             Stage dashboardStage = (Stage) updateProfile.getScene().getWindow();
             dashboardStage.close();
         } catch (IOException e) {
@@ -314,9 +436,23 @@ public class LecturerController implements Initializable {
         boarderPane.setCenter(root);
     }
 
+
     public void addmaterialsform(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("materialform.fxml")));
         boarderPane.setCenter(root);
+
+
+    public void addmaterialsform(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("materialform.fxml")));
+        boarderPane.setCenter(root);
+    }
+
+    @FXML
+    private void handleCloseButtonAction() {
+        Stage stage = (Stage) CloseButtonMain.getScene().getWindow();
+        stage.close();
+
     }
 }

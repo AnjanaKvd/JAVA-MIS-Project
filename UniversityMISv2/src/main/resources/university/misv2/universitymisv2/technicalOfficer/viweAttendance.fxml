@@ -7,7 +7,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #33DDFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.ViweAttendance">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #33DDFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.AttendanceController">
+
    <children>
       <TableView layoutX="43.0" layoutY="77.0" prefHeight="223.0" prefWidth="515.0">
         <columns>

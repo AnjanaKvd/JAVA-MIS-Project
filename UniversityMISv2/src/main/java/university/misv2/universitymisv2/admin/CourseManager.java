@@ -4,6 +4,7 @@ import university.misv2.universitymisv2.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CourseManager {
@@ -48,5 +49,22 @@ public class CourseManager {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static String getCourseCount() throws SQLException {
+        String query = "SELECT COUNT(*) AS courseCount FROM course";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            if (resultSet.next()) {
+                int courseCount = resultSet.getInt("courseCount");
+                System.out.println("Total number of courses: " + courseCount);
+                return String.valueOf(courseCount);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return String.valueOf(0);
     }
 }

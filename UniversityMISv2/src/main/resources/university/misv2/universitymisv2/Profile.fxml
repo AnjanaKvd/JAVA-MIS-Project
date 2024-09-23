@@ -63,7 +63,9 @@
                <String fx:value="danger" />
                <String fx:value="button-outlined" />
             </styleClass></Button>
-         <Button id="backButton" fx:id="profileBackButton" layoutX="136.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back">
+
+         <Button id="backButton" fx:id="profileBackButton" layoutX="150.0" layoutY="579.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back">
+
             <styleClass>
                <String fx:value="success" />
                <String fx:value="button-outlined" />

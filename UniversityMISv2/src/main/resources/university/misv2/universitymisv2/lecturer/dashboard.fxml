@@ -22,7 +22,9 @@
                 <Font size="24.0" />
             </font>
         </Label>
-      <ImageView id="CloseButton" fx:id="CloseButtonMain" fitHeight="34.0" fitWidth="36.0" layoutX="1715.0" layoutY="25.0" onMouseClicked="#cancelButtonOnAction" pickOnBounds="true" preserveRatio="true">
+
+      <ImageView id="CloseButton" fx:id="CloseButtonMain" fitHeight="34.0" fitWidth="36.0" layoutX="1715.0" layoutY="25.0" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true" preserveRatio="true">
+
          <image>
             <Image url="@../images/Close.png" />
          </image>
@@ -38,7 +40,9 @@
             <Font size="13.0" />
         </font>
     </Label>
-    <Label fx:id="conPasswordMessageLable1" layoutX="280.0" layoutY="315.0" prefHeight="19.0" prefWidth="8.0" textFill="#eb2002">
+
+    <Label fx:id="conPasswordMessageLable1" layoutX="29.0" layoutY="284.0" prefHeight="34.0" prefWidth="238.0" textFill="#eb2002">
+
         <font>
             <Font size="13.0" />
         </font>
@@ -161,7 +165,9 @@
                            <Font name="System Bold" size="34.0" />
                         </font>
                      </Label>
-                     <Label text="30" textFill="WHITE">
+
+                     <Label fx:id="notificationCount" text="30" textFill="WHITE">
+
                         <font>
                            <Font name="System Bold" size="27.0" />
                         </font>
@@ -175,7 +181,9 @@
                            <Font name="System Bold" size="34.0" />
                         </font>
                      </Label>
-                     <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" text="24" textFill="WHITE">
+
+                     <Label fx:id="courseCount" alignment="BASELINE_LEFT" contentDisplay="CENTER" text="24" textFill="WHITE">
+
                         <font>
                            <Font name="System Bold" size="27.0" />
                         </font>
@@ -189,7 +197,9 @@
                            <Font name="System Bold" size="34.0" />
                         </font>
                      </Label>
-                     <Label text="10" textFill="WHITE">
+
+                     <Label fx:id="materialCount" text="10" textFill="WHITE">
+
                         <font>
                            <Font name="System Bold" size="27.0" />
                         </font>
