@@ -105,9 +105,11 @@ public class LoginController {
             } else if ("lecturer".equals(userType)) {
                 fxmlPath = "lecturer/dashboard.fxml";
             } else if ("student".equals(userType)) {
+
                 fxmlPath = "student/StudentDashboard.fxml";
             } else if ("technical officer".equals(userType)) {
                 fxmlPath = "technicalOfficer/TechnicalOfficerDashboard.fxml";
+
             }else{
                 return;
             }

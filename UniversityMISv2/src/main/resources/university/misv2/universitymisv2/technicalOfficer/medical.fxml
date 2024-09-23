@@ -8,7 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.misv2.universitymisv2.technicalOfficer.MedicalQuery">
+
    <children>
       <AnchorPane layoutX="225.0" layoutY="42.0" prefHeight="507.0" prefWidth="670.0" style="-fx-border-color: black;">
          <children>
@@ -26,41 +28,56 @@
                   </ImageView>
                </children>
             </AnchorPane>
+
             <Label layoutX="102.0" layoutY="96.0" text="id">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
+
             <TextField fx:id="medid" layoutX="99.0" layoutY="116.0" prefHeight="26.0" prefWidth="200.0" promptText="id" />
             <TextField fx:id="reson" layoutX="366.0" layoutY="118.0" prefHeight="26.0" prefWidth="200.0" promptText="reson" />
             <Label layoutX="369.0" layoutY="95.0" text="reson">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
+
             <Label layoutX="106.0" layoutY="185.0" text="Start_date">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
+
             <TextField fx:id="Startdate" layoutX="101.0" layoutY="210.0" prefHeight="26.0" prefWidth="199.0" promptText="Start_date" />
             <Label layoutX="369.0" layoutY="183.0" text="end_date">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
+
+          
+
             <TextField fx:id="enddate" layoutX="366.0" layoutY="208.0" prefHeight="26.0" prefWidth="201.0" promptText="end_date" />
             <TextField fx:id="isdaymedical" layoutX="101.0" layoutY="303.0" prefHeight="26.0" prefWidth="200.0" promptText="is_day_medical" />
             <Label layoutX="108.0" layoutY="278.0" text="is_day_medical">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
+
             <Button fx:id="updatecourse" layoutX="178.0" layoutY="391.0" mnemonicParsing="false" onAction="#updatemedicalOnAction" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #116093;" text="updateMedical" textFill="WHITE">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
+
             <Button fx:id="clearButton" layoutX="178.0" layoutY="460.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #116093;" text="Clear" textFill="WHITE">
                <font>
                   <Font size="13.0" />
@@ -70,10 +87,16 @@
             <Label layoutX="371.0" layoutY="280.0" prefHeight="17.0" prefWidth="117.0" text="submittted_data" />
             <TextField fx:id="submittteddata" layoutX="369.0" layoutY="304.0" prefHeight="25.0" prefWidth="189.0" promptText="submitted_data" />
             <Button layoutX="178.0" layoutY="427.0" mnemonicParsing="false" onAction="#deletedata" prefHeight="26.0" prefWidth="336.0" style="-fx-background-color: #116093;" text=" Delete Medical" textFill="WHITE">
+
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
+
+            <Button layoutX="178.0" layoutY="375.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="336.0" style="-fx-background-color: #116093;" text="AddMedical" textFill="WHITE" />
+            <Label layoutX="371.0" layoutY="299.0" prefHeight="17.0" prefWidth="117.0" text="submittted_data" />
+            <TextField layoutX="369.0" layoutY="323.0" prefHeight="25.0" prefWidth="189.0" promptText="submitted_data" />
+
          </children>
       </AnchorPane>
       <Label fx:id="lablehide" layoutX="440.0" layoutY="136.0" prefHeight="26.0" prefWidth="99.0" text=" " textFill="#d75526">

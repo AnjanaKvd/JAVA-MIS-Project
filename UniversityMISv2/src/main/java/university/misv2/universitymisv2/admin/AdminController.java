@@ -208,9 +208,11 @@ public class AdminController {
             return new SimpleStringProperty(userData[1]);
         });
 
+
         totalUsers.setText(UserManager.getUserCount());
         totalCourses.setText(CourseManager.getCourseCount());
         adminUserCount.setText(UserManager.getAdminUserCount());
+
 
         try {
             ObservableList<String[]> userList = UserManager.getUsers();
